@@ -1,0 +1,35 @@
+with "gtkada"; 
+
+project gpu extends "kernelWithParsers.gpr" is
+    PROJECT_DIR := external("CHEDDAR_DIR") & "/src/";
+
+    for Source_Dirs use (
+            PROJECT_DIR & "framework_examples/gpu");
+    for Main use ( "main.adb" );
+
+    -- only the last definition of Object_Dir is used 
+    case kernel.Build is        
+        when "Debug" =>
+            for Object_Dir use PROJECT_DIR & "binaries/objects/debug";
+            for Exec_Dir use PROJECT_DIR;
+        when "Release" =>
+            for Object_Dir use PROJECT_DIR & "binaries/objects/release";
+            for Exec_Dir use PROJECT_DIR;
+    end case;  
+
+    package Builder is
+        Executable := "";
+        
+        case kernel.Build is
+            when "Release" =>
+                Executable := PROJECT_DIR & "gpu";
+            when "Debug" =>
+                Executable := PROJECT_DIR & "gpu_debug";
+		end case;
+
+      for Executable ("main.adb") use Executable;
+    end Builder;
+  
+end gpu;
+
+
