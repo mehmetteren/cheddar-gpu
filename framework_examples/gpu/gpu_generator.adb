@@ -51,93 +51,96 @@ with initialize_framework; use initialize_framework;
 with Random_Tools;         use Random_Tools;
 with Ada.Numerics.Float_Random;
 with Core_Units;           use Core_Units;
-with Ada.Numerics.Float_Random; use Ada.Numerics.Float_Random;
+with Ada.Numerics.Discrete_Random;
 
 package body gpu_generator is
 
-    procedure gpu_generator is
+    procedure gpu_generator
+       (DAGs      : in DAGList; stream_to_TPC : in StringList;
+        TPC_count : in Integer)
+    is
 
         a_system                         : System;
-        core_unit                        : Core_Unit_Ptr;
-        address_space_1, address_space_2 : Address_Space;
+        gpu                              : Core_Unit_Ptr;
         a_task                           : Generic_Task_Ptr;
+        task_index                       : Integer := 1;
+        core_name                        : unbounded_string := Suppress_Space("GPU");
 
-        -- task parameters
-        A_period   : Natural := 40;
-        A_capacity : Natural := 20;
+        subtype Range_0_10 is Integer range 0 .. 10;
+        subtype Range_0_100 is Integer range 0 .. 100;
+        package Rand_0_10 is new Ada.Numerics.Discrete_Random (Range_0_10);
+        package Rand_0_100 is new Ada.Numerics.Discrete_Random (Range_0_100);
+        Gen_0_10  : Rand_0_10.Generator;
+        Gen_0_100 : Rand_0_100.Generator;
 
     begin
+        Rand_0_10.Reset (Gen_0_10);
+        Rand_0_100.Reset (Gen_0_100);
 
         Set_Initialize;
         Initialize (A_System => a_system);
 
         Add_core_unit
-           (My_core_units  => a_system.Core_units, A_core_unit => core_unit,
-            Name           =>
-               Suppress_Space (To_Unbounded_String ("Core_1")),
-            Is_Preemptive  => not_preemptive, Quantum => 0, speed => 1,
-            capacity       => 1, period => 1, priority => 1,
-            File_Name      => empty_string,
-            A_Scheduler    => Earliest_Deadline_First_Protocol,
-            scheduling_protocol_name => To_Unbounded_String(""),
-            automaton_name => empty_string, start_time => 0);
-        
-        --  Add_core_unit
-        --     (My_core_units  => a_system.Core_units, A_core_unit => core_unit,
-        --      Name           =>
-        --         Suppress_Space (To_Unbounded_String ("Core_2")),
-        --      Is_Preemptive  => preemptive, Quantum => 0, speed => 1,
-        --      capacity       => 1, period => 1, priority => 1,
-        --      File_Name      => empty_string,
-        --      A_Scheduler    => Earliest_Deadline_First_Protocol,
-        --      scheduling_protocol_name => To_Unbounded_String(""),
-        --      automaton_name => empty_string, start_time => 0);
+           (My_core_units => a_system.Core_units, A_core_unit => gpu,
+            Name => core_name,
+            Is_Preemptive            => preemptive, Quantum => 5, speed => 1,
+            capacity                 => 1, period => 1, priority => 1,
+            File_Name                => empty_string,
+            A_Scheduler              => posix_1003_highest_priority_first_protocol,
+            scheduling_protocol_name => To_Unbounded_String (""),
+            automaton_name           => empty_string, start_time => 0);
 
-        Add_Processor
-           (My_Processors => a_system.Processors,
-            Name          => (To_Unbounded_String ("Processor")),
-            a_Core        => core_unit);
+        Put_Line ("Core unit added");
+
+        for i in 1 .. TPC_count loop
+            add_processor
+               (My_Processors => a_system.Processors,
+                Name => (To_Unbounded_String ("TPC" & i'Img)), a_Core => gpu);
+        end loop;
+
+        Put_Line ("Processors added");
 
         -- adress spaces
 
-        Add_Address_Space
-           (My_Address_Spaces => a_system.Address_Spaces,
-            Name              => To_Unbounded_String ("Address_Space"),
-            Cpu_Name          => To_Unbounded_string ("Processor"),
-            Text_Memory_Size  => 1_024, Stack_Memory_Size => 1_024,
-            Data_Memory_Size  => 1_024, Heap_Memory_Size => 1_024);
+        for i in 1 .. TPC_count loop
+            Add_Address_Space
+               (My_Address_Spaces => a_system.Address_Spaces,
+                Name => To_Unbounded_String ("Address_Space_" & "TPC" & i'Img),
+                Cpu_Name          => To_Unbounded_string ("TPC" & i'Img),
+                Text_Memory_Size  => 1_024, Stack_Memory_Size => 1_024,
+                Data_Memory_Size  => 1_024, Heap_Memory_Size => 1_024);
+        end loop;
 
         -- tasks
         Initialize (a_system.Tasks);
 
-        for i in 1 .. 2 loop
-            Add_Task
-               (My_Tasks           => a_system.Tasks, A_Task => a_task,
-                Name               => Suppress_Space(To_Unbounded_String ("Task1_" & i'Img)),
-                Cpu_Name           => To_Unbounded_string ("Processor"),
-                core_name          => empty_string,
-                Address_Space_Name => To_Unbounded_String ("Address_Space"),
-                Task_Type          => Periodic_Type, Start_Time => 0,
-                Capacity           => A_capacity, Period => A_period,
-                Deadline => A_period, Jitter => 0, Blocking_Time => 0,
-                Priority => 1, Criticality => 0, Policy => Sched_Fifo);
-        end loop;
+        for dag of DAGs loop
+            for i in 1 .. dag.size loop
+                Add_Task
+                   (My_Tasks           => a_system.Tasks, A_Task => a_task,
+                    Name               =>
+                       Suppress_Space
+                          (To_Unbounded_String
+                              ("DAG" & Integer'Image (dag.id) & "-" &
+                               Integer'Image (i))),
+                    Cpu_Name           =>
+                       To_Unbounded_string (stream_to_TPC (dag.stream)),
+                    core_name          => empty_string,
+                    Address_Space_Name =>
+                       To_Unbounded_String
+                          ("Address_Space_" & stream_to_TPC (dag.stream)),
+                    Task_Type          => Periodic_Type, Start_Time => 0,
+                    Capacity           => Rand_0_10.Random (Gen_0_10),
+                    Period             => Rand_0_10.Random (Gen_0_10),
+                    Deadline           => Rand_0_100.Random (Gen_0_100),
+                    Priority           => dag.stream,
+                    -- User_Defined_Parameters_Table, ???????
+                    Jitter             => 0, Blocking_Time => 0,
+                    Criticality        => 0, Policy => Sched_Fifo);
 
-        A_period   := 12;
-        for i in 1 .. 2 loop
-            
-            Add_Task
-               (My_Tasks           => a_system.Tasks, A_Task => a_task,
-                Name               => Suppress_Space(To_Unbounded_String ("Task2_" & i'Img)),
-                Cpu_Name           => To_Unbounded_string ("Processor"),
-                core_name          => empty_string,
-                Address_Space_Name => To_Unbounded_String ("Address_Space"),
-                Task_Type          => Periodic_Type, Start_Time => 0,
-                Capacity           => A_capacity, Period => A_period,
-                Deadline => A_period, Jitter => 0, Blocking_Time => 0,
-                Priority => 1, Criticality => 0, Policy => Sched_Fifo);
+                task_index := task_index + 1;
+            end loop;
         end loop;
-
 
         Put_Line ("------------------------");
         Put_Line ("Write system to xml file");

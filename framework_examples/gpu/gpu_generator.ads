@@ -50,10 +50,21 @@ with Ada.Numerics.Float_Random;
 with Core_Units;           use Core_Units;
 with Networks;             use Networks;
 use networks.Positions_Table_Package;
-with Ada.Numerics.Float_Random; use Ada.Numerics.Float_Random;
+with Ada.Numerics.Discrete_Random;
 
 package gpu_generator is
 
-    procedure gpu_generator;
+    type DAG is record
+        id     : Integer;
+        size   : Integer;
+        stream : Integer;
+    end record;
+
+    type DAGList is array (Integer range <>) of DAG;
+    type StringList is array (Integer range <>) of String (1 .. 4);
+
+    -- function Generate_Tasks (DAGs : DAG_Array; Stream_To_TPC : String_List) return Task_List;
+
+    procedure gpu_generator(DAGs : DAGList; Stream_To_TPC : StringList; TPC_count : integer);
 
 end gpu_generator;
