@@ -54,17 +54,38 @@ with Ada.Numerics.Discrete_Random;
 
 package gpu_generator is
 
-    type DAG is record
-        id     : Integer;
-        size   : Integer;
-        stream : Integer;
+    type Kernel is record
+        id          : Integer;
+        block_count : Integer;
     end record;
 
+    type Kernel_Array is array (Integer range <>) of Kernel;
+    type Kernel_List is access Kernel_Array;
+
+    type DAG is record
+        id      : Integer;
+        size    : Integer;
+        stream  : Integer;
+        kernels : Kernel_List;
+    end record;
+
+    type SM_Array is array (Integer range <>) of generic_processor_ptr;
+    type SM_List is access SM_Array;
+
+    type TPC is record
+        id         : Integer;
+        block_size : Integer;
+        SMs        : SM_List;
+    end record;
+    type TPC_ptr is access all TPC;
+
     type DAGList is array (Integer range <>) of DAG;
-    type StringList is array (Integer range <>) of String (1 .. 4);
+    type TPCList is array (Integer range <>) of TPC_ptr;
+    type IntegerList is array (Integer range <>) of Integer;
 
     -- function Generate_Tasks (DAGs : DAG_Array; Stream_To_TPC : String_List) return Task_List;
 
-    procedure gpu_generator(DAGs : DAGList; Stream_To_TPC : StringList; TPC_count : integer);
+    procedure gpu_generator
+       (DAGs : DAGList; Stream_To_TPC : in out TPCList; TPCs : in out TPCList; TPC_count : Integer);
 
 end gpu_generator;
