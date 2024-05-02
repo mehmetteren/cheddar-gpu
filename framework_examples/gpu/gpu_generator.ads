@@ -57,6 +57,10 @@ package gpu_generator is
     type Kernel is record
         id          : Integer;
         block_count : Integer;
+        block_size  : Integer := 1;
+        period      : Integer := 1;
+        capacity    : Integer := 1;
+        deadline    : Integer := 1;
     end record;
 
     type Kernel_Array is array (Integer range <>) of Kernel;
@@ -64,7 +68,7 @@ package gpu_generator is
 
     type DAG is record
         id      : Integer;
-        size    : Integer;
+        kernel_count    : Integer;
         stream  : Integer;
         kernels : Kernel_List;
     end record;
@@ -74,18 +78,19 @@ package gpu_generator is
 
     type TPC is record
         id         : Integer;
-        block_size : Integer;
+        max_block_size : Integer;
         SMs        : SM_List;
     end record;
     type TPC_ptr is access all TPC;
 
     type DAGList is array (Integer range <>) of DAG;
     type TPCList is array (Integer range <>) of TPC_ptr;
-    type IntegerList is array (Integer range <>) of Integer;
+    type TPCList_ptr is access all TPCList;
+    type StreamTPCMap is array (Integer range <>) of TPCList_ptr;
 
     -- function Generate_Tasks (DAGs : DAG_Array; Stream_To_TPC : String_List) return Task_List;
 
     procedure gpu_generator
-       (DAGs : DAGList; Stream_To_TPC : in out TPCList; TPCs : in out TPCList; TPC_count : Integer);
+       (DAGs : DAGList; Stream_To_TPC : in out StreamTPCMap; TPCs : in out TPCList; TPC_count : Integer);
 
 end gpu_generator;
