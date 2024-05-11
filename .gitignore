@@ -9,7 +9,9 @@
 /framework_examples/*
 !/framework_examples/gpu
 /gpr/*
-!/gpr/gpu.gpr
+!/gpr/gpu_generate.gpr
+!/gpr/gpu_run_simulation.gpr
+!/gpr/gpu_static_transform.gpr
 /graphical_editor
 /java
 /osate

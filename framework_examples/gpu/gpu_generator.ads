@@ -67,23 +67,26 @@ package gpu_generator is
     type Kernel_List is access Kernel_Array;
 
     type DAG is record
-        id      : Integer;
-        kernel_count    : Integer;
-        stream  : Integer;
-        kernels : Kernel_List;
+        id           : Integer;
+        kernel_count : Integer;
+        stream       : Integer;
+        kernels      : Kernel_List;
     end record;
+
+    type DAGArray is array (Integer range <>) of DAG;
+    type DAGList is access DAGArray;
+
 
     type SM_Array is array (Integer range <>) of generic_processor_ptr;
     type SM_List is access SM_Array;
 
     type TPC is record
-        id         : Integer;
+        id             : Integer;
         max_block_size : Integer;
-        SMs        : SM_List;
+        SMs            : SM_List;
     end record;
     type TPC_ptr is access all TPC;
 
-    type DAGList is array (Integer range <>) of DAG;
     type TPCList is array (Integer range <>) of TPC_ptr;
     type TPCList_ptr is access all TPCList;
     type StreamTPCMap is array (Integer range <>) of TPCList_ptr;
@@ -91,6 +94,18 @@ package gpu_generator is
     -- function Generate_Tasks (DAGs : DAG_Array; Stream_To_TPC : String_List) return Task_List;
 
     procedure gpu_generator
-       (DAGs : DAGList; Stream_To_TPC : in out StreamTPCMap; TPCs : in out TPCList; TPC_count : Integer);
+       (DAGs :   in out     DAGList; Stream_To_TPC : in out StreamTPCMap;
+        TPCs : in out TPCList; TPC_count : Integer);
+
+    procedure generate_kernel_specs_uunifast
+       (DAGs : in out DAGList;
+       total_kernel_count : in Integer; 
+        target_cpu_utilization : in Float; 
+        n_different_periods    : in Integer;
+        current_cpu_utilization : in out Float;
+        d_min : in Float := 1.0;
+        d_max : in Float := 1.0; 
+        is_synchronous : in Boolean := True
+        );
 
 end gpu_generator;

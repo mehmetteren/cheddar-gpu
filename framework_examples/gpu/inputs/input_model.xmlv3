@@ -178,9 +178,9 @@
    <cpu_name>TPC_1</cpu_name>
    <address_space_name>Address_Space_TPC_1</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>7</capacity>
+   <capacity>24</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>34</deadline>
+   <deadline>210</deadline>
    <start_time>0</start_time>
    <priority>1</priority>
    <blocking_time>0</blocking_time>
@@ -201,7 +201,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>5</period>
+   <period>210</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -213,77 +213,7 @@
    <cpu_name>TPC_1</cpu_name>
    <address_space_name>Address_Space_TPC_1</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>5</capacity>
-   <energy_consumption>0</energy_consumption>
-   <deadline>57</deadline>
-   <start_time>0</start_time>
-   <priority>1</priority>
-   <blocking_time>0</blocking_time>
-   <policy>SCHED_FIFO</policy>
-   <text_memory_size>0</text_memory_size>
-   <text_memory_start_address>0</text_memory_start_address>
-   <stack_memory_size>0</stack_memory_size>
-   <criticality>0</criticality>
-   <dc_value>0</dc_value>
-   <context_switch_overhead>0</context_switch_overhead>
-   <cfg_relocatable>FALSE</cfg_relocatable>
-   <mils_confidentiality_level>TOP_SECRET</mils_confidentiality_level>
-   <mils_integrity_level>HIGH</mils_integrity_level>
-   <mils_component>SLS</mils_component>
-   <mils_task>APPLICATION</mils_task>
-   <mils_compliant>TRUE</mils_compliant>
-   <access_memory_number>0</access_memory_number>
-   <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
-   <seed>0</seed>
-   <predictable>FALSE</predictable>
-   <period>7</period>
-   <jitter>0</jitter>
-   <every>0</every>
-   <completion_time>0</completion_time>
-  </periodic_task>
-  <periodic_task id="id_12">
-   <object_type>TASK_OBJECT_TYPE</object_type>
-   <name>DAG_1-Kernel_3</name>
-   <task_type>PERIODIC_TYPE</task_type>
-   <cpu_name>TPC_1</cpu_name>
-   <address_space_name>Address_Space_TPC_1</address_space_name>
-   <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>3</capacity>
-   <energy_consumption>0</energy_consumption>
-   <deadline>40</deadline>
-   <start_time>0</start_time>
-   <priority>1</priority>
-   <blocking_time>0</blocking_time>
-   <policy>SCHED_FIFO</policy>
-   <text_memory_size>0</text_memory_size>
-   <text_memory_start_address>0</text_memory_start_address>
-   <stack_memory_size>0</stack_memory_size>
-   <criticality>0</criticality>
-   <dc_value>0</dc_value>
-   <context_switch_overhead>0</context_switch_overhead>
-   <cfg_relocatable>FALSE</cfg_relocatable>
-   <mils_confidentiality_level>TOP_SECRET</mils_confidentiality_level>
-   <mils_integrity_level>HIGH</mils_integrity_level>
-   <mils_component>SLS</mils_component>
-   <mils_task>APPLICATION</mils_task>
-   <mils_compliant>TRUE</mils_compliant>
-   <access_memory_number>0</access_memory_number>
-   <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
-   <seed>0</seed>
-   <predictable>FALSE</predictable>
-   <period>7</period>
-   <jitter>0</jitter>
-   <every>0</every>
-   <completion_time>0</completion_time>
-  </periodic_task>
-  <periodic_task id="id_14">
-   <object_type>TASK_OBJECT_TYPE</object_type>
-   <name>DAG_2-Kernel_1</name>
-   <task_type>PERIODIC_TYPE</task_type>
-   <cpu_name>TPC_1</cpu_name>
-   <address_space_name>Address_Space_TPC_1</address_space_name>
-   <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>8</capacity>
+   <capacity>1</capacity>
    <energy_consumption>0</energy_consumption>
    <deadline>10</deadline>
    <start_time>0</start_time>
@@ -306,7 +236,77 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>7</period>
+   <period>10</period>
+   <jitter>0</jitter>
+   <every>0</every>
+   <completion_time>0</completion_time>
+  </periodic_task>
+  <periodic_task id="id_12">
+   <object_type>TASK_OBJECT_TYPE</object_type>
+   <name>DAG_1-Kernel_3</name>
+   <task_type>PERIODIC_TYPE</task_type>
+   <cpu_name>TPC_1</cpu_name>
+   <address_space_name>Address_Space_TPC_1</address_space_name>
+   <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
+   <capacity>10</capacity>
+   <energy_consumption>0</energy_consumption>
+   <deadline>140</deadline>
+   <start_time>0</start_time>
+   <priority>1</priority>
+   <blocking_time>0</blocking_time>
+   <policy>SCHED_FIFO</policy>
+   <text_memory_size>0</text_memory_size>
+   <text_memory_start_address>0</text_memory_start_address>
+   <stack_memory_size>0</stack_memory_size>
+   <criticality>0</criticality>
+   <dc_value>0</dc_value>
+   <context_switch_overhead>0</context_switch_overhead>
+   <cfg_relocatable>FALSE</cfg_relocatable>
+   <mils_confidentiality_level>TOP_SECRET</mils_confidentiality_level>
+   <mils_integrity_level>HIGH</mils_integrity_level>
+   <mils_component>SLS</mils_component>
+   <mils_task>APPLICATION</mils_task>
+   <mils_compliant>TRUE</mils_compliant>
+   <access_memory_number>0</access_memory_number>
+   <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
+   <seed>0</seed>
+   <predictable>FALSE</predictable>
+   <period>140</period>
+   <jitter>0</jitter>
+   <every>0</every>
+   <completion_time>0</completion_time>
+  </periodic_task>
+  <periodic_task id="id_14">
+   <object_type>TASK_OBJECT_TYPE</object_type>
+   <name>DAG_2-Kernel_1</name>
+   <task_type>PERIODIC_TYPE</task_type>
+   <cpu_name>TPC_1</cpu_name>
+   <address_space_name>Address_Space_TPC_1</address_space_name>
+   <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
+   <capacity>1</capacity>
+   <energy_consumption>0</energy_consumption>
+   <deadline>140</deadline>
+   <start_time>0</start_time>
+   <priority>1</priority>
+   <blocking_time>0</blocking_time>
+   <policy>SCHED_FIFO</policy>
+   <text_memory_size>0</text_memory_size>
+   <text_memory_start_address>0</text_memory_start_address>
+   <stack_memory_size>0</stack_memory_size>
+   <criticality>0</criticality>
+   <dc_value>0</dc_value>
+   <context_switch_overhead>0</context_switch_overhead>
+   <cfg_relocatable>FALSE</cfg_relocatable>
+   <mils_confidentiality_level>TOP_SECRET</mils_confidentiality_level>
+   <mils_integrity_level>HIGH</mils_integrity_level>
+   <mils_component>SLS</mils_component>
+   <mils_task>APPLICATION</mils_task>
+   <mils_compliant>TRUE</mils_compliant>
+   <access_memory_number>0</access_memory_number>
+   <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
+   <seed>0</seed>
+   <predictable>FALSE</predictable>
+   <period>140</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -318,9 +318,9 @@
    <cpu_name>TPC_1</cpu_name>
    <address_space_name>Address_Space_TPC_1</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>7</capacity>
+   <capacity>18</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>56</deadline>
+   <deadline>180</deadline>
    <start_time>0</start_time>
    <priority>1</priority>
    <blocking_time>0</blocking_time>
@@ -341,7 +341,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>3</period>
+   <period>180</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -353,9 +353,9 @@
    <cpu_name>TPC_1</cpu_name>
    <address_space_name>Address_Space_TPC_1</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>8</capacity>
+   <capacity>1</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>5</deadline>
+   <deadline>12</deadline>
    <start_time>0</start_time>
    <priority>1</priority>
    <blocking_time>0</blocking_time>
@@ -376,7 +376,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>2</period>
+   <period>12</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -388,9 +388,9 @@
    <cpu_name>TPC_1</cpu_name>
    <address_space_name>Address_Space_TPC_1</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>1</capacity>
+   <capacity>27</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>89</deadline>
+   <deadline>630</deadline>
    <start_time>0</start_time>
    <priority>1</priority>
    <blocking_time>0</blocking_time>
@@ -411,7 +411,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>9</period>
+   <period>630</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -423,9 +423,9 @@
    <cpu_name>TPC_1</cpu_name>
    <address_space_name>Address_Space_TPC_1</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>7</capacity>
+   <capacity>1</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>22</deadline>
+   <deadline>252</deadline>
    <start_time>0</start_time>
    <priority>1</priority>
    <blocking_time>0</blocking_time>
@@ -446,7 +446,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>1</period>
+   <period>252</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -458,9 +458,9 @@
    <cpu_name>TPC_1</cpu_name>
    <address_space_name>Address_Space_TPC_1</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>1</capacity>
+   <capacity>24</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>100</deadline>
+   <deadline>1260</deadline>
    <start_time>0</start_time>
    <priority>2</priority>
    <blocking_time>0</blocking_time>
@@ -481,7 +481,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>2</period>
+   <period>1260</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -493,9 +493,9 @@
    <cpu_name>TPC_1</cpu_name>
    <address_space_name>Address_Space_TPC_1</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>3</capacity>
+   <capacity>1</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>40</deadline>
+   <deadline>140</deadline>
    <start_time>0</start_time>
    <priority>2</priority>
    <blocking_time>0</blocking_time>
@@ -516,7 +516,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>3</period>
+   <period>140</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -528,9 +528,9 @@
    <cpu_name>TPC_2</cpu_name>
    <address_space_name>Address_Space_TPC_2</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>4</capacity>
+   <capacity>1</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>64</deadline>
+   <deadline>20</deadline>
    <start_time>0</start_time>
    <priority>3</priority>
    <blocking_time>0</blocking_time>
@@ -551,7 +551,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>8</period>
+   <period>20</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -563,9 +563,9 @@
    <cpu_name>TPC_2</cpu_name>
    <address_space_name>Address_Space_TPC_2</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>7</capacity>
+   <capacity>1</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>90</deadline>
+   <deadline>84</deadline>
    <start_time>0</start_time>
    <priority>3</priority>
    <blocking_time>0</blocking_time>
@@ -586,7 +586,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>4</period>
+   <period>84</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>
@@ -598,9 +598,9 @@
    <cpu_name>TPC_2</cpu_name>
    <address_space_name>Address_Space_TPC_2</address_space_name>
    <capacity_model>LIULAYLAND_EXECUTION_UNIT</capacity_model>
-   <capacity>6</capacity>
+   <capacity>1</capacity>
    <energy_consumption>0</energy_consumption>
-   <deadline>47</deadline>
+   <deadline>140</deadline>
    <start_time>0</start_time>
    <priority>3</priority>
    <blocking_time>0</blocking_time>
@@ -621,7 +621,7 @@
    <maximum_number_of_memory_request_per_job>0</maximum_number_of_memory_request_per_job>
    <seed>0</seed>
    <predictable>FALSE</predictable>
-   <period>6</period>
+   <period>140</period>
    <jitter>0</jitter>
    <every>0</every>
    <completion_time>0</completion_time>

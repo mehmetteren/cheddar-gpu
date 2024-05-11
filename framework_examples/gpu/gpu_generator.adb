@@ -53,10 +53,107 @@ with Random_Tools;         use Random_Tools;
 with Ada.Numerics.Float_Random;
 with Ada.Numerics.Discrete_Random;
 
+with scheduling_simulation_test_hlfet; use scheduling_simulation_test_hlfet;
+
+
 package body gpu_generator is
 
+    procedure generate_kernel_specs_uunifast
+       (DAGs : in out DAGList;
+       total_kernel_count : in Integer; 
+        target_cpu_utilization : in Float; 
+        n_different_periods    : in Integer;
+        current_cpu_utilization : in out Float;
+        d_min : in Float := 1.0;
+        d_max : in Float := 1.0; 
+        is_synchronous : in Boolean := True
+        )
+
+    is
+        use Ada.Numerics.Float_Random;
+
+        a_factor           : Integer;
+        a_capacity         : Natural := 0;
+        a_period           : Natural := 0;
+        a_deadline         : Natural := 0;
+        a_start_time       : Natural := 0;
+        a_random_deadline  : Float;
+        omin, omax         : Float;
+        g                  : Ada.Numerics.Float_Random.Generator;
+        cur_dag                : DAG;
+        kernel_counter       : Integer := 1;
+      u_values          : random_tools.float_array (0 .. total_kernel_count - 1);
+      t_values          : random_tools.integer_array (1 .. total_kernel_count);
+
+    begin
+
+        a_factor := 1;--N_Tasks;
+        Reset (g);
+
+        put_line ("Total kernel count: " & total_kernel_count'Img);
+
+        u_values := gen_uunifast (total_kernel_count, target_cpu_utilization);
+
+        t_values :=
+           generate_period_set_with_limited_hyperperiod
+              (total_kernel_count, n_different_periods);
+
+        for i in 1 .. DAGs'Length loop
+            cur_dag := DAGs (i);
+            for kernel_index in 1 .. cur_dag.kernel_count loop
+                a_period :=
+                   Natural
+                      (t_values (kernel_counter) *
+                       a_factor); -- A_factor inflates the periods to avoid too much execution times
+                -- equal to zero due to integer rounding
+
+                a_capacity :=
+                   Integer
+                      (Float'Rounding (Float (a_period) * u_values (kernel_counter - 1)));
+                if a_capacity = 0 then
+                    a_capacity := 1;
+                end if;
+
+                a_random_deadline := d_min + Random (g) * (d_max - d_min);
+                while (a_random_deadline > d_max) or
+                   (a_random_deadline < d_min)
+                loop
+                    a_random_deadline := d_min + Random (g) * (d_max - d_min);
+                end loop;
+
+                a_deadline :=
+                   Integer
+                      (Float'Rounding
+                          (Float (a_period - a_capacity) *
+                           a_random_deadline)) +
+                   a_capacity;
+
+                omin := 0.0;
+                omax := Float (a_period);
+
+                a_start_time := 0;
+
+                current_cpu_utilization :=
+                   current_cpu_utilization +
+                   Float (a_capacity) / Float (a_period);
+
+                cur_dag.kernels (kernel_index).period   := a_period;
+                cur_dag.kernels (kernel_index).capacity := a_capacity;
+                cur_dag.kernels (kernel_index).deadline := a_deadline;
+
+                put_line("DAG " & cur_dag.id'Img & 
+                " Kernel " & cur_dag.kernels (kernel_index).id'Img & 
+                " Period: " & cur_dag.kernels (kernel_index).period'Img & 
+                " Capacity: " & cur_dag.kernels (kernel_index).capacity'Img & 
+                " Deadline: " & cur_dag.kernels (kernel_index).deadline'Img);
+                kernel_counter := kernel_counter + 1;
+            end loop;
+        end loop;
+
+    end generate_kernel_specs_uunifast;
+
     procedure gpu_generator
-       (DAGs : in     DAGList; stream_to_TPC : in out StreamTPCMap;
+       (DAGs : in out DAGList; stream_to_TPC : in out StreamTPCMap;
         TPCs : in out TPCList; TPC_count : in Integer)
     is
 
@@ -67,11 +164,15 @@ package body gpu_generator is
         prev_task   : Generic_Task_Ptr;
         message_ptr : generic_message_ptr;
         cur_kernel  : Kernel;
+        cur_dag     : DAG;
 
         task_index       : Integer          := 1;
         core_name_prefix : unbounded_string := Suppress_Space ("SM_");
         sm_per_tpc       : Integer          := 4;
         max_sm_size      : Integer          := 1_024;
+        total_kernel_count : Integer := 0;
+        current_cpu_utilization : Float := 0.0;
+
 
         core_units : Core_Units_Table;
 
@@ -85,6 +186,14 @@ package body gpu_generator is
         cur_tpc        : TPC_ptr;
 
     begin
+        for i in 1 .. DAGs'Length loop
+            total_kernel_count := total_kernel_count + DAGs (i).kernel_count;
+        end loop;
+
+        generate_kernel_specs_uunifast
+           (DAGs => DAGs, total_kernel_count => total_kernel_count, target_cpu_utilization => 0.4,
+            n_different_periods => 10, current_cpu_utilization => current_cpu_utilization);
+
         Rand_1_10.Reset (Gen_1_10);
         Rand_1_100.Reset (Gen_1_100);
 
@@ -118,8 +227,9 @@ package body gpu_generator is
             Add_Address_Space
                (My_Address_Spaces => a_system.Address_Spaces,
                 Name              =>
-                   Suppress_Space ("Address_Space_" & ("TPC_" & cur_tpc.id'Img)),
-                Cpu_Name          => Suppress_Space (("TPC_" & cur_tpc.id'Img)),
+                   Suppress_Space
+                      ("Address_Space_" & ("TPC_" & cur_tpc.id'Img)),
+                Cpu_Name => Suppress_Space (("TPC_" & cur_tpc.id'Img)),
                 Text_Memory_Size  => 1_024, Stack_Memory_Size => 1_024,
                 Data_Memory_Size  => 1_024, Heap_Memory_Size => 1_024);
             Put_Line ("Address space added");
@@ -128,23 +238,24 @@ package body gpu_generator is
         -- tasks
         Initialize (a_system.Tasks);
 
-        for dag of DAGs loop
+        for dag_index in 1 .. DAGs'Length loop
+            cur_dag  := DAGs (dag_index);
             cur_task  := null;
             prev_task := null;
-            cur_tpc  := null;
-            for tpc_index in 1 .. stream_to_TPC (dag.stream)'Length
+            cur_tpc   := null;
+            for tpc_index in 1 .. stream_to_TPC (cur_dag.stream)'Length
             loop -- add task to each tpc that this dag is assigned to
-                cur_tpc := stream_to_TPC (dag.stream) (tpc_index);
-                for i in 1 .. dag.kernel_count
-                loop -- for kernel in dag.kernels
-                    cur_kernel := dag.kernels (i);
+                cur_tpc := stream_to_TPC (cur_dag.stream) (tpc_index);
+                for i in 1 .. cur_dag.kernel_count
+                loop -- for kernel in cur_dag.kernels
+                    cur_kernel := cur_dag.kernels (i);
 
                     Add_Task
                        (My_Tasks => a_system.Tasks, A_Task => cur_task,
                         Name               =>
                            Suppress_Space
                               (To_Unbounded_String
-                                  ("DAG_" & Integer'Image (dag.id) &
+                                  ("DAG_" & Integer'Image (cur_dag.id) &
                                    "-Kernel_" & Integer'Image (i))),
                         Cpu_Name => Suppress_Space (("TPC_" & cur_tpc.id'Img)),
                         core_name          => empty_string,
@@ -153,10 +264,10 @@ package body gpu_generator is
                               ("Address_Space_" &
                                Suppress_Space (("TPC_" & cur_tpc.id'Img))),
                         Task_Type          => Periodic_Type, Start_Time => 0,
-                        Capacity           => Rand_1_10.Random (Gen_1_10),
-                        Period             => Rand_1_10.Random (Gen_1_10),
-                        Deadline           => Rand_1_100.Random (Gen_1_100),
-                        Priority           => dag.stream,
+                        Capacity           => cur_kernel.capacity,
+                        Period             => cur_kernel.period,
+                        Deadline           => cur_kernel.deadline,
+                        Priority           => cur_dag.stream,
                         -- User_Defined_Parameters_Table, ???????
                         Jitter             => 0,
                         Blocking_Time      => 0, Criticality => 0,
@@ -172,7 +283,7 @@ package body gpu_generator is
                             name          =>
                                Suppress_Space
                                   (To_Unbounded_String
-                                      ("message:DAG" & Integer'Image (dag.id) &
+                                      ("message:DAG" & Integer'Image (cur_dag.id) &
                                        "-" & "kernel" & Integer'Image (i - 1) &
                                        "_to_" & "kernel" & Integer'Image (i) &
                                        "_TPC" & cur_tpc.id'Img)),

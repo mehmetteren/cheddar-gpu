@@ -52,10 +52,11 @@ with Networks;             use Networks;
 use networks.Positions_Table_Package;
 with Ada.Numerics.Discrete_Random;
 with gpu_generator;        use gpu_generator;
+with scheduling_simulation_test_hlfet; use scheduling_simulation_test_hlfet;
 
-package static_transfomer is
+package static_transformer is
 
-    procedure static_transfomer
+    procedure static_transformer
        (DAGs : DAGList; Stream_To_TPC : in out StreamTPCMap; TPCs : in out TPCList; TPC_count : Integer);
 
-end static_transfomer;
+end static_transformer;
