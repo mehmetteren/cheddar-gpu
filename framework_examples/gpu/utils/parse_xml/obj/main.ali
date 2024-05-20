@@ -1,0 +1,92 @@
+V "GNAT Lib v2021"
+M P W=b
+A -O2
+A -gnatA
+A -g
+A -gnatwa
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		2a03afbd NE OO SU IL
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W test%s		test.adb		test.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D dom.ads		20210519052321 2bd88f63 dom%s
+D dom-core.ads		20210519052321 3a4cc7f1 dom.core%s
+D dom-core-attrs.ads	20210519052321 73a71d1a dom.core.attrs%s
+D dom-core-documents.ads  20210519052321 a040c510 dom.core.documents%s
+D dom-core-nodes.ads	20210519052321 06d13589 dom.core.nodes%s
+D dom-readers.ads	20210519052321 41244551 dom.readers%s
+D input_sources.ads	20210519052321 9ec704a2 input_sources%s
+D input_sources-file.ads  20210519052321 b313acf6 input_sources.file%s
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D main.adb		20240512174858 8fb915e5 main%b
+D sax.ads		20210519052321 17965ec6 sax%s
+D sax-attributes.ads	20210519052321 baf0c3bb sax.attributes%s
+D sax-encodings.ads	20210519052321 22d791a3 sax.encodings%s
+D sax-exceptions.ads	20210519052321 32ef2902 sax.exceptions%s
+D sax-htable.ads	20210519052321 2df615ad sax.htable%s
+D sax-locators.ads	20210519052321 c21ab44e sax.locators%s
+D sax-models.ads	20210519052321 9f245dcd sax.models%s
+D sax-pointers.ads	20210519052321 d9877e85 sax.pointers%s
+D sax-readers.ads	20210519052321 41cb3ec9 sax.readers%s
+D sax-symbols.ads	20210519052321 d3179de8 sax.symbols%s
+D sax-utils.ads		20210519052321 214aab19 sax.utils%s
+D system.ads		20210520051134 a2da961d system%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-string.ads		20210520051133 8fe54fb7 system.strings%s
+D s-ststop.ads		20210520051133 5fbf1b38 system.strings.stream_ops%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D test.ads		20240513101624 a5baba58 test%s
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+D unchdeal.ads		20210520051134 214516a4 unchecked_deallocation%s
+D unicode.ads		20210519052321 a421878d unicode%s
+D unicode-ccs.ads	20210519052321 184e29de unicode.ccs%s
+D unicode-ces.ads	20210519052321 68f558ab unicode.ces%s
+D unicode-ces-basic_8bit.ads  20210519052321 a56f8139 unicode.ces.basic_8bit%s
+D unicode-ces-utf32.ads	20210519052321 b5f035ac unicode.ces.utf32%s
+D unicode-ces-utf8.ads	20210519052321 dcbef85d unicode.ces.utf8%s
+D unicode-encodings.ads	20210519052321 d94939b2 unicode.encodings%s
+G a e
+G c Z b b [main standard 3 11 none]
+G r c none [main standard 3 11 none] [domexample2 test 60 11 none]
+X 23 main.adb
+3U11*main 3b11 7l5 7t9
+X 57 test.ads
+11K9*test 23|1w6 1r16 6r5 57|70e9
+60U11*DomExample2 23|6s10
+

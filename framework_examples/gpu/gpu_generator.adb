@@ -101,15 +101,15 @@ package body gpu_generator is
         for i in 1 .. DAGs'Length loop
             cur_dag := DAGs (i);
             for kernel_index in 1 .. cur_dag.kernel_count loop
-                a_period :=
-                   Natural
-                      (t_values (kernel_counter) *
-                       a_factor); -- A_factor inflates the periods to avoid too much execution times
-                -- equal to zero due to integer rounding
+                a_period := 10;
+                --     Natural
+                --        (t_values (kernel_counter) *
+                --         a_factor); -- A_factor inflates the periods to avoid too much execution times
+                --  -- equal to zero due to integer rounding
 
-                a_capacity :=
-                   Integer
-                      (Float'Rounding (Float (a_period) * u_values (kernel_counter - 1)));
+                a_capacity := 3;
+                --     Integer
+                --        (Float'Rounding (Float (a_period) * u_values (kernel_counter - 1)));
                 if a_capacity = 0 then
                     a_capacity := 1;
                 end if;
@@ -121,12 +121,12 @@ package body gpu_generator is
                     a_random_deadline := d_min + Random (g) * (d_max - d_min);
                 end loop;
 
-                a_deadline :=
-                   Integer
-                      (Float'Rounding
-                          (Float (a_period - a_capacity) *
-                           a_random_deadline)) +
-                   a_capacity;
+                a_deadline := 10;
+                --     Integer
+                --        (Float'Rounding
+                --            (Float (a_period - a_capacity) *
+                --             a_random_deadline)) +
+                --     a_capacity;
 
                 omin := 0.0;
                 omax := Float (a_period);

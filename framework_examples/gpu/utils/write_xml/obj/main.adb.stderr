@@ -1,0 +1,5 @@
+main.adb:3:05: warning: "DAGs" is not modified, could be declared constant [-gnatwk]
+main.adb:38:05: warning: "TPCss" is not modified, could be declared constant [-gnatwk]
+main.adb:40:05: warning: "stream_to_TPC" is not modified, could be declared constant [-gnatwk]
+main.adb:44:05: warning: variable "current_cpu_utilization" is not referenced [-gnatwu]
+main.adb:45:05: warning: variable "total_kernel_count" is not referenced [-gnatwu]

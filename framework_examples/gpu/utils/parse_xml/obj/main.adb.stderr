@@ -1,0 +1,1 @@
+main.adb:1:12: warning: use clause for package "test" has no effect [-gnatwu]

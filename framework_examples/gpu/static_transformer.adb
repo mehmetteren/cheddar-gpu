@@ -90,7 +90,7 @@ package body static_transformer is
 
         task_index       : Integer          := 1;
         core_name_prefix : unbounded_string := Suppress_Space ("SM_");
-        sm_per_tpc       : Integer          := 4;
+        sm_per_tpc       : Integer          := 2;
         max_sm_size      : Integer          := 1_024;
 
         --core_unit_table_ptr : Core_Units_Table;
@@ -218,9 +218,9 @@ package body static_transformer is
                                        (cur_tpc.id) &
                                     "-" & core_name_prefix & cpu_index'Img)),
                             Task_Type => Periodic_Type, Start_Time => 0,
-                            Capacity           => cur_kernel.capacity,
-                            Period             => cur_kernel.period,
-                            Deadline => cur_kernel.deadline,
+                            Capacity           => 3, -- cur_kernel.capacity,
+                            Period             => 10, -- cur_kernel.period,
+                            Deadline => 10, --cur_kernel.deadline,
                             Priority           => cur_dag.stream,
                             -- User_Defined_Parameters_Table, ???????
                             Jitter             => 0,
@@ -261,14 +261,14 @@ package body static_transformer is
                                    (my_dependencies   =>
                                        transformed_system.dependencies,
                                     a_task => cur_task, a_dep => message_ptr,
-                                    a_type            => from_task_to_object,
+                                    a_type            => from_object_to_task,
                                     protocol_property => first_message);
 
                                 add_one_task_dependency_asynchronous_communication
                                    (my_dependencies   =>
                                        transformed_system.dependencies,
                                     a_task => prev_taskk, a_dep => message_ptr,
-                                    a_type            => from_object_to_task,
+                                    a_type            => from_task_to_object,
                                     protocol_property => first_message);
                                 prev_task_counter := prev_task_counter + 1;
                                 put_line

@@ -1,0 +1,391 @@
+V "GNAT Lib v2021"
+A -O2
+A -gnatA
+A -g
+A -gnatwa
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+
+U test%b		test.adb		cd543eff NE OO PK IL
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.val_int%s	s-valint.ads		s-valint.ali
+
+U test%s		test.ads		57c89229 EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W dom%s			dom.ads			dom.ali
+W dom.core%s		dom-core.adb		dom-core.ali
+W dom.core.attrs%s	dom-core-attrs.adb	dom-core-attrs.ali
+W dom.core.documents%s	dom-core-documents.adb	dom-core-documents.ali
+W dom.core.nodes%s	dom-core-nodes.adb	dom-core-nodes.ali
+W dom.readers%s		dom-readers.adb		dom-readers.ali
+W input_sources%s	input_sources.adb	input_sources.ali
+W input_sources.file%s	input_sources-file.adb	input_sources-file.ali
+W sax%s			sax.ads			sax.ali
+W sax.readers%s		sax-readers.adb		sax-readers.ali
+
+D ada.ads		20210520051130 76789da1 ada%s
+D a-except.ads		20210520051127 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051127 bf4f806b ada.finalization%s
+D a-ioexce.ads		20210520051127 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051128 119b8fb3 ada.streams%s
+D a-string.ads		20210520051128 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051128 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051128 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051129 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051129 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051129 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051129 c3a8ac65 ada.unchecked_deallocation%s
+D dom.ads		20210519052321 2bd88f63 dom%s
+D dom-core.ads		20210519052321 3a4cc7f1 dom.core%s
+D dom-core-attrs.ads	20210519052321 73a71d1a dom.core.attrs%s
+D dom-core-documents.ads  20210519052321 a040c510 dom.core.documents%s
+D dom-core-nodes.ads	20210519052321 06d13589 dom.core.nodes%s
+D dom-readers.ads	20210519052321 41244551 dom.readers%s
+D input_sources.ads	20210519052321 9ec704a2 input_sources%s
+D input_sources-file.ads  20210519052321 b313acf6 input_sources.file%s
+D interfac.ads		20210520051131 edec285f interfaces%s
+D i-cstrea.ads		20210520051131 e53d8b8e interfaces.c_streams%s
+D sax.ads		20210519052321 17965ec6 sax%s
+D sax-attributes.ads	20210519052321 baf0c3bb sax.attributes%s
+D sax-encodings.ads	20210519052321 22d791a3 sax.encodings%s
+D sax-exceptions.ads	20210519052321 32ef2902 sax.exceptions%s
+D sax-htable.ads	20210519052321 2df615ad sax.htable%s
+D sax-locators.ads	20210519052321 c21ab44e sax.locators%s
+D sax-models.ads	20210519052321 9f245dcd sax.models%s
+D sax-pointers.ads	20210519052321 d9877e85 sax.pointers%s
+D sax-readers.ads	20210519052321 41cb3ec9 sax.readers%s
+D sax-symbols.ads	20210519052321 d3179de8 sax.symbols%s
+D sax-utils.ads		20210519052321 214aab19 sax.utils%s
+D system.ads		20210520051134 a2da961d system%s
+D s-crtl.ads		20210520051131 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051131 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051131 078245e4 system.file_control_block%s
+D s-finmas.ads		20210520051131 1ab4dba8 system.finalization_masters%s
+D s-finroo.ads		20210520051131 4ff27390 system.finalization_root%s
+D s-imagei.ads		20210520051132 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210520051132 bdb6f5ec system.img_int%s
+D s-memory.ads		20210520051132 597d6634 system.memory%s
+D s-parame.ads		20210520051133 4752c4cb system.parameters%s
+D s-pooglo.ads		20210520051133 ede33ef8 system.pool_global%s
+D s-putima.ads		20210520051133 4e095881 system.put_images%s
+D s-secsta.ads		20210520051133 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051133 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051133 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051133 472fbca8 system.standard_library%s
+D s-stalib.adb		20210520051133 977290bf system.standard_library%b
+D s-stoele.ads		20210520051133 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051133 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20210520051133 e9fa2dd8 system.storage_pools%s
+D s-stratt.ads		20210520051133 7bdda3fa system.stream_attributes%s
+D s-string.ads		20210520051133 8fe54fb7 system.strings%s
+D s-ststop.ads		20210520051133 5fbf1b38 system.strings.stream_ops%s
+D s-traent.ads		20210520051133 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051133 2b077493 system.unsigned_types%s
+D s-valint.ads		20210520051133 e7fcadb7 system.val_int%s
+D s-valuns.ads		20210520051133 dac7b45d system.val_uns%s
+D s-valuei.ads		20210520051133 978dd0a6 system.value_i%s
+D s-valueu.ads		20210520051133 7b8fccf5 system.value_u%s
+D s-wchcon.ads		20210520051134 1b7d22d2 system.wch_con%s
+D test.ads		20240513101624 a5baba58 test%s
+D test.adb		20240513113244 68ee84a7 test%b
+D unchconv.ads		20210520051134 ca2f9e18 unchecked_conversion%s
+D unchdeal.ads		20210520051134 214516a4 unchecked_deallocation%s
+D unicode.ads		20210519052321 a421878d unicode%s
+D unicode-ccs.ads	20210519052321 184e29de unicode.ccs%s
+D unicode-ces.ads	20210519052321 68f558ab unicode.ces%s
+D unicode-ces-basic_8bit.ads  20210519052321 a56f8139 unicode.ces.basic_8bit%s
+D unicode-ces-utf32.ads	20210519052321 b5f035ac unicode.ces.utf32%s
+D unicode-ces-utf8.ads	20210519052321 dcbef85d unicode.ces.utf8%s
+D unicode-encodings.ads	20210519052321 d94939b2 unicode.encodings%s
+G a e
+G c Z s b [domexample test 59 11 none]
+G c Z s b [domexample2 test 60 11 none]
+G c Z s b [parsedags test 61 11 none]
+G c Z s b [parsetpcs test 64 11 none]
+G c Z s b [parsestreamtpcmap test 67 11 none]
+G c Z s s [kernelIP test 12 10 none]
+G c Z s s [kernel_arrayIP test 22 10 none]
+G c Z s s [dagIP test 25 10 none]
+G c Z s s [dagarrayIP test 33 10 none]
+G c Z s s [tpcIP test 39 10 none]
+G c Z s s [tpcarrayIP test 46 10 none]
+G c Z s s [streamtpcmapIP test 48 10 none]
+G c Z s s [systemIP test 51 10 none]
+G r s file_input [domexample test 59 11 none] [file_inputIP input_sources__file 67 9 none]
+G r s tree_reader [domexample test 59 11 none] [tree_readerIP dom__readers 97 9 none]
+G r l tree_reader [domexample test 59 11 none] [tree_readerDI dom__readers 97 9 none]
+G r k tree_reader [domexample test 59 11 none] [tree_readerDF dom__readers 97 9 none]
+G r c none [domexample test 59 11 none] [set_public_id input_sources 110 14 none]
+G r c none [domexample test 59 11 none] [open input_sources__file 33 14 none]
+G r c none [domexample test 59 11 none] [set_feature sax__readers 82 14 none]
+G r c none [domexample test 59 11 none] [parse sax__readers 54 14 none]
+G r c none [domexample test 59 11 none] [close input_sources__file 49 14 none]
+G r c none [domexample test 59 11 none] [get_tree dom__readers 42 13 none]
+G r c none [domexample test 59 11 none] [free dom__readers 50 14 none]
+G r s file_input [domexample2 test 60 11 none] [file_inputIP input_sources__file 67 9 none]
+G r s tree_reader [domexample2 test 60 11 none] [tree_readerIP dom__readers 97 9 none]
+G r l tree_reader [domexample2 test 60 11 none] [tree_readerDI dom__readers 97 9 none]
+G r k tree_reader [domexample2 test 60 11 none] [tree_readerDF dom__readers 97 9 none]
+G r c none [domexample2 test 60 11 none] [get_tree dom__readers 42 13 none]
+G r s node_list [domexample2 test 60 11 none] [node_listIP dom__core 217 9 none]
+G r c none [domexample2 test 60 11 none] [set_public_id input_sources 110 14 none]
+G r c none [domexample2 test 60 11 none] [open input_sources__file 33 14 none]
+G r c none [domexample2 test 60 11 none] [set_feature sax__readers 82 14 none]
+G r c none [domexample2 test 60 11 none] [parse sax__readers 54 14 none]
+G r c none [domexample2 test 60 11 none] [close input_sources__file 49 14 none]
+G r c none [domexample2 test 60 11 none] [get_elements_by_tag_name dom__core__documents 117 13 none]
+G r c none [domexample2 test 60 11 none] [length dom__core__nodes 183 13 none]
+G r c none [domexample2 test 60 11 none] [item dom__core__nodes 178 13 none]
+G r c none [domexample2 test 60 11 none] [node_name dom__core__nodes 34 13 none]
+G r c none [domexample2 test 60 11 none] [first_child dom__core__nodes 58 13 none]
+G r c none [domexample2 test 60 11 none] [node_type dom__core__nodes 45 13 none]
+G r c none [domexample2 test 60 11 none] [node_value dom__core__nodes 41 13 none]
+G r c none [domexample2 test 60 11 none] [next_sibling dom__core__nodes 74 13 none]
+G r c none [domexample2 test 60 11 none] [free dom__core__nodes 326 14 none]
+G r s file_input [parsedags test 61 11 none] [file_inputIP input_sources__file 67 9 none]
+G r s tree_reader [parsedags test 61 11 none] [tree_readerIP dom__readers 97 9 none]
+G r l tree_reader [parsedags test 61 11 none] [tree_readerDI dom__readers 97 9 none]
+G r k tree_reader [parsedags test 61 11 none] [tree_readerDF dom__readers 97 9 none]
+G r c none [parsedags test 61 11 none] [get_tree dom__readers 42 13 none]
+G r s node_list [parsedags test 61 11 none] [node_listIP dom__core 217 9 none]
+G r c none [parsedags test 61 11 none] [set_public_id input_sources 110 14 none]
+G r c none [parsedags test 61 11 none] [open input_sources__file 33 14 none]
+G r c none [parsedags test 61 11 none] [set_feature sax__readers 82 14 none]
+G r c none [parsedags test 61 11 none] [parse sax__readers 54 14 none]
+G r c none [parsedags test 61 11 none] [close input_sources__file 49 14 none]
+G r c none [parsedags test 61 11 none] [get_elements_by_tag_name dom__core__documents 117 13 none]
+G r c none [parsedags test 61 11 none] [length dom__core__nodes 183 13 none]
+G r c none [parsedags test 61 11 none] [item dom__core__nodes 178 13 none]
+G r c none [parsedags test 61 11 none] [node_name dom__core__nodes 34 13 none]
+G r c none [parsedags test 61 11 none] [first_child dom__core__nodes 58 13 none]
+G r c none [parsedags test 61 11 none] [node_type dom__core__nodes 45 13 none]
+G r c none [parsedags test 61 11 none] [node_value dom__core__nodes 41 13 none]
+G r c none [parsedags test 61 11 none] [next_sibling dom__core__nodes 74 13 none]
+G r c none [parsedags test 61 11 none] [free dom__core__nodes 326 14 none]
+G r s file_input [parsetpcs test 64 11 none] [file_inputIP input_sources__file 67 9 none]
+G r s tree_reader [parsetpcs test 64 11 none] [tree_readerIP dom__readers 97 9 none]
+G r l tree_reader [parsetpcs test 64 11 none] [tree_readerDI dom__readers 97 9 none]
+G r k tree_reader [parsetpcs test 64 11 none] [tree_readerDF dom__readers 97 9 none]
+G r s node_list [parsetpcs test 64 11 none] [node_listIP dom__core 217 9 none]
+G r c none [parsetpcs test 64 11 none] [set_public_id input_sources 110 14 none]
+G r c none [parsetpcs test 64 11 none] [open input_sources__file 33 14 none]
+G r c none [parsetpcs test 64 11 none] [set_feature sax__readers 82 14 none]
+G r c none [parsetpcs test 64 11 none] [parse sax__readers 54 14 none]
+G r c none [parsetpcs test 64 11 none] [close input_sources__file 49 14 none]
+G r c none [parsetpcs test 64 11 none] [get_tree dom__readers 42 13 none]
+G r c none [parsetpcs test 64 11 none] [get_elements_by_tag_name dom__core__documents 117 13 none]
+G r c none [parsetpcs test 64 11 none] [length dom__core__nodes 183 13 none]
+G r c none [parsetpcs test 64 11 none] [item dom__core__nodes 178 13 none]
+G r c none [parsetpcs test 64 11 none] [first_child dom__core__nodes 58 13 none]
+G r c none [parsetpcs test 64 11 none] [node_value dom__core__nodes 41 13 none]
+G r c none [parsetpcs test 64 11 none] [node_name dom__core__nodes 34 13 none]
+G r c none [parsetpcs test 64 11 none] [node_type dom__core__nodes 45 13 none]
+G r c none [parsetpcs test 64 11 none] [next_sibling dom__core__nodes 74 13 none]
+G r s file_input [parsestreamtpcmap test 67 11 none] [file_inputIP input_sources__file 67 9 none]
+G r s tree_reader [parsestreamtpcmap test 67 11 none] [tree_readerIP dom__readers 97 9 none]
+G r l tree_reader [parsestreamtpcmap test 67 11 none] [tree_readerDI dom__readers 97 9 none]
+G r k tree_reader [parsestreamtpcmap test 67 11 none] [tree_readerDF dom__readers 97 9 none]
+G r s node_list [parsestreamtpcmap test 67 11 none] [node_listIP dom__core 217 9 none]
+G r c none [parsestreamtpcmap test 67 11 none] [set_public_id input_sources 110 14 none]
+G r c none [parsestreamtpcmap test 67 11 none] [open input_sources__file 33 14 none]
+G r c none [parsestreamtpcmap test 67 11 none] [set_feature sax__readers 82 14 none]
+G r c none [parsestreamtpcmap test 67 11 none] [parse sax__readers 54 14 none]
+G r c none [parsestreamtpcmap test 67 11 none] [close input_sources__file 49 14 none]
+G r c none [parsestreamtpcmap test 67 11 none] [get_tree dom__readers 42 13 none]
+G r c none [parsestreamtpcmap test 67 11 none] [get_elements_by_tag_name dom__core__documents 117 13 none]
+G r c none [parsestreamtpcmap test 67 11 none] [length dom__core__nodes 183 13 none]
+G r c none [parsestreamtpcmap test 67 11 none] [item dom__core__nodes 178 13 none]
+G r c none [parsestreamtpcmap test 67 11 none] [node_name dom__core__nodes 34 13 none]
+G r c none [parsestreamtpcmap test 67 11 none] [first_child dom__core__nodes 58 13 none]
+G r c none [parsestreamtpcmap test 67 11 none] [next_sibling dom__core__nodes 74 13 none]
+G r c none [parsestreamtpcmap test 67 11 none] [node_value dom__core__nodes 41 13 none]
+G r c none [parsestreamtpcmap test 67 11 none] [node_type dom__core__nodes 45 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 64|9r6 9r30
+X 10 a-textio.ads
+58K13*Text_IO 725e16 64|9w10 9r34
+506U14*Put_Line 65|34s9 35s9 36s9 37s9 38s9 42s9 43s9 47s9 83s13 85s13 92s13
+. 98s13 106s21 127s13 160s9 162s9 168s9 170s9 174s9 180s21 202s9 242s13 255s21
+. 259s25 262s25 265s25 268s21 279s37 330s37 331s37 332s37 333s37 349s13
+X 13 dom.ads
+37K9*DOM 39e8 64|4r6 4r30 5r6 5r30 6r6 6r30 7r6 7r30 8r6 8r30
+X 14 dom-core.ads
+38K13*Core 382e13 64|5w10 5r34 6r10 6r34 7r10 7r34 8r10 8r34
+48A12*DOM_String{70|41A12}<integer>
+63n7*Element_Node{62E9} 65|104r40 178r40 253r40
+79P9*Node(78R9) 65|57r29 58r21 64r22 66r26 138r28 139r24 140r26 219r20 220r20
+. 272r49 273r49
+90P12*Document{79P9} 65|7r18 54r15 134r15 217r15
+95R9*Node_List 221e14 65|56r25 136r21 137r21 218r20
+X 15 dom-core-attrs.ads
+26K18*Attrs 53e19 64|8w15 8r39
+X 16 dom-core-documents.ads
+24K18*Documents 168e23 64|6w15 6r39
+117V13*Get_Elements_By_Tag_Name{14|95R9} 65|80s26 157s18 165s18 237s17
+X 17 dom-core-nodes.ads
+28K18*Nodes 332e19 64|7w15 7r39
+34V13*Node_Name{14|48A12} 65|92s40 94s19 105s20 113s28 115s31 168s36 179s20
+. 187s28 189s31 242s41 255s55 258s24 261s27 264s27 267s27 278s36 290s44 295s47
+. 301s47 308s47 314s47 320s47
+41V13*Node_Value{14|48A12} 65|97s36 114s55 116s67 159s36 188s55 190s67 259s55
+. 260s51 262s54 263s61 265s48 266s55 293s62 299s62 305s65 312s67 318s67 324s67
+45V13*Node_Type{14|62E9} 65|104s16 178s16 253s20
+58V13*First_Child{14|79P9} 65|93s27 97s47 101s26 111s39 114s67 116s79 159s47
+. 176s22 185s39 188s67 190s79 244s22 259s67 260s63 262s66 263s73 265s60 266s67
+. 272s60 288s58 294s52 300s52 306s52 313s52 319s52 325s52
+74V13*Next_Sibling{14|79P9} 65|95s31 118s43 124s26 192s43 198s26 328s44 339s49
+. 346s26
+178V13*Item{14|79P9} 65|91s34 159s59 167s25 241s18
+183V13*Length{natural} 65|82s12 83s47 88s42 90s27 158s8 166s8 238s36 240s27
+326U14*Free 65|341s29 342s29
+X 18 dom-readers.ads
+33K13*Readers 105e16 64|4w10 4r34
+35R9*Tree_Reader<31|42R9> 103e14 65|6r18 55r18 135r18 216r20
+42V13*Get_Tree{14|90P12} 65|18s16 78s16 155s16 217s27 234s16
+50U14*Free 65|20s9
+X 19 input_sources.ads
+41K9*Input_Sources 134e18 64|2r6 2r30
+110U14*Set_Public_Id 65|9s9 69s9 146s9 225s17
+X 20 input_sources-file.ads
+27K23*File 72e23 64|2w20 2r44
+29R9*File_Input<19|43R9> 71e17 65|5r18 53r17 133r17 215r19
+33U14*Open 65|10s9 70s9 147s9 226s9
+49U14*Close<19|121p14> 65|16s9 76s9 153s9 232s9
+X 23 sax.ads
+33K9*Sax 35e8 64|3r6 3r30
+X 31 sax-readers.ads
+40K13*Readers 1176e16 64|3w10 3r34
+54U14*Parse 65|15s9 75s9 152s9 231s9
+82U14*Set_Feature 65|12s9 13s9 72s9 73s9 149s9 150s9 228s9 229s9
+106a4*Namespace_Feature{string} 65|13r30 73r30 150r30 229r30
+138a4*Validation_Feature{string} 65|12r30 72r30 149r30 228r30
+X 34 system.ads
+67M9*Address
+X 42 s-memory.ads
+53V13*Alloc{34|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{34|67M9} 105i<c,__gnat_realloc>22
+X 50 s-stalib.adb
+89U14 Break_Start 90i<c,__gnat_break_start>22
+X 64 test.ads
+11K9*test 70l5 70e9 65|2b14 362l5 362t9
+12R10*Kernel 19e15 21r35 65|283r44
+13i9*id{integer} 65|37r51 284m44 292m54 332r85
+14i9*block_count{integer} 65|284m61 298m54
+15i9*block_size{integer} 65|285m44 304m56
+16i9*period{integer} 65|38r51 285m61 311m58 333r89
+17i9*capacity{integer} 65|286m44 317m58
+18i9*deadline{integer} 65|286m61 323m58
+21P10*Kernel_ptr(12R10) 22r54 65|223r20
+22A10*Kernel_Array(21P10)<integer> 23r32 65|270r32
+23P10*Kernel_List(22A10) 29r24
+25R10*DAG 30e15 32r32 65|247r28
+26i9*id{integer} 65|34r39 248m28 260m31
+27i9*kernel_count{integer} 65|35r39 248m42 263m31 268r74 270r57
+28i9*stream{integer} 65|36r39 248m61 266m31
+29p9*kernels{23P10} 65|37r39 38r39 249m28 269m31 330r91 335r43
+32P10*DAG_ptr(25R10) 33r50 65|222r20
+33A10*DAGArray(32P10)<integer> 34r28 65|238r21
+34P10*DAGList(33A10) 52r21 65|221r20
+39R10*TPC 43e15 44r32 65|108r28 182r28
+40i9*id{integer} 65|42r39 47r53 109m28 114m35 183m28 188m35
+41i9*max_block_size{integer} 65|43r39 109m37 116m35 127r69 183m37 190m35
+44P10*TPC_ptr(39R10) 46r50 65|62r17 142r20
+46A10*TPCArray(44P10)<integer> 47r32 65|100r31 173r21
+47P10*TPCList(46A10) 48r54 54r21 65|61r22 141r20
+48A10*StreamTPCMap(47P10)<integer> 49r41 65|88r24
+49P10*StreamTPCMap_ptr(48A10) 55r26 65|59r19
+51R10*System 56e15 57r35 65|28r16
+52p9*dags{34P10} 65|29m16 34r30 35r30 36r30 37r30 38r30 352m20
+53i9*tpc_count{integer} 65|29m40
+54p9*tpcs{47P10} 65|29m56 42r30 43r30 201m20
+55p9*stream_tpc_map{49P10} 65|30m16 47r30
+57P10*System_ptr(51R10) 62r29 65r29 68r29 65|24r22 52r54 132r46 214r46
+59U11*DomExample 65|4b15 21l9 21t19
+60U11*DomExample2 65|23b15 49l9 49t20
+61U11*ParseDAGs 62=9 65|32s9 214b15 360l9 360t18
+62p9 the_system{57P10} 65|214b26 352r9
+64U11*ParseTPCs 65=9 65|40s9 132b15 211l9 211t18
+65p9 the_system{57P10} 65|132b26 201r9
+67U11*ParseStreamTPCMap 68=9 65|45s9 52b15 130l9 130t26
+68p9 the_system{57P10} 65|52b34
+X 65 test.adb
+5r9 Input{20|29R9} 9m24 9r24 10m26 15m24 15r24 16m16 16r16
+6r9 Reader{18|35R9} 12m22 12r22 13m22 13r22 15m16 15r16 18r26 20m15 20r15
+7p9 Doc{14|90P12} 18m9
+24p9 the_system{64|57P10} 27m9 32m20 32r20 34r19 35r19 36r19 37r19 38r19
+. 40m20 40r20 42r19 43r19 45m28 45r28 47r19
+53r9 input{20|29R9} 69m24 69r24 70m26 75m24 75r24 76m16 76r16
+54p9 doc{14|90P12} 78m9 80r51
+55r9 Reader{18|35R9} 72m22 72r22 73m22 73r22 75m16 75r16 78r26
+56r9 assigned_TPCs{14|95R9} 80m9 82r19 83r54 88r49 90r34 91r39
+57p9 assigned_TPC_node{14|79P9} 91m13 92r50 93r39
+58p9 tpc_child{14|79P9} 101m13 103r19 104r27 105r31 111r52 124m13 124r40
+59p9 map_ptr{64|49P10} 88m9 126r13 127r51
+60i9 tpc_index{integer} 102m13 106r64 120r33 121m21 121r34
+61p9 a_tpc_list{64|47P10} 100m13 120r21 126r31
+62p9 a_tpc{64|44P10} 107m21 114r29 116r29 120r47
+63i9 count{integer} 97m13 98r52 100r45
+64p9 count_node{14|79P9} 93m13 94r29 95m17 95r44 97r59 101r38
+65i9 tpc_count{integer}
+66p9 tpc_attr_child{14|79P9} 111m21 112r27 113r39 114r79 115r42 116r91 118m25
+. 118r57
+90i13 index{integer} 91r54 126r21 127r59
+133r9 input{20|29R9} 146m24 146r24 147m26 152m24 152r24 153m16 153r16
+134p9 doc{14|90P12} 155m9 157r43 165r43
+135r9 Reader{18|35R9} 149m22 149r22 150m22 150r22 152m16 152r16 155r26
+136r9 test_xml1{14|95R9} 157m5 158r15 159r64
+137r9 test_xml2{14|95R9} 165m5 166r15 167r30
+138p9 xml_tpc_List{14|79P9} 167m9 168r46 176r35
+139p9 tpc_child{14|79P9} 176m9 177r15 178r27 179r31 185r52 198m13 198r40
+140p9 tpc_attr_child{14|79P9} 185m21 186r27 187r39 188r79 189r42 190r91 192m25
+. 192r57
+141p9 TPCs{64|47P10} 173m9 174r49 194r21 201r28
+142p9 a_tpc{64|44P10} 181m21 188r29 190r29 194r41
+143i9 tpc_count{integer} 159m9 160r48 173r36
+144i9 tpc_index{integer} 180r64 194r27 195m21 195r34
+215r9 input{20|29R9} 225m32 225r32 226m26 231m24 231r24 232m16 232r16
+216r9 reader{18|35R9} 217r37 228m22 228r22 229m22 229r22 231m16 231r16 234r26
+217p9 doc{14|90P12} 234m9 237r43
+218r9 List{14|95R9} 237m9 238r44 240r35 241r24
+219p9 N{14|79P9} 241m13 242r52 244r35
+220p9 Child{14|79P9} 244m13 251r19 253r31 255r66 258r35 259r79 260r75 261r38
+. 262r78 263r85 264r38 265r72 266r79 267r38 272r73 346m17 346r40
+221p9 DAGs{64|34P10} 238m9 348r13 352r28
+222p9 a_dag{64|32P10} 246m17 260r25 263r25 266r25 268r68 269r25 270r51 330r85
+. 335r37 348r29
+223p9 a_kernel{64|21P10} 282m37 292r45 298r45 304r47 311r49 317r49 323r49
+. 332r76 333r80 336r40
+240i13 Index{integer} 241r30 348r19
+272p29 Kernel_Child{14|79P9} 276r35 278r47 288r71 339m33 339r63 341m35 341r35
+273p29 Kernel_attr_child{14|79P9} 288m37 289r43 290r55 294r64 295r58 300r64
+. 301r58 306r64 308r58 313r64 314r58 319r64 320r58 325r64 327m41 328r58 342m35
+. 342r35
+274i29 kernel_index{integer} 281r55 331r79 335r52 337m37 337r53
+X 70 unicode-ces.ads
+41A12*Byte_Sequence{string}<integer>
+

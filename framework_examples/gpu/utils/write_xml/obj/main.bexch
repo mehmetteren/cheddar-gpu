@@ -1,0 +1,37 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/media/sf_shared/trunk/src/framework_examples/gpu/utils/write_xml/test.gpr
+20240511225520 31fbaf48be16f0a50c1bb1cd06ba2bec
+/opt/GNAT/2021/share/gpr/xmlada_schema.gpr
+20210520102602 0d08a5679ddc815bc50b8ae749ab7c75
+/opt/GNAT/2021/share/gpr/xmlada_dom.gpr
+20210520102602 f9e6928b869a7f81decefe2ab9dd7f70
+/opt/GNAT/2021/share/gpr/xmlada_input.gpr
+20210520102602 27babdf24e6a2bd59792229b22daeba9
+/opt/GNAT/2021/share/gpr/xmlada_sax.gpr
+20210520102602 f17fc0c5cd7257ee005df17448ae23d5
+/opt/GNAT/2021/share/gpr/xmlada_unicode.gpr
+20210520102602 d4051bcf4ea00b4eb77e3e16876af2c9
+/opt/GNAT/2021/share/gpr/xmlada.gpr
+20210519052321 3ce12ea39fda433c543b6f64777ccaea
+[BOUND OBJECT FILES]
+/media/sf_shared/trunk/src/framework_examples/gpu/utils/write_xml/obj/test.o
+/media/sf_shared/trunk/src/framework_examples/gpu/utils/write_xml/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/media/sf_shared/trunk/src/framework_examples/gpu/utils/write_xml/obj/
+-L/media/sf_shared/trunk/src/framework_examples/gpu/utils/write_xml/obj/
+-L/opt/GNAT/2021/lib/xmlada/xmlada_unicode.static/
+-L/opt/GNAT/2021/lib/xmlada/xmlada_sax.static/
+-L/opt/GNAT/2021/lib/xmlada/xmlada_input.static/
+-L/opt/GNAT/2021/lib/xmlada/xmlada_dom.static/
+-L/opt/GNAT/2021/lib/xmlada/xmlada_schema.static/
+-L/opt/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/
+-static
+-static-libgcc
+/opt/GNAT/2021/lib/gcc/x86_64-pc-linux-gnu/10.3.1/adalib/libgnat.a
+-ldl
