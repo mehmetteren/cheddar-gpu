@@ -1,8 +1,6 @@
 with gpu_generator; use gpu_generator;
 with static_transformer; use static_transformer;
 
--- with transformator;
-
 procedure static_transform is
     DAGs : DAGList := new DAGArray'
        (1 =>

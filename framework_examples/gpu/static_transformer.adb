@@ -218,9 +218,9 @@ package body static_transformer is
                                        (cur_tpc.id) &
                                     "-" & core_name_prefix & cpu_index'Img)),
                             Task_Type => Periodic_Type, Start_Time => 0,
-                            Capacity           => 3, -- cur_kernel.capacity,
-                            Period             => 10, -- cur_kernel.period,
-                            Deadline => 10, --cur_kernel.deadline,
+                            Capacity           => cur_kernel.capacity,
+                            Period             => cur_kernel.period,
+                            Deadline => cur_kernel.deadline,
                             Priority           => cur_dag.stream,
                             -- User_Defined_Parameters_Table, ???????
                             Jitter             => 0,
@@ -298,13 +298,14 @@ package body static_transformer is
         end loop;
 
         Put_Line ("------------------------");
+        Put_Line("Hyperperiod: " & Integer'Image (compute_hyperperiod(transformed_system.Tasks)));
         Put_Line ("Write system to xml file");
         Write_To_Xml_File
            (a_system => transformed_system,
             File_Name          =>
                Suppress_Space
                   (To_Unbounded_String
-                      ("framework_examples/gpu/inputs/analysis_model.xmlv3")));
+                      ("framework_examples/gpu/inputs/analysis_model_" & DAGs(1).kernels(1).block_count'Img & ".xmlv3")));
         Put_Line ("Finish write");
         Put_Line ("System Transformed for Cheddar Simulation");
         Put_Line ("------------------------");

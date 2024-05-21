@@ -1,0 +1,201 @@
+Number of arguments:  2
+Period: 500
+System: framework_examples/gpu/inputs/analysis_model_2.xmlv3
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+Simulation Complete.
+Nb Response: 12
+
+
+Scheduling simulation, Processor TPC_1-SM_1 : 
+
+- Number of context switches :  24
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block1 => 20/worst 
+    DAG1-Kernel2-Block1 => 127/worst ,  missed its deadline (absolute deadline =  135 ; completion time =  142),  missed its deadline (absolute deadline =  180 ; completion time =  202),  missed its deadline (absolute deadline =  225 ; completion time =  262),  missed its deadline (absolute deadline =  270 ; completion time =  322),  missed its deadline (absolute deadline =  315 ; completion time =  382),  missed its deadline (absolute deadline =  360 ; completion time =  442)
+    DAG1-Kernel3-Block1 => 139/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  94),  missed its deadline (absolute deadline =  135 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  214),  missed its deadline (absolute deadline =  225 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  334),  missed its deadline (absolute deadline =  315 ; completion time =  394),  missed its deadline (absolute deadline =  360 ; completion time =  454)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  24
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block2 => 20/worst 
+    DAG1-Kernel2-Block2 => 127/worst ,  missed its deadline (absolute deadline =  135 ; completion time =  142),  missed its deadline (absolute deadline =  180 ; completion time =  202),  missed its deadline (absolute deadline =  225 ; completion time =  262),  missed its deadline (absolute deadline =  270 ; completion time =  322),  missed its deadline (absolute deadline =  315 ; completion time =  382),  missed its deadline (absolute deadline =  360 ; completion time =  442)
+    DAG1-Kernel3-Block2 => 139/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  94),  missed its deadline (absolute deadline =  135 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  214),  missed its deadline (absolute deadline =  225 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  334),  missed its deadline (absolute deadline =  315 ; completion time =  394),  missed its deadline (absolute deadline =  360 ; completion time =  454)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Define a task before
+- Define a task before
+
+
+
+- Define a task before
+- Define a task before
+
+
+
+- Define a task before
+- Define a task before
+
+
+
+- Define a task before
+- Define a task before
+
+
+
+- Define a task before
+- Define a task before
+
+
+
+- Define a task before
+- Define a task before
+
+
+
+- Number of context switches :  18
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block1 => 10/worst 
+    DAG2-Kernel2-Block1 => 19/worst 
+    DAG2-Kernel3-Block1 => 27/worst 
+    DAG2-Kernel4-Block1 => 27/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  18
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block2 => 10/worst 
+    DAG2-Kernel2-Block2 => 19/worst 
+    DAG2-Kernel3-Block2 => 27/worst 
+    DAG2-Kernel4-Block2 => 27/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Define a task before
+- Define a task before
+
+
+
+- Define a task before
+- Define a task before
+
+
+

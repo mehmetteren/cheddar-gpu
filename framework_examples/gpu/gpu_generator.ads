@@ -90,9 +90,22 @@ package gpu_generator is
     type TPCList is array (Integer range <>) of TPC_ptr;
     type TPCList_ptr is access all TPCList;
     type StreamTPCMap is array (Integer range <>) of TPCList_ptr;
+    type StreamTPCMap_ptr is access all StreamTPCMap;
 
-    -- function Generate_Tasks (DAGs : DAG_Array; Stream_To_TPC : String_List) return Task_List;
+    type gpu_system is record
+        DAGs : DAGList;
+        TPCs : TPCList_ptr;
+        Stream_To_TPC : StreamTPCMap_ptr;
+        TPC_count : Integer;
+    end record;
 
+    type gpu_system_ptr is access all gpu_system;
+    type IntegerArray is array (Integer range <>) of Integer;
+
+    procedure iterate_over_system
+       (DAGs : in out DAGList; stream_to_TPC : in out StreamTPCMap;
+        TPCs : in out TPCList; TPC_count : in Integer; block_per_kernel : in Integer);
+    
     procedure gpu_generator
        (DAGs :   in out     DAGList; Stream_To_TPC : in out StreamTPCMap;
         TPCs : in out TPCList; TPC_count : Integer);

@@ -58,6 +58,30 @@ with scheduling_simulation_test_hlfet; use scheduling_simulation_test_hlfet;
 
 package body gpu_generator is
 
+    procedure iterate_over_system
+       (DAGs : in out DAGList; stream_to_TPC : in out StreamTPCMap;
+        TPCs : in out TPCList; TPC_count : in Integer;
+        block_per_kernel : in Integer)
+    is
+        cur_dag   : DAG;
+        cur_kernel : Kernel;
+    begin
+
+        for i in 1 .. DAGs'Length loop
+            cur_dag := DAGs (i);
+
+            for j in 1 .. cur_dag.kernel_count loop
+                cur_dag.kernels (j).block_count := block_per_kernel;
+
+                put_line
+                   ("DAG " & cur_dag.id'Img & " Kernel " & cur_kernel.id'Img &
+                    " Period: " & cur_kernel.period'Img & " Capacity: " &
+                    cur_kernel.capacity'Img & " Deadline: " & cur_kernel.deadline'Img);
+            end loop;
+        end loop;
+
+    end iterate_over_system;
+
     procedure generate_kernel_specs_uunifast
        (DAGs : in out DAGList;
        total_kernel_count : in Integer; 
@@ -87,7 +111,7 @@ package body gpu_generator is
 
     begin
 
-        a_factor := 1;--N_Tasks;
+        a_factor := 2;--N_Tasks;
         Reset (g);
 
         put_line ("Total kernel count: " & total_kernel_count'Img);
@@ -101,15 +125,15 @@ package body gpu_generator is
         for i in 1 .. DAGs'Length loop
             cur_dag := DAGs (i);
             for kernel_index in 1 .. cur_dag.kernel_count loop
-                a_period := 10;
-                --     Natural
-                --        (t_values (kernel_counter) *
-                --         a_factor); -- A_factor inflates the periods to avoid too much execution times
-                --  -- equal to zero due to integer rounding
+                a_period := 
+                   Natural
+                      (t_values (kernel_counter) *
+                       a_factor); -- A_factor inflates the periods to avoid too much execution times
+                -- equal to zero due to integer rounding
 
-                a_capacity := 3;
-                --     Integer
-                --        (Float'Rounding (Float (a_period) * u_values (kernel_counter - 1)));
+                a_capacity := 
+                   Integer
+                      (Float'Rounding (Float (a_period) * u_values (kernel_counter - 1)));
                 if a_capacity = 0 then
                     a_capacity := 1;
                 end if;
@@ -121,12 +145,12 @@ package body gpu_generator is
                     a_random_deadline := d_min + Random (g) * (d_max - d_min);
                 end loop;
 
-                a_deadline := 10;
-                --     Integer
-                --        (Float'Rounding
-                --            (Float (a_period - a_capacity) *
-                --             a_random_deadline)) +
-                --     a_capacity;
+                a_deadline := 
+                   Integer
+                      (Float'Rounding
+                          (Float (a_period - a_capacity) *
+                           a_random_deadline)) +
+                   a_capacity;
 
                 omin := 0.0;
                 omax := Float (a_period);
@@ -137,9 +161,11 @@ package body gpu_generator is
                    current_cpu_utilization +
                    Float (a_capacity) / Float (a_period);
 
+                put_line("Current CPU utilization: " & current_cpu_utilization'Img);
+
                 cur_dag.kernels (kernel_index).period   := a_period;
                 cur_dag.kernels (kernel_index).capacity := a_capacity;
-                cur_dag.kernels (kernel_index).deadline := a_deadline;
+                cur_dag.kernels (kernel_index).deadline := a_period;
 
                 put_line("DAG " & cur_dag.id'Img & 
                 " Kernel " & cur_dag.kernels (kernel_index).id'Img & 
