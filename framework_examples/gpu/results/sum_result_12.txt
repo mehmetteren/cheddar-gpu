@@ -1,0 +1,685 @@
+Number of arguments:  3
+Period: 500
+System: framework_examples/gpu/inputs/analysis_model_12.xmlv3
+Extra: 12
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+Simulation Complete.
+Nb Response: 12
+
+
+Scheduling simulation, Processor TPC_1-SM_1 : 
+
+- Number of context switches :  53
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block1 => 20/worst 
+    DAG1-Kernel1-Block8 => 18/worst 
+    DAG1-Kernel2-Block1 => 16/worst 
+    DAG1-Kernel2-Block8 => 15/worst 
+    DAG1-Kernel3-Block1 => 38/worst 
+    DAG1-Kernel3-Block8 => 44/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  53
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block2 => 20/worst 
+    DAG1-Kernel1-Block9 => 18/worst 
+    DAG1-Kernel2-Block2 => 16/worst 
+    DAG1-Kernel2-Block9 => 15/worst 
+    DAG1-Kernel3-Block2 => 38/worst 
+    DAG1-Kernel3-Block9 => 44/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  53
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block10 => 20/worst 
+    DAG1-Kernel1-Block3 => 18/worst 
+    DAG1-Kernel2-Block10 => 16/worst 
+    DAG1-Kernel2-Block3 => 15/worst 
+    DAG1-Kernel3-Block10 => 38/worst 
+    DAG1-Kernel3-Block3 => 44/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  53
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block11 => 20/worst 
+    DAG1-Kernel1-Block4 => 18/worst 
+    DAG1-Kernel2-Block11 => 16/worst 
+    DAG1-Kernel2-Block4 => 15/worst 
+    DAG1-Kernel3-Block11 => 38/worst 
+    DAG1-Kernel3-Block4 => 44/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  53
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block12 => 20/worst 
+    DAG1-Kernel1-Block5 => 18/worst 
+    DAG1-Kernel2-Block12 => 16/worst 
+    DAG1-Kernel2-Block5 => 15/worst 
+    DAG1-Kernel3-Block12 => 38/worst 
+    DAG1-Kernel3-Block5 => 44/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  21
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block6 => 3/worst 
+    DAG1-Kernel2-Block6 => 4/worst 
+    DAG1-Kernel3-Block6 => 22/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  21
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block7 => 3/worst 
+    DAG1-Kernel2-Block7 => 4/worst 
+    DAG1-Kernel3-Block7 => 22/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Define a task before
+- Define a task before
+
+
+
+- Number of context switches :  32
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block1 => 442/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  472),  missed its deadline (absolute deadline =  90 ; completion time =  493)
+    DAG2-Kernel1-Block10 => 441/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  471),  missed its deadline (absolute deadline =  90 ; completion time =  494)
+    DAG2-Kernel1-Block4 => 440/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  470),  missed its deadline (absolute deadline =  90 ; completion time =  495)
+    DAG2-Kernel1-Block7 => 439/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  469),  missed its deadline (absolute deadline =  90 ; completion time =  496)
+    DAG2-Kernel2-Block1 => 458/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  488),  missed its deadline (absolute deadline =  90 ; completion time =  500)
+    DAG2-Kernel2-Block10 => 454/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  484)
+    DAG2-Kernel2-Block4 => 450/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  480)
+    DAG2-Kernel2-Block7 => 446/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  476)
+    DAG2-Kernel3-Block1 => 462/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  492)
+    DAG2-Kernel3-Block10 => 461/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  491)
+    DAG2-Kernel3-Block4 => 460/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  490)
+    DAG2-Kernel3-Block7 => 459/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  489)
+    DAG2-Kernel4-Block1 => 135/worst 
+    DAG2-Kernel4-Block10 => 246/worst ,  missed its deadline (absolute deadline =  210 ; completion time =  246)
+    DAG2-Kernel4-Block4 => 357/worst ,  missed its deadline (absolute deadline =  210 ; completion time =  357)
+    DAG2-Kernel4-Block7 => 468/worst ,  missed its deadline (absolute deadline =  210 ; completion time =  468)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  32
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block11 => 442/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  472),  missed its deadline (absolute deadline =  90 ; completion time =  493)
+    DAG2-Kernel1-Block2 => 441/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  471),  missed its deadline (absolute deadline =  90 ; completion time =  494)
+    DAG2-Kernel1-Block5 => 440/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  470),  missed its deadline (absolute deadline =  90 ; completion time =  495)
+    DAG2-Kernel1-Block8 => 439/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  469),  missed its deadline (absolute deadline =  90 ; completion time =  496)
+    DAG2-Kernel2-Block11 => 458/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  488),  missed its deadline (absolute deadline =  90 ; completion time =  500)
+    DAG2-Kernel2-Block2 => 454/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  484)
+    DAG2-Kernel2-Block5 => 450/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  480)
+    DAG2-Kernel2-Block8 => 446/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  476)
+    DAG2-Kernel3-Block11 => 462/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  492)
+    DAG2-Kernel3-Block2 => 461/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  491)
+    DAG2-Kernel3-Block5 => 460/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  490)
+    DAG2-Kernel3-Block8 => 459/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  489)
+    DAG2-Kernel4-Block11 => 135/worst 
+    DAG2-Kernel4-Block2 => 246/worst ,  missed its deadline (absolute deadline =  210 ; completion time =  246)
+    DAG2-Kernel4-Block5 => 357/worst ,  missed its deadline (absolute deadline =  210 ; completion time =  357)
+    DAG2-Kernel4-Block8 => 468/worst ,  missed its deadline (absolute deadline =  210 ; completion time =  468)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  32
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block12 => 442/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  472),  missed its deadline (absolute deadline =  90 ; completion time =  493)
+    DAG2-Kernel1-Block3 => 441/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  471),  missed its deadline (absolute deadline =  90 ; completion time =  494)
+    DAG2-Kernel1-Block6 => 440/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  470),  missed its deadline (absolute deadline =  90 ; completion time =  495)
+    DAG2-Kernel1-Block9 => 439/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  469),  missed its deadline (absolute deadline =  90 ; completion time =  496)
+    DAG2-Kernel2-Block12 => 458/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  488),  missed its deadline (absolute deadline =  90 ; completion time =  500)
+    DAG2-Kernel2-Block3 => 454/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  484)
+    DAG2-Kernel2-Block6 => 450/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  480)
+    DAG2-Kernel2-Block9 => 446/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  476)
+    DAG2-Kernel3-Block12 => 462/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  492)
+    DAG2-Kernel3-Block3 => 461/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  491)
+    DAG2-Kernel3-Block6 => 460/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  490)
+    DAG2-Kernel3-Block9 => 459/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  489)
+    DAG2-Kernel4-Block12 => 135/worst 
+    DAG2-Kernel4-Block3 => 246/worst ,  missed its deadline (absolute deadline =  210 ; completion time =  246)
+    DAG2-Kernel4-Block6 => 357/worst ,  missed its deadline (absolute deadline =  210 ; completion time =  357)
+    DAG2-Kernel4-Block9 => 468/worst ,  missed its deadline (absolute deadline =  210 ; completion time =  468)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Define a task before
+- Define a task before
+
+
+

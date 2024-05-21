@@ -52,7 +52,7 @@ procedure generate is
 
     current_cpu_utilization : Float := 0.0;
     total_kernel_count : Integer := 0;
-    block_counts : IntegerArray := (1 => 1, 2 => 2, 3 => 3, 4 => 8);
+    block_counts : IntegerArray := (1 => 1, 2 => 2, 3 => 3, 4 => 5, 5 => 7, 6 => 8, 7 => 10, 8 => 12, 9 => 16);
     filename : Unbounded_string;
 begin
 
@@ -61,13 +61,13 @@ begin
    end loop;
       gpu_generator.generate_kernel_specs_uunifast
       (DAGs => DAGss, total_kernel_count => total_kernel_count, target_cpu_utilization => 0.9,
-      n_different_periods => 5, current_cpu_utilization => current_cpu_utilization);
+      n_different_periods => 3, current_cpu_utilization => current_cpu_utilization);
 
       for i in block_counts'Range loop
          Put_Line ("Block count: " & Integer'Image (block_counts (i)));
          gpu_generator.iterate_over_system (DAGss, stream_to_TPC, TPCss, TPC_count, block_counts (i));
          filename := Suppress_space("framework_examples/gpu/inputs/gpu_system_" & block_counts (i)'Img & ".xml");
-         -- write_xml.write_to_xml_file (DAGss, TPCss, stream_to_TPC, TPC_count, filename);
+         write_xml.write_to_xml_file (DAGss, TPCss, stream_to_TPC, TPC_count, filename);
          static_transformer.static_transformer (DAGss, stream_to_TPC, TPCss, TPC_count);
       end loop;
 

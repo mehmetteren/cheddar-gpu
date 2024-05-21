@@ -205,6 +205,7 @@ procedure run_simulation is
 
     period : Integer;
     system_file_name : unbounded_string;
+    extra : integer;
     the_system : System;
     dir1         			 	 : unbounded_string_list;	
 
@@ -213,8 +214,10 @@ begin
 
     Put_Line ("Period: " & Argument (1));
     Put_Line ("System: " & Argument (2));
+    Put_Line ("Extra: " & Argument (3));
     period := Integer'Value (Argument (1));
     system_file_name := To_Unbounded_String (Argument (2));
+    extra := Integer'Value (Argument (3));
 
     set_initialize;
     initialize (the_system);
@@ -225,6 +228,6 @@ begin
 
     compute_scheduling_of_tasks(period, the_system, Suppress_Space
                   (To_Unbounded_String
-                      ("framework_examples/gpu/results/total_result.xml")), true);
+                      ("framework_examples/gpu/results/total_result_" & Integer'Image(extra) & ".xml")), true);
 
 end run_simulation;
