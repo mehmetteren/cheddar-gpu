@@ -163,9 +163,9 @@ package body gpu_generator is
 
                 put_line("Current CPU utilization: " & current_cpu_utilization'Img);
 
-                cur_dag.kernels (kernel_index).period   := a_period;
-                cur_dag.kernels (kernel_index).capacity := a_capacity;
-                cur_dag.kernels (kernel_index).deadline := a_period;
+                cur_dag.kernels (kernel_index).period   := cur_dag.id * 20;
+                cur_dag.kernels (kernel_index).capacity := 4;
+                cur_dag.kernels (kernel_index).deadline := cur_dag.id * 20;
 
                 put_line("DAG " & cur_dag.id'Img & 
                 " Kernel " & cur_dag.kernels (kernel_index).id'Img & 

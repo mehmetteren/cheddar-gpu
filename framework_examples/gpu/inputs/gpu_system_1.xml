@@ -10,25 +10,25 @@
      <id>1</id>
      <block_count>1</block_count>
      <block_size>1</block_size>
-     <period>30</period>
-     <capacity>2</capacity>
-     <deadline>30</deadline>
+     <period>20</period>
+     <capacity>4</capacity>
+     <deadline>20</deadline>
     </kernel>
     <kernel>
      <id>2</id>
      <block_count>1</block_count>
      <block_size>1</block_size>
-     <period>30</period>
-     <capacity>1</capacity>
-     <deadline>30</deadline>
+     <period>20</period>
+     <capacity>4</capacity>
+     <deadline>20</deadline>
     </kernel>
     <kernel>
      <id>3</id>
      <block_count>1</block_count>
      <block_size>1</block_size>
-     <period>462</period>
-     <capacity>19</capacity>
-     <deadline>462</deadline>
+     <period>20</period>
+     <capacity>4</capacity>
+     <deadline>20</deadline>
     </kernel>
    </kernels>
   </DAG>
@@ -41,33 +41,33 @@
      <id>1</id>
      <block_count>1</block_count>
      <block_size>1</block_size>
-     <period>30</period>
-     <capacity>1</capacity>
-     <deadline>30</deadline>
+     <period>40</period>
+     <capacity>4</capacity>
+     <deadline>40</deadline>
     </kernel>
     <kernel>
      <id>2</id>
      <block_count>1</block_count>
      <block_size>1</block_size>
-     <period>30</period>
+     <period>40</period>
      <capacity>4</capacity>
-     <deadline>30</deadline>
+     <deadline>40</deadline>
     </kernel>
     <kernel>
      <id>3</id>
      <block_count>1</block_count>
      <block_size>1</block_size>
-     <period>30</period>
-     <capacity>1</capacity>
-     <deadline>30</deadline>
+     <period>40</period>
+     <capacity>4</capacity>
+     <deadline>40</deadline>
     </kernel>
     <kernel>
      <id>4</id>
      <block_count>1</block_count>
      <block_size>1</block_size>
-     <period>210</period>
-     <capacity>111</capacity>
-     <deadline>210</deadline>
+     <period>40</period>
+     <capacity>4</capacity>
+     <deadline>40</deadline>
     </kernel>
    </kernels>
   </DAG>

@@ -58,9 +58,7 @@ package gpu_generator is
         id          : Integer;
         block_count : Integer;
         block_size  : Integer := 1;
-        period      : Integer := 1;
         capacity    : Integer := 1;
-        deadline    : Integer := 1;
     end record;
 
     type Kernel_Array is array (Integer range <>) of Kernel;
@@ -70,6 +68,8 @@ package gpu_generator is
         id           : Integer;
         kernel_count : Integer;
         stream       : Integer;
+        period      : Integer := 1;
+        deadline    : Integer := 1;
         kernels      : Kernel_List;
     end record;
 

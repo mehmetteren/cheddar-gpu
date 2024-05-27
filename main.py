@@ -7,7 +7,7 @@ def get_integer_list():
 
 def run_simulation(integer_list):
     for i in integer_list:
-        cmd = f"./gpu_run_simulation 500 framework_examples/gpu/inputs/analysis_model_{i}.xmlv3 {i} > framework_examples/gpu/results/sum_result_{i}.txt"
+        cmd = f"./gpu_run_simulation 120 framework_examples/gpu/inputs/analysis_model_{i}.xmlv3 {i} > framework_examples/gpu/results/sum_result_{i}.txt"
         print(f"Running command: {cmd}")
         subprocess.run(cmd, shell=True, check=True)
 
