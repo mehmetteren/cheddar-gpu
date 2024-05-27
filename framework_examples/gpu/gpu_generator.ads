@@ -101,6 +101,7 @@ package gpu_generator is
 
     type gpu_system_ptr is access all gpu_system;
     type IntegerArray is array (Integer range <>) of Integer;
+    type IntegerArray_ptr is access all IntegerArray;
 
     procedure iterate_over_system
        (DAGs : in out DAGList; stream_to_TPC : in out StreamTPCMap;
@@ -110,7 +111,7 @@ package gpu_generator is
        (DAGs :   in out     DAGList; Stream_To_TPC : in out StreamTPCMap;
         TPCs : in out TPCList; TPC_count : Integer);
 
-    procedure generate_kernel_specs_uunifast
+    procedure generate_dag_specs_uunifast
        (DAGs : in out DAGList;
        total_kernel_count : in Integer; 
         target_cpu_utilization : in Float; 

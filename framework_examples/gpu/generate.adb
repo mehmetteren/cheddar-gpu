@@ -61,7 +61,7 @@ begin
    end loop;
       gpu_generator.generate_kernel_specs_uunifast
       (DAGs => DAGss, total_kernel_count => total_kernel_count, target_cpu_utilization => 0.9,
-      n_different_periods => 3, current_cpu_utilization => current_cpu_utilization);
+      n_different_periods => 2, current_cpu_utilization => current_cpu_utilization);
 
       for i in block_counts'Range loop
          Put_Line ("Block count: " & Integer'Image (block_counts (i)));

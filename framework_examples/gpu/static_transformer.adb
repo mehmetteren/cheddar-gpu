@@ -219,8 +219,8 @@ package body static_transformer is
                                     "-" & core_name_prefix & cpu_index'Img)),
                             Task_Type => Periodic_Type, Start_Time => 0,
                             Capacity           => cur_kernel.capacity,
-                            Period             => cur_kernel.period,
-                            Deadline => cur_kernel.deadline,
+                            Period             => cur_dag.period,
+                            Deadline => cur_dag.deadline,
                             Priority           => cur_dag.stream,
                             -- User_Defined_Parameters_Table, ???????
                             Jitter             => 0,

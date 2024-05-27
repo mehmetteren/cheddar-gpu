@@ -52,6 +52,7 @@ with initialize_framework; use initialize_framework;
 with Random_Tools;         use Random_Tools;
 with Ada.Numerics.Float_Random;
 with Ada.Numerics.Discrete_Random;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 
 with scheduling_simulation_test_hlfet; use scheduling_simulation_test_hlfet;
 
@@ -75,14 +76,14 @@ package body gpu_generator is
 
                 put_line
                    ("DAG " & cur_dag.id'Img & " Kernel " & cur_kernel.id'Img &
-                    " Period: " & cur_kernel.period'Img & " Capacity: " &
-                    cur_kernel.capacity'Img & " Deadline: " & cur_kernel.deadline'Img);
+                    " Period: " & cur_dag.period'Img & " Capacity: " &
+                    cur_kernel.capacity'Img & " Deadline: " & cur_dag.deadline'Img);
             end loop;
         end loop;
 
     end iterate_over_system;
 
-    procedure generate_kernel_specs_uunifast
+    procedure generate_dag_specs_uunifast
        (DAGs : in out DAGList;
        total_kernel_count : in Integer; 
         target_cpu_utilization : in Float; 
@@ -105,9 +106,42 @@ package body gpu_generator is
         omin, omax         : Float;
         g                  : Ada.Numerics.Float_Random.Generator;
         cur_dag                : DAG;
-        kernel_counter       : Integer := 1;
       u_values          : random_tools.float_array (0 .. total_kernel_count - 1);
       t_values          : random_tools.integer_array (1 .. total_kernel_count);
+      capacities : IntegerArray_ptr;
+
+function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return IntegerArray_ptr is
+      subtype Part_Range is Integer range 1 .. Num_Parts;
+
+      package Random_Generator is new Ada.Numerics.Discrete_Random(Part_Range);
+      use Random_Generator;
+
+      Gen    : Generator;
+      Parts  : IntegerArray(1 .. Num_Parts);
+      Sum    : Integer := 0;
+      Factor : Float;
+   begin
+      Reset(Gen);
+
+      for I in Part_Range loop
+         Parts(I) := Random(Gen);
+         Sum := Sum + Parts(I);
+      end loop;
+
+      Factor := Float(Target_Value) / Float(Sum);
+
+      Sum := 0; 
+      for I in Part_Range loop
+         Parts(I) := Integer(Float(Parts(I)) * Factor);
+         Sum := Sum + Parts(I);
+      end loop;
+
+      if Sum /= Target_Value then
+         Parts(Num_Parts) := Parts(Num_Parts) + (Target_Value - Sum);
+      end if;
+
+      return new IntegerArray'(Parts);
+   end Random_Partition;
 
     begin
 
@@ -115,47 +149,51 @@ package body gpu_generator is
         Reset (g);
 
         put_line ("Total kernel count: " & total_kernel_count'Img);
+        put_line("DAG count: " & DAGs'Length'Img);
 
-        u_values := gen_uunifast (total_kernel_count, target_cpu_utilization);
+        u_values := gen_uunifast (DAGs'Length, target_cpu_utilization);
 
         t_values :=
            generate_period_set_with_limited_hyperperiod
-              (total_kernel_count, n_different_periods);
+              (DAGs'Length, n_different_periods);
 
         for i in 1 .. DAGs'Length loop
             cur_dag := DAGs (i);
-            for kernel_index in 1 .. cur_dag.kernel_count loop
-                a_period := 
+            a_period := 
                    Natural
-                      (t_values (kernel_counter) *
+                      (t_values (i) *
                        a_factor); -- A_factor inflates the periods to avoid too much execution times
                 -- equal to zero due to integer rounding
 
                 a_capacity := 
                    Integer
-                      (Float'Rounding (Float (a_period) * u_values (kernel_counter - 1)));
+                      (Float'Rounding (Float (a_period) * u_values (i - 1)));
                 if a_capacity = 0 then
                     a_capacity := 1;
                 end if;
 
-                a_random_deadline := d_min + Random (g) * (d_max - d_min);
-                while (a_random_deadline > d_max) or
-                   (a_random_deadline < d_min)
-                loop
-                    a_random_deadline := d_min + Random (g) * (d_max - d_min);
-                end loop;
+            --  a_random_deadline := d_min + Random (g) * (d_max - d_min);
+            --      while (a_random_deadline > d_max) or
+            --         (a_random_deadline < d_min)
+            --      loop
+            --          a_random_deadline := d_min + Random (g) * (d_max - d_min);
+            --      end loop;
 
-                a_deadline := 
-                   Integer
-                      (Float'Rounding
-                          (Float (a_period - a_capacity) *
-                           a_random_deadline)) +
-                   a_capacity;
-
-                omin := 0.0;
-                omax := Float (a_period);
+            --      a_deadline := 
+            --         Integer
+            --            (Float'Rounding
+            --                (Float (a_period - a_capacity) *
+            --                 a_random_deadline)) +
+            --         a_capacity;
+                
+            --      omin := 0.0;
+            --      omax := Float (a_period);
 
                 a_start_time := 0;
+
+                cur_dag.period := a_period;
+                cur_dag.deadline := a_period;
+                capacities := Random_Partition(a_capacity, cur_dag.kernel_count);
 
                 current_cpu_utilization :=
                    current_cpu_utilization +
@@ -163,17 +201,19 @@ package body gpu_generator is
 
                 put_line("Current CPU utilization: " & current_cpu_utilization'Img);
 
-                cur_dag.kernels (kernel_index).period   := cur_dag.id * 20;
-                cur_dag.kernels (kernel_index).capacity := 4;
-                cur_dag.kernels (kernel_index).deadline := cur_dag.id * 20;
+            for kernel_index in 1 .. cur_dag.kernel_count loop
+
+                cur_dag.kernels (kernel_index).capacity := capacities(kernel_index);
 
                 put_line("DAG " & cur_dag.id'Img & 
                 " Kernel " & cur_dag.kernels (kernel_index).id'Img & 
-                " Period: " & cur_dag.kernels (kernel_index).period'Img & 
+                " Period: " & cur_dag.period'Img & 
                 " Capacity: " & cur_dag.kernels (kernel_index).capacity'Img & 
-                " Deadline: " & cur_dag.kernels (kernel_index).deadline'Img);
-                kernel_counter := kernel_counter + 1;
+                " Deadline: " & cur_dag.deadline'Img);
             end loop;
+            if capacities /= null then
+                Ada.Unchecked_Deallocation(capacities'Access_Type, capacities);
+            end if;
         end loop;
 
     end generate_kernel_specs_uunifast;
@@ -291,8 +331,8 @@ package body gpu_generator is
                                Suppress_Space (("TPC_" & cur_tpc.id'Img))),
                         Task_Type          => Periodic_Type, Start_Time => 0,
                         Capacity           => cur_kernel.capacity,
-                        Period             => cur_kernel.period,
-                        Deadline           => cur_kernel.deadline,
+                        Period             => cur_dag.period,
+                        Deadline           => cur_dag.deadline,
                         Priority           => cur_dag.stream,
                         -- User_Defined_Parameters_Table, ???????
                         Jitter             => 0,
