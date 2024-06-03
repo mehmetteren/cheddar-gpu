@@ -157,7 +157,7 @@ procedure compute_scheduling_of_tasks
 	 	Put_Line (To_String (Response_List.Entries (J).text));
 	end loop;
 	
-   write_to_xml_file (framework.sched, sys, output_file_name);
+   --write_to_xml_file (framework.sched, sys, output_file_name);
 
 
 

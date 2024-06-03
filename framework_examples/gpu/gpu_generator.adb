@@ -47,24 +47,22 @@ with Framework_Config;     use Framework_Config;
 with Ada.Float_Text_IO;
 with Offsets;              use Offsets;
 with Offsets;              use Offsets.Offsets_Table_Package;
-with Random_Tools;         use Random_Tools;
 with initialize_framework; use initialize_framework;
 with Random_Tools;         use Random_Tools;
 with Ada.Numerics.Float_Random;
 with Ada.Numerics.Discrete_Random;
-with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+with Ada.Integer_Text_IO;  use Ada.Integer_Text_IO;
 
 with scheduling_simulation_test_hlfet; use scheduling_simulation_test_hlfet;
-
 
 package body gpu_generator is
 
     procedure iterate_over_system
-       (DAGs : in out DAGList; stream_to_TPC : in out StreamTPCMap;
-        TPCs : in out TPCList; TPC_count : in Integer;
-        block_per_kernel : in Integer)
+       (DAGs             : in out DAGList; stream_to_TPC : in out StreamTPCMap;
+        TPCs             : in out TPCList; TPC_count : in Integer;
+        block_per_kernel : in     Integer)
     is
-        cur_dag   : DAG;
+        cur_dag    : DAG;
         cur_kernel : Kernel;
     begin
 
@@ -77,71 +75,77 @@ package body gpu_generator is
                 put_line
                    ("DAG " & cur_dag.id'Img & " Kernel " & cur_kernel.id'Img &
                     " Period: " & cur_dag.period'Img & " Capacity: " &
-                    cur_kernel.capacity'Img & " Deadline: " & cur_dag.deadline'Img);
+                    cur_kernel.capacity'Img & " Deadline: " &
+                    cur_dag.deadline'Img);
             end loop;
         end loop;
 
     end iterate_over_system;
 
     procedure generate_dag_specs_uunifast
-       (DAGs : in out DAGList;
-       total_kernel_count : in Integer; 
-        target_cpu_utilization : in Float; 
-        n_different_periods    : in Integer;
-        current_cpu_utilization : in out Float;
-        d_min : in Float := 1.0;
-        d_max : in Float := 1.0; 
-        is_synchronous : in Boolean := True
-        )
+       (DAGs : in out DAGList; total_kernel_count : in Integer;
+        target_cpu_utilization  : in Float; n_different_periods : in Integer;
+        current_cpu_utilization : in out Float; d_min : in Float := 1.0;
+        d_max : in     Float := 1.0; is_synchronous : in Boolean := True)
 
     is
         use Ada.Numerics.Float_Random;
 
-        a_factor           : Integer;
-        a_capacity         : Natural := 0;
-        a_period           : Natural := 0;
-        a_deadline         : Natural := 0;
-        a_start_time       : Natural := 0;
-        a_random_deadline  : Float;
-        omin, omax         : Float;
-        g                  : Ada.Numerics.Float_Random.Generator;
-        cur_dag                : DAG;
-      u_values          : random_tools.float_array (0 .. total_kernel_count - 1);
-      t_values          : random_tools.integer_array (1 .. total_kernel_count);
-      capacities : IntegerArray_ptr;
+        a_factor          : Integer;
+        a_capacity        : Natural := 0;
+        a_period          : Natural := 0;
+        a_deadline        : Natural := 0;
+        a_start_time      : Natural := 0;
+        a_random_deadline : Float;
+        omin, omax        : Float;
+        g                 : Ada.Numerics.Float_Random.Generator;
+        cur_dag           : DAG;
+        u_values          : random_tools.float_array (0 .. DAGs'Length - 1);
+        t_values          : random_tools.integer_array (1 .. DAGs'Length);
+        capacities        : IntegerArray_ptr;
 
-function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return IntegerArray_ptr is
-      subtype Part_Range is Integer range 1 .. Num_Parts;
+        --  procedure Free is new Ada.Unchecked_Deallocation
+        --   (Object => IntegerArray, Name => IntegerArray_ptr);
 
-      package Random_Generator is new Ada.Numerics.Discrete_Random(Part_Range);
-      use Random_Generator;
+        function Random_Partition
+           (Target_Value : Integer; Num_Parts : Natural)
+            return IntegerArray_ptr
+        is
+            subtype Part_Range is Integer range 1 .. Num_Parts;
+            subtype Target_Range is Integer range 1 .. Target_Value;
 
-      Gen    : Generator;
-      Parts  : IntegerArray(1 .. Num_Parts);
-      Sum    : Integer := 0;
-      Factor : Float;
-   begin
-      Reset(Gen);
+            package Rand_Int is new Ada.Numerics.Discrete_Random
+               (Target_Range);
+            Gen    : Rand_Int.Generator;
+            Parts  : IntegerArray (Part_Range);
+            Sum    : Integer := 0;
+            Factor : Float;
+        begin
+            Rand_Int.Reset (Gen);
+            for I in Part_Range loop
+                Parts (i) := Rand_Int.Random (Gen);
+                Sum       := Sum + Parts (I);
+                put_line ("sum: " & sum'Img & "  parts: " & Parts (i)'Img);
+            end loop;
 
-      for I in Part_Range loop
-         Parts(I) := Random(Gen);
-         Sum := Sum + Parts(I);
-      end loop;
+            Factor := Float (Target_Value) / Float (Sum);
 
-      Factor := Float(Target_Value) / Float(Sum);
+            Sum := 0;
+            for I in Part_Range loop
+                Parts (I) := Integer (Float (Parts (I)) * Factor);
+                Sum       := Sum + Parts (I);
+            end loop;
 
-      Sum := 0; 
-      for I in Part_Range loop
-         Parts(I) := Integer(Float(Parts(I)) * Factor);
-         Sum := Sum + Parts(I);
-      end loop;
+            if Sum /= Target_Value then
+                Parts (Num_Parts) := Parts (Num_Parts) + (Target_Value - Sum);
+            end if;
 
-      if Sum /= Target_Value then
-         Parts(Num_Parts) := Parts(Num_Parts) + (Target_Value - Sum);
-      end if;
+            for x in Part_Range loop
+                put_line (Parts (x)'Img);
+            end loop;
 
-      return new IntegerArray'(Parts);
-   end Random_Partition;
+            return new IntegerArray'(Parts);
+        end Random_Partition;
 
     begin
 
@@ -149,7 +153,7 @@ function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return I
         Reset (g);
 
         put_line ("Total kernel count: " & total_kernel_count'Img);
-        put_line("DAG count: " & DAGs'Length'Img);
+        put_line ("DAG count: " & DAGs'Length'Img);
 
         u_values := gen_uunifast (DAGs'Length, target_cpu_utilization);
 
@@ -158,19 +162,18 @@ function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return I
               (DAGs'Length, n_different_periods);
 
         for i in 1 .. DAGs'Length loop
-            cur_dag := DAGs (i);
-            a_period := 
-                   Natural
-                      (t_values (i) *
-                       a_factor); -- A_factor inflates the periods to avoid too much execution times
-                -- equal to zero due to integer rounding
+            cur_dag  := DAGs (i);
+            a_period :=
+               Natural
+                  (t_values (i) *
+                   a_factor); -- A_factor inflates the periods to avoid too much execution times
+            -- equal to zero due to integer rounding
 
-                a_capacity := 
-                   Integer
-                      (Float'Rounding (Float (a_period) * u_values (i - 1)));
-                if a_capacity = 0 then
-                    a_capacity := 1;
-                end if;
+            a_capacity :=
+               Integer (Float'Rounding (Float (a_period) * u_values (i - 1)));
+            if a_capacity = 0 then
+                a_capacity := 1;
+            end if;
 
             --  a_random_deadline := d_min + Random (g) * (d_max - d_min);
             --      while (a_random_deadline > d_max) or
@@ -179,44 +182,44 @@ function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return I
             --          a_random_deadline := d_min + Random (g) * (d_max - d_min);
             --      end loop;
 
-            --      a_deadline := 
+            --      a_deadline :=
             --         Integer
             --            (Float'Rounding
             --                (Float (a_period - a_capacity) *
             --                 a_random_deadline)) +
             --         a_capacity;
-                
+
             --      omin := 0.0;
             --      omax := Float (a_period);
 
-                a_start_time := 0;
+            a_start_time := 0;
 
-                cur_dag.period := a_period;
-                cur_dag.deadline := a_period;
-                capacities := Random_Partition(a_capacity, cur_dag.kernel_count);
+            DAGs (i).period   := cur_dag.id * 25;
+            DAGs (i).deadline := cur_dag.id * 25;
+            -- capacities := Random_Partition(a_capacity, cur_dag.kernel_count);
 
-                current_cpu_utilization :=
-                   current_cpu_utilization +
-                   Float (a_capacity) / Float (a_period);
+            current_cpu_utilization :=
+               current_cpu_utilization + Float (a_capacity) / Float (a_period);
 
-                put_line("Current CPU utilization: " & current_cpu_utilization'Img);
+            --put_line("Current CPU utilization: " & current_cpu_utilization'Img);
 
             for kernel_index in 1 .. cur_dag.kernel_count loop
 
-                cur_dag.kernels (kernel_index).capacity := capacities(kernel_index);
+                --cur_dag.kernels (kernel_index).capacity := capacities(kernel_index);
 
-                put_line("DAG " & cur_dag.id'Img & 
-                " Kernel " & cur_dag.kernels (kernel_index).id'Img & 
-                " Period: " & cur_dag.period'Img & 
-                " Capacity: " & cur_dag.kernels (kernel_index).capacity'Img & 
-                " Deadline: " & cur_dag.deadline'Img);
+                put_line
+                   ("DAG " & cur_dag.id'Img & " Kernel " &
+                    cur_dag.kernels (kernel_index).id'Img & " Period: " &
+                    DAGs (i).period'Img & " Capacity: " &
+                    cur_dag.kernels (kernel_index).capacity'Img &
+                    " Deadline: " & DAGs (i).deadline'Img);
             end loop;
-            if capacities /= null then
-                Ada.Unchecked_Deallocation(capacities'Access_Type, capacities);
-            end if;
+            --  if capacities /= null then
+            --      Free(capacities);
+            --  end if;
         end loop;
 
-    end generate_kernel_specs_uunifast;
+    end generate_dag_specs_uunifast;
 
     procedure gpu_generator
        (DAGs : in out DAGList; stream_to_TPC : in out StreamTPCMap;
@@ -232,13 +235,12 @@ function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return I
         cur_kernel  : Kernel;
         cur_dag     : DAG;
 
-        task_index       : Integer          := 1;
-        core_name_prefix : unbounded_string := Suppress_Space ("SM_");
-        sm_per_tpc       : Integer          := 4;
-        max_sm_size      : Integer          := 1_024;
-        total_kernel_count : Integer := 0;
-        current_cpu_utilization : Float := 0.0;
-
+        task_index              : Integer          := 1;
+        core_name_prefix        : unbounded_string := Suppress_Space ("SM_");
+        sm_per_tpc              : Integer          := 4;
+        max_sm_size             : Integer          := 1_024;
+        total_kernel_count      : Integer          := 0;
+        current_cpu_utilization : Float            := 0.0;
 
         core_units : Core_Units_Table;
 
@@ -256,9 +258,10 @@ function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return I
             total_kernel_count := total_kernel_count + DAGs (i).kernel_count;
         end loop;
 
-        generate_kernel_specs_uunifast
-           (DAGs => DAGs, total_kernel_count => total_kernel_count, target_cpu_utilization => 0.4,
-            n_different_periods => 10, current_cpu_utilization => current_cpu_utilization);
+        generate_dag_specs_uunifast
+           (DAGs => DAGs, total_kernel_count => total_kernel_count,
+            target_cpu_utilization  => 0.4, n_different_periods => 10,
+            current_cpu_utilization => current_cpu_utilization);
 
         Rand_1_10.Reset (Gen_1_10);
         Rand_1_100.Reset (Gen_1_100);
@@ -305,7 +308,7 @@ function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return I
         Initialize (a_system.Tasks);
 
         for dag_index in 1 .. DAGs'Length loop
-            cur_dag  := DAGs (dag_index);
+            cur_dag   := DAGs (dag_index);
             cur_task  := null;
             prev_task := null;
             cur_tpc   := null;
@@ -331,8 +334,7 @@ function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return I
                                Suppress_Space (("TPC_" & cur_tpc.id'Img))),
                         Task_Type          => Periodic_Type, Start_Time => 0,
                         Capacity           => cur_kernel.capacity,
-                        Period             => cur_dag.period,
-                        Deadline           => cur_dag.deadline,
+                        Period => cur_dag.period, Deadline => cur_dag.deadline,
                         Priority           => cur_dag.stream,
                         -- User_Defined_Parameters_Table, ???????
                         Jitter             => 0,
@@ -349,8 +351,9 @@ function Random_Partition (Target_Value : Integer; Num_Parts : Natural) return I
                             name          =>
                                Suppress_Space
                                   (To_Unbounded_String
-                                      ("message:DAG" & Integer'Image (cur_dag.id) &
-                                       "-" & "kernel" & Integer'Image (i - 1) &
+                                      ("message:DAG" &
+                                       Integer'Image (cur_dag.id) & "-" &
+                                       "kernel" & Integer'Image (i - 1) &
                                        "_to_" & "kernel" & Integer'Image (i) &
                                        "_TPC" & cur_tpc.id'Img)),
                             size => 0, period => 0, deadline => 0, jitter => 0,

@@ -4,72 +4,60 @@ with Ada.Text_IO; use Ada.Text_IO;
 with unbounded_strings;    use unbounded_strings;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with static_transformer; use static_transformer;
+with Systems;            use Systems;
+
 
 procedure generate is
     DAGss : DAGList := new DAGArray'
        (1 =>
-           (Id      => 1, kernel_count => 3, Stream => 1,
+           (Id      => 1, kernel_count => 4, Stream => 1,
             kernels =>
                new Kernel_Array'
-               (1 => (id => 1, block_count => 1, others => <>), 
-                2 => (id => 2, block_count => 1, others => <>), 
-                3 => (id => 3, block_count => 1, others => <>))),
-        2 =>
-           (Id      => 2, kernel_count => 4, Stream => 2,
+               (1 => (id => 1, block_count => 16, block_size => 128, capacity => 10), 
+                2 => (id => 2, block_count => 8, block_size => 128, capacity => 10),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 10), 
+                4 => (id => 4, block_count => 8, block_size => 128, capacity => 10)), others => <>),
+         2 =>
+           (Id      => 2, kernel_count => 3, Stream => 1,
             kernels =>
                new Kernel_Array'
-                  (1 => (id => 1, block_count => 1, others => <>), 
-                  2 => (id => 2, block_count => 1, others => <>), 
-                  3 => (id => 3, block_count => 1, others => <>), 
-                  4 => (id => 4, block_count => 1, others => <>))));
-      --    3 =>
-      --       (Id      => 3, kernel_count => 1, Stream => 1,
-      --        kernels => new Kernel_Array'(1 => (id => 1, block_count => 8, others => <>))),
-      --    4 =>
-      --       (Id      => 4, kernel_count => 2, Stream => 2,
-      --        kernels => new Kernel_Array'
-      --                (1 => (id => 1, block_count => 4, others => <>), 
-      --                2 => (id => 2, block_count => 2, others => <>))),
-      --    5 =>
-      --       (Id      => 5, kernel_count => 3, Stream => 3,
-      --        kernels =>
-      --           new Kernel_Array'(1 => (id => 1, block_count => 8, others => <>), 
-      --           2 => (id => 2, block_count => 2, others => <>), 
-      --           3 => (id => 3, block_count => 4, others => <>))));
+               (1 => (id => 1, block_count => 32, block_size => 128, capacity => 10), 
+                2 => (id => 2, block_count => 16, block_size => 128, capacity => 10),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 10)), others => <>));
 
     TPC1  : constant TPC_ptr :=
-       new TPC'(Id => 1, max_block_size => 256, SMs => null);
-    TPC2  : constant TPC_ptr :=
-       new TPC'(Id => 2, max_block_size => 512, SMs => null);
-    TPCss : TPCList          := (1 => TPC1, 2 => TPC2);
+       new TPC'(Id => 1, max_block_size => 128, SMs => null);
+   TPCss : TPCList          := (1 => TPC1);
 
     stream_to_TPC : StreamTPCMap     :=
-       (1 => new TPCList'(1 => TPC1), 2 => new TPCList'(1 => TPC2),
-        3 => new TPCList'(1 => TPC2));
-    TPC_count     : constant Integer := 2;
+       (1 => new TPCList'(1 => TPC1));
+    TPC_count     : constant Integer := 1;
 
-    -- the_system : gpu_system_ptr := new gpu_system'(DAGs => DAGss, TPCs => access TPCss, Stream_to_TPC => stream_to_TPC, TPC_count => TPC_count);
 
     current_cpu_utilization : Float := 0.0;
+    dag_cpu_utilization : Float;
     total_kernel_count : Integer := 0;
-    block_counts : IntegerArray := (1 => 1, 2 => 2, 3 => 3, 4 => 5, 5 => 7, 6 => 8, 7 => 10, 8 => 12, 9 => 16);
+   -- utilizations : FloatArray := (1 => 0.3, 2 => 0.4, 3 => 0.5, 4 => 0.6, 5 => 0.7, 6 => 0.8, 7 => 0.9, 8 => 1.0);
+   -- utilizations : FloatArray := (1 => 0.3, 2 => 0.4);
+
     filename : Unbounded_string;
+    cheddar_system : system;
 begin
 
-   for i in 1 .. DAGss'Length loop
-      total_kernel_count := total_kernel_count + DAGss (i).kernel_count;
-   end loop;
-      gpu_generator.generate_kernel_specs_uunifast
-      (DAGs => DAGss, total_kernel_count => total_kernel_count, target_cpu_utilization => 0.9,
+      gpu_generator.generate_dag_specs_uunifast
+      (DAGs => DAGss, total_kernel_count => total_kernel_count, target_cpu_utilization => 1.0,
       n_different_periods => 2, current_cpu_utilization => current_cpu_utilization);
 
-      for i in block_counts'Range loop
-         Put_Line ("Block count: " & Integer'Image (block_counts (i)));
-         gpu_generator.iterate_over_system (DAGss, stream_to_TPC, TPCss, TPC_count, block_counts (i));
-         filename := Suppress_space("framework_examples/gpu/inputs/gpu_system_" & block_counts (i)'Img & ".xml");
-         write_xml.write_to_xml_file (DAGss, TPCss, stream_to_TPC, TPC_count, filename);
-         static_transformer.static_transformer (DAGss, stream_to_TPC, TPCss, TPC_count);
-      end loop;
+      filename := Suppress_space("framework_examples/gpu/inputs/gpu_system.xml");
+      write_xml.write_to_xml_file (DAGss, TPCss, stream_to_TPC, TPC_count, filename);
+
+      dag_cpu_utilization := current_cpu_utilization;
+
+         static_transformer.static_transformer (cheddar_system, DAGss, stream_to_TPC, TPCss, TPC_count);
+      --  static_transformer.generate_dummy_workload(cheddar_system, 
+      --        current_utilization => current_cpu_utilization, target_utilization => utilizations(i), 
+      --        no_of_tasks_per_cpu => 10, TPCs => TPCss);
+         static_transformer.finalize(cheddar_system, 0.1);
 
 
 

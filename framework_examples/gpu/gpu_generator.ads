@@ -100,8 +100,12 @@ package gpu_generator is
     end record;
 
     type gpu_system_ptr is access all gpu_system;
+    
     type IntegerArray is array (Integer range <>) of Integer;
     type IntegerArray_ptr is access all IntegerArray;
+
+    type FloatArray is array (Integer range <>) of Float;
+    type FloatArray_ptr is access all FloatArray;
 
     procedure iterate_over_system
        (DAGs : in out DAGList; stream_to_TPC : in out StreamTPCMap;

@@ -41,14 +41,9 @@ package body write_xml is
            result & to_unbounded_string ("<block_size>") & obj.block_size'Img &
            to_unbounded_string ("</block_size>");
         result :=
-           result & to_unbounded_string ("<period>") & obj.period'Img &
-           to_unbounded_string ("</period>");
-        result :=
            result & to_unbounded_string ("<capacity>") & obj.capacity'Img &
            to_unbounded_string ("</capacity>");
-        result :=
-           result & to_unbounded_string ("<deadline>") & obj.deadline'Img &
-           to_unbounded_string ("</deadline>");
+
 
         --  if obj.dependencies /= null then
         --      if not is_empty (obj.dependencies.depends) then
@@ -86,6 +81,12 @@ package body write_xml is
         result :=
            result & to_unbounded_string ("<stream>") & obj.stream'Img &
            to_unbounded_string ("</stream>");
+        result :=
+           result & to_unbounded_string ("<period>") & obj.period'Img &
+           to_unbounded_string ("</period>");
+        result :=
+           result & to_unbounded_string ("<deadline>") & obj.deadline'Img &
+           to_unbounded_string ("</deadline>");
 
         if obj.kernels /= null then
             result := result & "<kernels>";

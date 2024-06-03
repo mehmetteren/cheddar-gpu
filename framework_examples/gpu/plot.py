@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 import re
 import argparse
-
+TOTAL_TASK_COUNT = 208
 def parse_total_result(file_path):
     total_count = 0
     with open(file_path, 'r') as file:
@@ -22,13 +22,15 @@ def parse_sum_result(file_path):
         tasks = re.findall(r'DAG\d+-Kernel\d+-Block\d+ => \d+/worst(.*?)\n', content)
         for task in tasks:
             print(task)
-            missed_count += len(re.findall(r'missed its deadline', task))
-            print(missed_count)
+            if 'missed its deadline' in task:
+                missed_count += 1            
+        print(missed_count)
     
     return missed_count
 
 def main(results_dir, output_filename):
-    block_per_kernel_values = []
+    # utilizations = []
+    array = []
     schedulability_rates = []
     total_counts = []
     missed_counts = []
@@ -37,18 +39,19 @@ def main(results_dir, output_filename):
         print(filename)
 
         if filename.startswith("sum") and filename.endswith(".txt"):
-            block_per_kernel = int(re.search(r'\d+', filename).group())
-            block_per_kernel_values.append(block_per_kernel)
+            val = int(re.search(r'\d+', filename).group())
+            array.append(val)
             file_path = os.path.join(results_dir, filename)
             missed_count = parse_sum_result(file_path)
             missed_counts.append(missed_count)
-        elif filename.startswith("total") and filename.endswith(".xml"):
-            file_path = os.path.join(results_dir, filename)
-            total_count = parse_total_result(file_path)
-            total_counts.append(total_count)
+            total_counts.append(TOTAL_TASK_COUNT)
+        # elif filename.startswith("total") and filename.endswith(".xml"):
+        #     file_path = os.path.join(results_dir, filename)
+        #     total_count = parse_total_result(file_path)
+        #     total_counts.append(total_count)
         
-    for i in range(len(block_per_kernel_values)):
-        print(block_per_kernel_values[i], missed_counts[i], total_counts[i])
+    for i in range(len(array)):
+        print(array[i], missed_counts[i], total_counts[i])
         missed_count = missed_counts[i]
         total_count = total_counts[i]
         if total_count > 0:
@@ -60,10 +63,10 @@ def main(results_dir, output_filename):
         
     # Plotting the results
     plt.figure(figsize=(10, 5))
-    plt.plot(block_per_kernel_values, schedulability_rates, marker='o', linestyle='-')
-    plt.xlabel('Block per Kernel')
+    plt.plot(array, schedulability_rates, marker='o', linestyle='-')
+    plt.xlabel('val')
     plt.ylabel('Schedulability Rate')
-    plt.title('Schedulability Rate vs Block per Kernel')
+    plt.title('Schedulability Rate vs val')
     plt.grid(True)
     plt.savefig(output_filename)  # Save the plot to a file
     plt.close()
