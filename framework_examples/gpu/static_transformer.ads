@@ -51,22 +51,22 @@ with Core_Units;           use Core_Units;
 with Networks;             use Networks;
 use networks.Positions_Table_Package;
 with Ada.Numerics.Discrete_Random;
-with gpu_generator;        use gpu_generator;
+with gpu_generator;                    use gpu_generator;
 with scheduling_simulation_test_hlfet; use scheduling_simulation_test_hlfet;
 
 package static_transformer is
 
     procedure static_transformer
-       (transformed_system : in out System; DAGs : DAGList; Stream_To_TPC : in out StreamTPCMap; TPCs : in out TPCList; TPC_count : Integer);
-    
-    procedure generate_dummy_workload(cheddar_system : in out System; current_utilization : in out Float;
-    target_utilization : in out Float; no_of_tasks_per_cpu : in Integer; TPCs : in TPCList);
+       (transformed_system : in out System; DAGs : DAGList;
+        Stream_To_TPC      : in out StreamTPCMap; TPCs : in out TPCList;
+        TPC_count          :        Integer; task_capacities : in IntegerArray_ptr);
+
+    procedure generate_dummy_workload
+       (cheddar_system     : in out System; current_utilization : in out Float;
+        target_utilization : in out Float; no_of_tasks_per_cpu : in Integer;
+        TPCs               : in     TPCList);
 
     procedure finalize
-(
-        transformed_system : in System;
-        utilization : in Float
-    );
-
+       (transformed_system : in System; utilization : in Float);
 
 end static_transformer;

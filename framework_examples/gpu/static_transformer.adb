@@ -202,7 +202,7 @@ package body static_transformer is
    procedure static_transformer
      (transformed_system : in out System; DAGs : DAGList;
       Stream_To_TPC      : in out StreamTPCMap; TPCs : in out TPCList;
-      TPC_count          :        Integer)
+      TPC_count          :        Integer; task_capacities : in IntegerArray_ptr)
    is
 
       package Task_Vector is new Ada.Containers.Vectors
@@ -221,7 +221,7 @@ package body static_transformer is
 
       task_index       : Integer          := 1;
       core_name_prefix : unbounded_string := Suppress_Space ("SM_");
-      sm_per_tpc       : Integer          := 8;
+      sm_per_tpc       : Integer          := 2;
       max_sm_size      : Integer          := 1_024;
 
       --core_unit_table_ptr : Core_Units_Table;
@@ -239,7 +239,7 @@ package body static_transformer is
       cur_tasks         : Task_Vector.Vector;
       prev_task_counter : Integer;
       inc_cpu_count     : Boolean;
-
+      task_capacity_index : Integer := 1;
       generic_Gen : Ada.Numerics.Float_Random.Generator; -- Declare the random number generator.
 
     -- Function to generate a random integer between Low and High
@@ -269,6 +269,7 @@ package body static_transformer is
 
       for i in 1 .. TPC_count loop
          tpc_block_size := TPCs (i).max_block_size;
+         sm_per_tpc := sm_per_tpc * TPCs(i).resource_multiplier;
          Put_Line ("TPC " & i'Img & " block size: " & tpc_block_size'Img);
          cpu_count    := (max_sm_size / tpc_block_size) * sm_per_tpc;
          TPCs (i).SMs := new SM_Array (1 .. cpu_count);
@@ -359,14 +360,14 @@ package body static_transformer is
                           ("TPC_" & Integer'Image (cur_tpc.id) & "-" &
                            core_name_prefix & cpu_index'Img)),
                      Task_Type          => Periodic_Type, Start_Time => 0,
-                     Capacity           => Random_Range(1, cur_kernel.capacity),
+                     Capacity           => task_capacities(task_capacity_index),
                      Period => cur_dag.period, Deadline => cur_dag.deadline,
                      Priority           => cur_dag.stream,
                      -- User_Defined_Parameters_Table, ???????
                      Jitter             => 0,
                      Blocking_Time      => 0, Criticality => 0,
                      Policy             => Sched_Fifo);
-
+                  task_capacity_index := task_capacity_index + 1;
                   cur_tasks.Append (cur_task);
                   put_line
                     ("Task " & to_string (cur_task.name) & " added to system");
@@ -410,15 +411,12 @@ package body static_transformer is
                      end loop;
                   end if;
                   if inc_cpu_count then
-                     cpu_index := cpu_index + 1;
                      if cur_tpc.SMs'Length > 0 then
                         cpu_index := (cpu_index mod cur_tpc.SMs'Length);
                      else
                         put_line ("Error: SMs length is 0");
                      end if;
-                     if cpu_index = 0 then
-                        cpu_index := 1;
-                     end if;
+                     cpu_index := cpu_index + 1;
                   else
                      cpu_index := cpu_index - 1;
                      if cpu_index <= 0 then
@@ -476,7 +474,7 @@ package body static_transformer is
            Suppress_Space
              (To_Unbounded_String
                 ("framework_examples/gpu/inputs/analysis_model_" &
-                 Integer (utilization * 10.0)'Img & ".xmlv3")));
+                 Integer (utilization * 100.0)'Img & ".xmlv3")));
       Put_Line ("Finish write");
       Put_Line ("System Transformed for Cheddar Simulation");
       Put_Line ("------------------------");

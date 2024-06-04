@@ -83,6 +83,7 @@ package gpu_generator is
     type TPC is record
         id             : Integer;
         max_block_size : Integer;
+        resource_multiplier : Integer;
         SMs            : SM_List;
     end record;
     type TPC_ptr is access all TPC;
@@ -117,7 +118,7 @@ package gpu_generator is
 
     procedure generate_dag_specs_uunifast
        (DAGs : in out DAGList;
-       total_kernel_count : in Integer; 
+       total_block_count : in Integer; capacities : in out IntegerArray_ptr;
         target_cpu_utilization : in Float; 
         n_different_periods    : in Integer;
         current_cpu_utilization : in out Float;

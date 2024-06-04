@@ -83,7 +83,7 @@ package body gpu_generator is
     end iterate_over_system;
 
     procedure generate_dag_specs_uunifast
-       (DAGs : in out DAGList; total_kernel_count : in Integer;
+       (DAGs : in out DAGList; total_block_count : in Integer; capacities : in out IntegerArray_ptr;
         target_cpu_utilization  : in Float; n_different_periods : in Integer;
         current_cpu_utilization : in out Float; d_min : in Float := 1.0;
         d_max : in     Float := 1.0; is_synchronous : in Boolean := True)
@@ -102,7 +102,18 @@ package body gpu_generator is
         cur_dag           : DAG;
         u_values          : random_tools.float_array (0 .. DAGs'Length - 1);
         t_values          : random_tools.integer_array (1 .. DAGs'Length);
-        capacities        : IntegerArray_ptr;
+        block_index : Integer := 1;
+
+        generic_Gen : Ada.Numerics.Float_Random.Generator; -- Declare the random number generator.
+
+    -- Function to generate a random integer between Low and High
+    function Random_Range (Low, High : Integer) return Integer is
+        Random_Value : Float := Ada.Numerics.Float_Random.Random (generic_Gen); -- Generate a random float between 0.0 and 1.0
+        the_range : Integer := High - Low + 1; -- Compute the range size
+        Scaled_Value : Integer := Integer (Random_Value * Float (the_range)) + Low; -- Scale and shift the random value
+    begin
+        return Scaled_Value; -- Return the scaled random integer
+    end;
 
         --  procedure Free is new Ada.Unchecked_Deallocation
         --   (Object => IntegerArray, Name => IntegerArray_ptr);
@@ -151,8 +162,9 @@ package body gpu_generator is
 
         a_factor := 2;--N_Tasks;
         Reset (g);
+        Ada.Numerics.Float_Random.reset(generic_Gen);
 
-        put_line ("Total kernel count: " & total_kernel_count'Img);
+        put_line ("Total block count: " & total_block_count'Img);
         put_line ("DAG count: " & DAGs'Length'Img);
 
         u_values := gen_uunifast (DAGs'Length, target_cpu_utilization);
@@ -194,18 +206,18 @@ package body gpu_generator is
 
             a_start_time := 0;
 
-            DAGs (i).period   := cur_dag.id * 25;
-            DAGs (i).deadline := cur_dag.id * 25;
-            -- capacities := Random_Partition(a_capacity, cur_dag.kernel_count);
+            DAGs (i).period   := cur_dag.id * 20;
+            DAGs (i).deadline := cur_dag.id * 20;
 
             current_cpu_utilization :=
                current_cpu_utilization + Float (a_capacity) / Float (a_period);
 
-            --put_line("Current CPU utilization: " & current_cpu_utilization'Img);
-
             for kernel_index in 1 .. cur_dag.kernel_count loop
 
-                --cur_dag.kernels (kernel_index).capacity := capacities(kernel_index);
+                for x_x in 1 ..  cur_dag.kernels(kernel_index).block_count loop
+                    capacities(block_index) := Random_Range(1, cur_dag.kernels(kernel_index).block_count);
+                    block_index := block_index + 1;
+                end loop;
 
                 put_line
                    ("DAG " & cur_dag.id'Img & " Kernel " &
@@ -214,9 +226,6 @@ package body gpu_generator is
                     cur_dag.kernels (kernel_index).capacity'Img &
                     " Deadline: " & DAGs (i).deadline'Img);
             end loop;
-            --  if capacities /= null then
-            --      Free(capacities);
-            --  end if;
         end loop;
 
     end generate_dag_specs_uunifast;
@@ -258,10 +267,10 @@ package body gpu_generator is
             total_kernel_count := total_kernel_count + DAGs (i).kernel_count;
         end loop;
 
-        generate_dag_specs_uunifast
-           (DAGs => DAGs, total_kernel_count => total_kernel_count,
-            target_cpu_utilization  => 0.4, n_different_periods => 10,
-            current_cpu_utilization => current_cpu_utilization);
+        --  generate_dag_specs_uunifast
+        --     (DAGs => DAGs, total_kernel_count => total_kernel_count,
+        --      target_cpu_utilization  => 0.4, n_different_periods => 10,
+        --      current_cpu_utilization => current_cpu_utilization);
 
         Rand_1_10.Reset (Gen_1_10);
         Rand_1_100.Reset (Gen_1_100);
