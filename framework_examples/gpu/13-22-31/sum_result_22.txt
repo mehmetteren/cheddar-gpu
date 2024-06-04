@@ -1,0 +1,272 @@
+Number of arguments:  3
+Period: 159
+System: framework_examples/gpu/inputs/analysis_model_22.xmlv3
+Extra: 22
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+Simulation Complete.
+Nb Response: 12
+
+
+Scheduling simulation, Processor TPC_1-SM_1 : 
+
+- Number of context switches :  23
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block1 => 3/worst 
+    DAG1-Kernel3-Block1 => 15/worst 
+    DAG1-Kernel3-Block5 => 15/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  23
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block2 => 2/worst 
+    DAG1-Kernel3-Block2 => 9/worst 
+    DAG1-Kernel3-Block6 => 9/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  8
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block3 => 17/worst 
+    DAG1-Kernel3-Block7 => 17/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  30
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel2-Block1 => 4/worst 
+    DAG1-Kernel3-Block4 => 15/worst 
+    DAG1-Kernel3-Block8 => 15/worst 
+    DAG1-Kernel4-Block1 => 17/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  4
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block1 => 4/worst 
+    DAG2-Kernel3-Block1 => 6/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  4
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block2 => 12/worst 
+    DAG2-Kernel3-Block2 => 13/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  5
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block3 => 12/worst 
+    DAG2-Kernel3-Block3 => 12/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  4
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block4 => 7/worst 
+    DAG2-Kernel3-Block4 => 9/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  0
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel3-Block5 => 8/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  0
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel3-Block6 => 13/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  4
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel2-Block2 => 11/worst 
+    DAG2-Kernel3-Block7 => 13/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  5
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel2-Block1 => 11/worst 
+    DAG2-Kernel3-Block8 => 13/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+

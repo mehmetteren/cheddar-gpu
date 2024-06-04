@@ -268,10 +268,12 @@ package body static_transformer is
       initialize (transformed_system);
 
       for i in 1 .. TPC_count loop
+         sm_per_tpc := 2;
          tpc_block_size := TPCs (i).max_block_size;
          sm_per_tpc := sm_per_tpc * TPCs(i).resource_multiplier;
          Put_Line ("TPC " & i'Img & " block size: " & tpc_block_size'Img);
          cpu_count    := (max_sm_size / tpc_block_size) * sm_per_tpc;
+         put_line("smpertpc: " & sm_per_tpc'Img & "  cpu_count: " & cpu_count'Img);
          TPCs (i).SMs := new SM_Array (1 .. cpu_count);
          --core_unit_table_ptr := new Core_Units_Table;
          for j in 1 .. cpu_count loop

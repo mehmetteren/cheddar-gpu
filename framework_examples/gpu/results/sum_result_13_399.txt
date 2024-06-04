@@ -1,0 +1,384 @@
+Number of arguments:  3
+Period: 399
+System: framework_examples/gpu/inputs/analysis_model_13.xmlv3
+Extra: 13
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+Simulation Complete.
+Nb Response: 8
+
+
+Scheduling simulation, Processor TPC_1-SM_1 : 
+
+- Number of context switches :  61
+- Number of preemptions :  6
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block1 => 43/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  66),  missed its deadline (absolute deadline =  80 ; completion time =  92),  missed its deadline (absolute deadline =  140 ; completion time =  157),  missed its deadline (absolute deadline =  160 ; completion time =  165),  missed its deadline (absolute deadline =  200 ; completion time =  223),  missed its deadline (absolute deadline =  220 ; completion time =  231),  missed its deadline (absolute deadline =  260 ; completion time =  266),  missed its deadline (absolute deadline =  280 ; completion time =  292),  missed its deadline (absolute deadline =  340 ; completion time =  355),  missed its deadline (absolute deadline =  360 ; completion time =  363)
+    DAG1-Kernel3-Block1 => 175/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  62),  missed its deadline (absolute deadline =  60 ; completion time =  72),  missed its deadline (absolute deadline =  80 ; completion time =  131),  missed its deadline (absolute deadline =  100 ; completion time =  138),  missed its deadline (absolute deadline =  120 ; completion time =  197),  missed its deadline (absolute deadline =  140 ; completion time =  204),  missed its deadline (absolute deadline =  160 ; completion time =  263),  missed its deadline (absolute deadline =  180 ; completion time =  270),  missed its deadline (absolute deadline =  200 ; completion time =  329),  missed its deadline (absolute deadline =  220 ; completion time =  336),  missed its deadline (absolute deadline =  240 ; completion time =  395)
+    DAG1-Kernel3-Block3 => 171/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  58),  missed its deadline (absolute deadline =  60 ; completion time =  77),  missed its deadline (absolute deadline =  80 ; completion time =  127),  missed its deadline (absolute deadline =  100 ; completion time =  143),  missed its deadline (absolute deadline =  120 ; completion time =  193),  missed its deadline (absolute deadline =  140 ; completion time =  209),  missed its deadline (absolute deadline =  160 ; completion time =  259),  missed its deadline (absolute deadline =  180 ; completion time =  275),  missed its deadline (absolute deadline =  200 ; completion time =  325),  missed its deadline (absolute deadline =  220 ; completion time =  341),  missed its deadline (absolute deadline =  240 ; completion time =  391)
+    DAG1-Kernel3-Block5 => 166/worst ,  missed its deadline (absolute deadline =  20 ; completion time =  24),  missed its deadline (absolute deadline =  40 ; completion time =  53),  missed its deadline (absolute deadline =  60 ; completion time =  81),  missed its deadline (absolute deadline =  80 ; completion time =  122),  missed its deadline (absolute deadline =  100 ; completion time =  147),  missed its deadline (absolute deadline =  120 ; completion time =  188),  missed its deadline (absolute deadline =  140 ; completion time =  213),  missed its deadline (absolute deadline =  160 ; completion time =  254),  missed its deadline (absolute deadline =  180 ; completion time =  279),  missed its deadline (absolute deadline =  200 ; completion time =  320),  missed its deadline (absolute deadline =  220 ; completion time =  345),  missed its deadline (absolute deadline =  240 ; completion time =  386)
+    DAG1-Kernel3-Block7 => 162/worst ,  missed its deadline (absolute deadline =  20 ; completion time =  29),  missed its deadline (absolute deadline =  40 ; completion time =  49),  missed its deadline (absolute deadline =  60 ; completion time =  86),  missed its deadline (absolute deadline =  80 ; completion time =  118),  missed its deadline (absolute deadline =  100 ; completion time =  152),  missed its deadline (absolute deadline =  120 ; completion time =  184),  missed its deadline (absolute deadline =  140 ; completion time =  218),  missed its deadline (absolute deadline =  160 ; completion time =  250),  missed its deadline (absolute deadline =  180 ; completion time =  284),  missed its deadline (absolute deadline =  200 ; completion time =  316),  missed its deadline (absolute deadline =  220 ; completion time =  350),  missed its deadline (absolute deadline =  240 ; completion time =  382)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  85
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block2 => 155/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  42),  missed its deadline (absolute deadline =  60 ; completion time =  77),  missed its deadline (absolute deadline =  80 ; completion time =  111),  missed its deadline (absolute deadline =  100 ; completion time =  143),  missed its deadline (absolute deadline =  120 ; completion time =  177),  missed its deadline (absolute deadline =  140 ; completion time =  209),  missed its deadline (absolute deadline =  160 ; completion time =  243),  missed its deadline (absolute deadline =  180 ; completion time =  275),  missed its deadline (absolute deadline =  200 ; completion time =  309),  missed its deadline (absolute deadline =  220 ; completion time =  341),  missed its deadline (absolute deadline =  240 ; completion time =  375)
+    DAG1-Kernel2-Block1 => 158/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  44),  missed its deadline (absolute deadline =  60 ; completion time =  68),  missed its deadline (absolute deadline =  80 ; completion time =  113),  missed its deadline (absolute deadline =  100 ; completion time =  134),  missed its deadline (absolute deadline =  120 ; completion time =  179),  missed its deadline (absolute deadline =  140 ; completion time =  200),  missed its deadline (absolute deadline =  160 ; completion time =  245),  missed its deadline (absolute deadline =  180 ; completion time =  266),  missed its deadline (absolute deadline =  200 ; completion time =  311),  missed its deadline (absolute deadline =  220 ; completion time =  332),  missed its deadline (absolute deadline =  240 ; completion time =  377),  missed its deadline (absolute deadline =  260 ; completion time =  398)
+    DAG1-Kernel3-Block2 => 176/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  63),  missed its deadline (absolute deadline =  60 ; completion time =  81),  missed its deadline (absolute deadline =  80 ; completion time =  132),  missed its deadline (absolute deadline =  100 ; completion time =  147),  missed its deadline (absolute deadline =  120 ; completion time =  198),  missed its deadline (absolute deadline =  140 ; completion time =  213),  missed its deadline (absolute deadline =  160 ; completion time =  264),  missed its deadline (absolute deadline =  180 ; completion time =  279),  missed its deadline (absolute deadline =  200 ; completion time =  330),  missed its deadline (absolute deadline =  220 ; completion time =  345),  missed its deadline (absolute deadline =  240 ; completion time =  396)
+    DAG1-Kernel3-Block4 => 175/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  62),  missed its deadline (absolute deadline =  60 ; completion time =  85),  missed its deadline (absolute deadline =  80 ; completion time =  131),  missed its deadline (absolute deadline =  100 ; completion time =  151),  missed its deadline (absolute deadline =  120 ; completion time =  197),  missed its deadline (absolute deadline =  140 ; completion time =  217),  missed its deadline (absolute deadline =  160 ; completion time =  263),  missed its deadline (absolute deadline =  180 ; completion time =  283),  missed its deadline (absolute deadline =  200 ; completion time =  329),  missed its deadline (absolute deadline =  220 ; completion time =  349),  missed its deadline (absolute deadline =  240 ; completion time =  395)
+    DAG1-Kernel3-Block6 => 171/worst ,  missed its deadline (absolute deadline =  20 ; completion time =  21),  missed its deadline (absolute deadline =  40 ; completion time =  58),  missed its deadline (absolute deadline =  60 ; completion time =  90),  missed its deadline (absolute deadline =  80 ; completion time =  127),  missed its deadline (absolute deadline =  100 ; completion time =  156),  missed its deadline (absolute deadline =  120 ; completion time =  193),  missed its deadline (absolute deadline =  140 ; completion time =  222),  missed its deadline (absolute deadline =  160 ; completion time =  259),  missed its deadline (absolute deadline =  180 ; completion time =  288),  missed its deadline (absolute deadline =  200 ; completion time =  325),  missed its deadline (absolute deadline =  220 ; completion time =  354),  missed its deadline (absolute deadline =  240 ; completion time =  391)
+    DAG1-Kernel3-Block8 => 166/worst ,  missed its deadline (absolute deadline =  20 ; completion time =  30),  missed its deadline (absolute deadline =  40 ; completion time =  53),  missed its deadline (absolute deadline =  60 ; completion time =  99),  missed its deadline (absolute deadline =  80 ; completion time =  122),  missed its deadline (absolute deadline =  100 ; completion time =  165),  missed its deadline (absolute deadline =  120 ; completion time =  188),  missed its deadline (absolute deadline =  140 ; completion time =  231),  missed its deadline (absolute deadline =  160 ; completion time =  254),  missed its deadline (absolute deadline =  180 ; completion time =  297),  missed its deadline (absolute deadline =  200 ; completion time =  320),  missed its deadline (absolute deadline =  220 ; completion time =  363),  missed its deadline (absolute deadline =  240 ; completion time =  386)
+    DAG1-Kernel4-Block1 => 146/worst ,  missed its deadline (absolute deadline =  20 ; completion time =  33),  missed its deadline (absolute deadline =  40 ; completion time =  66),  missed its deadline (absolute deadline =  60 ; completion time =  80),  missed its deadline (absolute deadline =  80 ; completion time =  102),  missed its deadline (absolute deadline =  100 ; completion time =  146),  missed its deadline (absolute deadline =  120 ; completion time =  168),  missed its deadline (absolute deadline =  140 ; completion time =  212),  missed its deadline (absolute deadline =  160 ; completion time =  234),  missed its deadline (absolute deadline =  180 ; completion time =  278),  missed its deadline (absolute deadline =  200 ; completion time =  300),  missed its deadline (absolute deadline =  220 ; completion time =  344),  missed its deadline (absolute deadline =  240 ; completion time =  366)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  29
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block1 => 3/worst 
+    DAG2-Kernel3-Block1 => 15/worst 
+    DAG2-Kernel3-Block7 => 17/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  29
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block2 => 2/worst 
+    DAG2-Kernel3-Block2 => 24/worst 
+    DAG2-Kernel3-Block8 => 26/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  19
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block3 => 4/worst 
+    DAG2-Kernel3-Block3 => 18/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  19
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block4 => 8/worst 
+    DAG2-Kernel3-Block4 => 20/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  19
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel2-Block2 => 10/worst 
+    DAG2-Kernel3-Block5 => 21/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  19
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel2-Block1 => 10/worst 
+    DAG2-Kernel3-Block6 => 13/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+

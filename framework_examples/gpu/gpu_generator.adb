@@ -103,6 +103,7 @@ package body gpu_generator is
         u_values          : random_tools.float_array (0 .. DAGs'Length - 1);
         t_values          : random_tools.integer_array (1 .. DAGs'Length);
         block_index : Integer := 1;
+        cur_max_capacity_for_kernel : Integer := 1;
 
         generic_Gen : Ada.Numerics.Float_Random.Generator; -- Declare the random number generator.
 
@@ -215,9 +216,14 @@ package body gpu_generator is
             for kernel_index in 1 .. cur_dag.kernel_count loop
 
                 for x_x in 1 ..  cur_dag.kernels(kernel_index).block_count loop
-                    capacities(block_index) := Random_Range(1, cur_dag.kernels(kernel_index).block_count);
+                    capacities(block_index) := Random_Range(1, cur_dag.kernels(kernel_index).capacity);
+                    if capacities(block_index) > cur_max_capacity_for_kernel then
+                        cur_max_capacity_for_kernel := capacities(block_index);
+                    end if;
                     block_index := block_index + 1;
                 end loop;
+
+                cur_dag.kernels(kernel_index).capacity := cur_max_capacity_for_kernel;
 
                 put_line
                    ("DAG " & cur_dag.id'Img & " Kernel " &
