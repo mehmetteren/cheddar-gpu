@@ -410,15 +410,12 @@ package body static_transformer is
                      end loop;
                   end if;
                   if inc_cpu_count then
-                     cpu_index := cpu_index + 1;
                      if cur_tpc.SMs'Length > 0 then
                         cpu_index := (cpu_index mod cur_tpc.SMs'Length);
                      else
                         put_line ("Error: SMs length is 0");
                      end if;
-                     if cpu_index = 0 then
-                        cpu_index := 1;
-                     end if;
+                     cpu_index := cpu_index + 1;
                   else
                      cpu_index := cpu_index - 1;
                      if cpu_index <= 0 then

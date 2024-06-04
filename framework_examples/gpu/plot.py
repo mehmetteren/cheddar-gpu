@@ -21,7 +21,6 @@ def parse_sum_result(file_path):
         
         tasks = re.findall(r'DAG\d+-Kernel\d+-Block\d+ => \d+/worst(.*?)\n', content)
         for task in tasks:
-            print(task)
             if 'missed its deadline' in task:
                 missed_count += 1            
         print(missed_count)
@@ -64,9 +63,9 @@ def main(results_dir, output_filename):
     # Plotting the results
     plt.figure(figsize=(10, 5))
     plt.plot(array, schedulability_rates, marker='o', linestyle='-')
-    plt.xlabel('val')
+    plt.xlabel('Hyperperiod')
     plt.ylabel('Schedulability Rate')
-    plt.title('Schedulability Rate vs val')
+    plt.title('Schedulability Rate vs Hyperperiod')
     plt.grid(True)
     plt.savefig(output_filename)  # Save the plot to a file
     plt.close()

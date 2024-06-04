@@ -5,8 +5,8 @@
    <id>1</id>
    <kernel_count>4</kernel_count>
    <stream>1</stream>
-   <period>25</period>
-   <deadline>25</deadline>
+   <period>20</period>
+   <deadline>20</deadline>
    <kernels>
     <kernel>
      <id>1</id>
@@ -38,8 +38,8 @@
    <id>2</id>
    <kernel_count>3</kernel_count>
    <stream>1</stream>
-   <period>50</period>
-   <deadline>50</deadline>
+   <period>40</period>
+   <deadline>40</deadline>
    <kernels>
     <kernel>
      <id>1</id>
