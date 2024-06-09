@@ -202,7 +202,7 @@ package body static_transformer is
    procedure static_transformer
      (transformed_system : in out System; DAGs : DAGList;
       Stream_To_TPC      : in out StreamTPCMap; TPCs : in out TPCList;
-      TPC_count          :        Integer; task_capacities : in IntegerArray_ptr)
+      TPC_count          :        Integer)
    is
 
       package Task_Vector is new Ada.Containers.Vectors
@@ -362,7 +362,7 @@ package body static_transformer is
                           ("TPC_" & Integer'Image (cur_tpc.id) & "-" &
                            core_name_prefix & cpu_index'Img)),
                      Task_Type          => Periodic_Type, Start_Time => 0,
-                     Capacity           => task_capacities(task_capacity_index),
+                     Capacity           => cur_kernel.capacity,
                      Period => cur_dag.period, Deadline => cur_dag.deadline,
                      Priority           => cur_dag.stream,
                      -- User_Defined_Parameters_Table, ???????

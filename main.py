@@ -3,11 +3,12 @@ import argparse
 
 def get_integer_list():
     user_input = input("Enter a list of integers separated by spaces: ")
-    user_input2 = input("Enter a list of hyperperiods separated by spaces: ")
+    #user_input2 = input("Enter a list of hyperperiods separated by spaces: ")
     integer_list = [int(item) for item in user_input.split()]
-    integer_list2 = [int(item) for item in user_input2.split()]
+    #integer_list2 = [int(item) for item in user_input2.split()]
 
-    return integer_list, integer_list2
+    #return integer_list, integer_list2
+    return integer_list
 
 def run_simulation(integer_list, hyperperiods):
     for i in integer_list:
@@ -27,8 +28,8 @@ def main():
     args = parser.parse_args()
 
     try:
-        integer_list, integer_list2 = get_integer_list()
-        run_simulation(integer_list, integer_list2)
+        integer_list = get_integer_list()
+        run_simulation(integer_list, [args.hyperperiod])
         plot_results()
     except ValueError:
         print("Error: Please ensure you only enter integers.")

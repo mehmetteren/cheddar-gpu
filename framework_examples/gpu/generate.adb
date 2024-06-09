@@ -10,20 +10,20 @@ procedure generate is
 
     DAGss : DAGList := new DAGArray'
        (1 =>
-           (Id      => 1, kernel_count => 4, Stream => 1,
+           (Id      => 1, kernel_count => 4, Stream => 1, period => 30, deadline => 30,
             kernels =>
                new Kernel_Array'
                (1 => (id => 1, block_count => 2, block_size => 1024, capacity => 10), 
                 2 => (id => 2, block_count => 1, block_size => 1024, capacity => 10),
                 3 => (id => 3, block_count => 8, block_size => 1024, capacity => 10), 
-                4 => (id => 4, block_count => 1, block_size => 1024, capacity => 10)), others => <>),
+                4 => (id => 4, block_count => 1, block_size => 1024, capacity => 10))),
          2 =>
-           (Id      => 2, kernel_count => 3, Stream => 2,
+           (Id      => 2, kernel_count => 3, Stream => 2, period => 40, deadline => 40,
             kernels =>
                new Kernel_Array'
                (1 => (id => 1, block_count => 4, block_size => 1024, capacity => 10), 
                 2 => (id => 2, block_count => 2, block_size => 1024, capacity => 10),
-                3 => (id => 3, block_count => 8, block_size => 1024, capacity => 10)), others => <>));
+                3 => (id => 3, block_count => 8, block_size => 1024, capacity => 10))));
 
    TPC_count     : constant Integer := 2;
 
@@ -73,16 +73,9 @@ procedure generate is
    task_capacities : IntegerArray_ptr;
 
 begin
-   for dag_index in 1 .. DAGss'Length loop
-      cur_dag := DAGss(dag_index);
-      for kernel_index in 1 .. cur_dag.kernels'Length loop
-         total_block_count := total_block_count + cur_dag.kernels(kernel_index).block_count;
-      end loop;
-   end loop;
-   task_capacities := new IntegerArray(1..total_block_count);
 
    gpu_generator.generate_dag_specs_uunifast
-     (DAGs => DAGss, total_block_count => total_block_count, capacities => task_capacities,
+     (DAGs => DAGss, total_block_count => total_block_count,
       target_cpu_utilization  => 1.0, n_different_periods => 2,
       current_cpu_utilization => current_cpu_utilization);
 
@@ -93,15 +86,15 @@ begin
    dag_cpu_utilization := current_cpu_utilization;
 
    static_transformer.static_transformer
-     (system13, DAGss, stream_to_TPC13, TPC13ss, TPC_count, task_capacities);
+     (system13, DAGss, stream_to_TPC13, TPC13ss, TPC_count);
    static_transformer.finalize (system13, 0.13);
 
    static_transformer.static_transformer
-     (system31, DAGss, stream_to_TPC31, TPC31ss, TPC_count, task_capacities);
+     (system31, DAGss, stream_to_TPC31, TPC31ss, TPC_count);
    static_transformer.finalize (system31, 0.31);
 
    static_transformer.static_transformer
-     (system22, DAGss, stream_to_TPC22, TPC22ss, TPC_count, task_capacities);
+     (system22, DAGss, stream_to_TPC22, TPC22ss, TPC_count);
    static_transformer.finalize (system22, 0.22);
 
 end generate;

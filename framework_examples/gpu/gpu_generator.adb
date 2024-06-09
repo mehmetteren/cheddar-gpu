@@ -83,7 +83,7 @@ package body gpu_generator is
     end iterate_over_system;
 
     procedure generate_dag_specs_uunifast
-       (DAGs : in out DAGList; total_block_count : in Integer; capacities : in out IntegerArray_ptr;
+       (DAGs : in out DAGList; total_block_count : in Integer;
         target_cpu_utilization  : in Float; n_different_periods : in Integer;
         current_cpu_utilization : in out Float; d_min : in Float := 1.0;
         d_max : in     Float := 1.0; is_synchronous : in Boolean := True)
@@ -91,30 +91,36 @@ package body gpu_generator is
     is
         use Ada.Numerics.Float_Random;
 
-        a_factor          : Integer;
-        a_capacity        : Natural := 0;
-        a_period          : Natural := 0;
-        a_deadline        : Natural := 0;
-        a_start_time      : Natural := 0;
-        a_random_deadline : Float;
-        omin, omax        : Float;
-        g                 : Ada.Numerics.Float_Random.Generator;
-        cur_dag           : DAG;
-        u_values          : random_tools.float_array (0 .. DAGs'Length - 1);
-        t_values          : random_tools.integer_array (1 .. DAGs'Length);
-        block_index : Integer := 1;
+        a_factor                    : Integer;
+        a_capacity                  : Natural := 0;
+        a_period                    : Natural := 0;
+        a_deadline                  : Natural := 0;
+        a_start_time                : Natural := 0;
+        a_random_deadline           : Float;
+        omin, omax                  : Float;
+        g                           : Ada.Numerics.Float_Random.Generator;
+        cur_dag                     : DAG;
+        u_values : random_tools.float_array (0 .. DAGs'Length - 1);
+        t_values : random_tools.integer_array (1 .. DAGs'Length);
+        block_index                 : Integer := 1;
         cur_max_capacity_for_kernel : Integer := 1;
 
-        generic_Gen : Ada.Numerics.Float_Random.Generator; -- Declare the random number generator.
+        generic_Gen :
+           Ada.Numerics.Float_Random
+              .Generator;
 
-    -- Function to generate a random integer between Low and High
-    function Random_Range (Low, High : Integer) return Integer is
-        Random_Value : Float := Ada.Numerics.Float_Random.Random (generic_Gen); -- Generate a random float between 0.0 and 1.0
-        the_range : Integer := High - Low + 1; -- Compute the range size
-        Scaled_Value : Integer := Integer (Random_Value * Float (the_range)) + Low; -- Scale and shift the random value
-    begin
-        return Scaled_Value; -- Return the scaled random integer
-    end;
+        -- Function to generate a random integer between Low and High
+        function Random_Range (Low, High : Integer) return Integer is
+            Random_Value : Float   :=
+               Ada.Numerics.Float_Random.Random
+                  (generic_Gen); 
+            the_range    : Integer := High - Low + 1;
+            Scaled_Value : Integer :=
+               Integer (Random_Value * Float (the_range)) +
+               Low;
+        begin
+            return Scaled_Value; 
+        end Random_Range;
 
         --  procedure Free is new Ada.Unchecked_Deallocation
         --   (Object => IntegerArray, Name => IntegerArray_ptr);
@@ -163,7 +169,7 @@ package body gpu_generator is
 
         a_factor := 2;--N_Tasks;
         Reset (g);
-        Ada.Numerics.Float_Random.reset(generic_Gen);
+        Ada.Numerics.Float_Random.reset (generic_Gen);
 
         put_line ("Total block count: " & total_block_count'Img);
         put_line ("DAG count: " & DAGs'Length'Img);
@@ -207,24 +213,14 @@ package body gpu_generator is
 
             a_start_time := 0;
 
-            DAGs (i).period   := cur_dag.id * 20;
-            DAGs (i).deadline := cur_dag.id * 20;
+            --DAGs (i).period   := cur_dag.id * 20;
+            --DAGs (i).deadline := cur_dag.id * 20;
 
             current_cpu_utilization :=
                current_cpu_utilization + Float (a_capacity) / Float (a_period);
 
             for kernel_index in 1 .. cur_dag.kernel_count loop
-
-                for x_x in 1 ..  cur_dag.kernels(kernel_index).block_count loop
-                    capacities(block_index) := Random_Range(1, cur_dag.kernels(kernel_index).capacity);
-                    if capacities(block_index) > cur_max_capacity_for_kernel then
-                        cur_max_capacity_for_kernel := capacities(block_index);
-                    end if;
-                    block_index := block_index + 1;
-                end loop;
-
-                cur_dag.kernels(kernel_index).capacity := cur_max_capacity_for_kernel;
-
+                cur_dag.kernels (kernel_index).capacity := Random_Range(1, 7);
                 put_line
                    ("DAG " & cur_dag.id'Img & " Kernel " &
                     cur_dag.kernels (kernel_index).id'Img & " Period: " &

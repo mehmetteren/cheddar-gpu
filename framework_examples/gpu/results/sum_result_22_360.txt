@@ -1,0 +1,361 @@
+Number of arguments:  3
+Period: 360
+System: framework_examples/gpu/inputs/analysis_model_22.xmlv3
+Extra: 22
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+Simulation Complete.
+Nb Response: 8
+
+
+Scheduling simulation, Processor TPC_1-SM_1 : 
+
+- Number of context switches :  35
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block1 => 5/worst 
+    DAG1-Kernel3-Block1 => 24/worst 
+    DAG1-Kernel3-Block5 => 24/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  35
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel1-Block2 => 5/worst 
+    DAG1-Kernel3-Block2 => 24/worst 
+    DAG1-Kernel3-Block6 => 24/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  12
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block3 => 24/worst 
+    DAG1-Kernel3-Block7 => 24/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  47
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG1-Kernel2-Block1 => 12/worst 
+    DAG1-Kernel3-Block4 => 24/worst 
+    DAG1-Kernel3-Block8 => 24/worst 
+    DAG1-Kernel4-Block1 => 32/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  62),  missed its deadline (absolute deadline =  90 ; completion time =  92),  missed its deadline (absolute deadline =  120 ; completion time =  122),  missed its deadline (absolute deadline =  150 ; completion time =  152),  missed its deadline (absolute deadline =  180 ; completion time =  182),  missed its deadline (absolute deadline =  210 ; completion time =  212),  missed its deadline (absolute deadline =  240 ; completion time =  242),  missed its deadline (absolute deadline =  270 ; completion time =  272),  missed its deadline (absolute deadline =  300 ; completion time =  302),  missed its deadline (absolute deadline =  330 ; completion time =  332)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  26
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block1 => 3/worst 
+    DAG2-Kernel3-Block1 => 16/worst 
+    DAG2-Kernel3-Block5 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  26
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block2 => 3/worst 
+    DAG2-Kernel3-Block2 => 16/worst 
+    DAG2-Kernel3-Block6 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  35
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block3 => 3/worst 
+    DAG2-Kernel2-Block2 => 10/worst 
+    DAG2-Kernel3-Block3 => 16/worst 
+    DAG2-Kernel3-Block7 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  35
+- Number of preemptions :  0
+
+- Task response time computed from simulation : 
+    DAG2-Kernel1-Block4 => 3/worst 
+    DAG2-Kernel2-Block1 => 10/worst 
+    DAG2-Kernel3-Block4 => 16/worst 
+    DAG2-Kernel3-Block8 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+

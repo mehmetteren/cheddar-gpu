@@ -118,7 +118,7 @@ package gpu_generator is
 
     procedure generate_dag_specs_uunifast
        (DAGs : in out DAGList;
-       total_block_count : in Integer; capacities : in out IntegerArray_ptr;
+       total_block_count : in Integer;
         target_cpu_utilization : in Float; 
         n_different_periods    : in Integer;
         current_cpu_utilization : in out Float;
