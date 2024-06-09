@@ -194,8 +194,8 @@ package body gpu_generator is
 
             a_start_time := 0;
 
-            DAGs (i).period   := cur_dag.id * 20;
-            DAGs (i).deadline := cur_dag.id * 20;
+            --  DAGs (i).period   := cur_dag.id * 20;
+            --  DAGs (i).deadline := cur_dag.id * 20;
             -- capacities := Random_Partition(a_capacity, cur_dag.kernel_count);
 
             current_cpu_utilization :=
