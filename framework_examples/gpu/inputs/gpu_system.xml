@@ -5,32 +5,32 @@
    <id>1</id>
    <kernel_count>4</kernel_count>
    <stream>1</stream>
-   <period>20</period>
-   <deadline>20</deadline>
+   <period>30</period>
+   <deadline>30</deadline>
    <kernels>
     <kernel>
      <id>1</id>
      <block_count>16</block_count>
      <block_size>128</block_size>
-     <capacity>10</capacity>
+     <capacity>7</capacity>
     </kernel>
     <kernel>
      <id>2</id>
      <block_count>8</block_count>
      <block_size>128</block_size>
-     <capacity>10</capacity>
+     <capacity>4</capacity>
     </kernel>
     <kernel>
      <id>3</id>
      <block_count>64</block_count>
      <block_size>128</block_size>
-     <capacity>10</capacity>
+     <capacity>2</capacity>
     </kernel>
     <kernel>
      <id>4</id>
      <block_count>8</block_count>
      <block_size>128</block_size>
-     <capacity>10</capacity>
+     <capacity>6</capacity>
     </kernel>
    </kernels>
   </DAG>
@@ -45,19 +45,19 @@
      <id>1</id>
      <block_count>32</block_count>
      <block_size>128</block_size>
-     <capacity>10</capacity>
+     <capacity>8</capacity>
     </kernel>
     <kernel>
      <id>2</id>
      <block_count>16</block_count>
      <block_size>128</block_size>
-     <capacity>10</capacity>
+     <capacity>3</capacity>
     </kernel>
     <kernel>
      <id>3</id>
      <block_count>64</block_count>
      <block_size>128</block_size>
-     <capacity>10</capacity>
+     <capacity>9</capacity>
     </kernel>
    </kernels>
   </DAG>
