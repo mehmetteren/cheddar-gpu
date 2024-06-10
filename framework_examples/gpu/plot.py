@@ -19,7 +19,9 @@ def parse_sum_result(file_path):
     with open(file_path, 'r') as file:
         content = file.read()
         
-        tasks = re.findall(r'DAG\d+-Kernel\d+-Block\d+ => \d+/worst(.*?)\n', content)
+        a_tasks = re.findall(r'DAG1+-Kernel\d+-Block\d+ => \d+/worst(.*?)\n', content)
+        b_tasks = re.findall(r'DAG1+-Kernel\d+-Block\d+ => \d+/worst(.*?)\n', content)
+
         for task in tasks:
             if 'missed its deadline' in task:
                 missed_count += 1            

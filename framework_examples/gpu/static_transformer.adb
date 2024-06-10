@@ -359,7 +359,7 @@ package body static_transformer is
                           ("TPC_" & Integer'Image (cur_tpc.id) & "-" &
                            core_name_prefix & cpu_index'Img)),
                      Task_Type          => Periodic_Type, Start_Time => 0,
-                     Capacity           => Random_Range(1, cur_kernel.capacity),
+                     Capacity           => cur_kernel.capacity,
                      Period => cur_dag.period, Deadline => cur_dag.deadline,
                      Priority           => cur_dag.stream,
                      -- User_Defined_Parameters_Table, ???????
