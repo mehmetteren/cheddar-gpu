@@ -12,7 +12,7 @@
      <id>1</id>
      <block_count>16</block_count>
      <block_size>128</block_size>
-     <capacity>8</capacity>
+     <capacity>5</capacity>
     </kernel>
     <kernel>
      <id>2</id>
@@ -24,13 +24,13 @@
      <id>3</id>
      <block_count>64</block_count>
      <block_size>128</block_size>
-     <capacity>9</capacity>
+     <capacity>6</capacity>
     </kernel>
     <kernel>
      <id>4</id>
      <block_count>8</block_count>
      <block_size>128</block_size>
-     <capacity>6</capacity>
+     <capacity>8</capacity>
     </kernel>
    </kernels>
   </DAG>
@@ -45,19 +45,19 @@
      <id>1</id>
      <block_count>32</block_count>
      <block_size>128</block_size>
-     <capacity>8</capacity>
+     <capacity>3</capacity>
     </kernel>
     <kernel>
      <id>2</id>
      <block_count>16</block_count>
      <block_size>128</block_size>
-     <capacity>6</capacity>
+     <capacity>7</capacity>
     </kernel>
     <kernel>
      <id>3</id>
      <block_count>64</block_count>
      <block_size>128</block_size>
-     <capacity>9</capacity>
+     <capacity>3</capacity>
     </kernel>
    </kernels>
   </DAG>

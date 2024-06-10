@@ -1994,6 +1994,174 @@ hein ?
 hein ?
 hein ?
 hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
 Simulation Complete.
 Nb Response: 64
 
@@ -2001,658 +2169,658 @@ Nb Response: 64
 Scheduling simulation, Processor TPC_1-SM_1 : 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block1 => 29/worst 
-    DAG1-Kernel3-Block1 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block1 => 34/worst 
-    DAG2-Kernel3-Block1 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block1 => 5/worst 
+    DAG1-Kernel3-Block1 => 26/worst 
+    DAG2-Kernel1-Block1 => 12/worst 
+    DAG2-Kernel3-Block1 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block2 => 29/worst 
-    DAG1-Kernel3-Block2 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block2 => 34/worst 
-    DAG2-Kernel3-Block2 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block2 => 5/worst 
+    DAG1-Kernel3-Block2 => 26/worst 
+    DAG2-Kernel1-Block2 => 12/worst 
+    DAG2-Kernel3-Block2 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block3 => 29/worst 
-    DAG1-Kernel3-Block3 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block3 => 34/worst 
-    DAG2-Kernel3-Block3 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block3 => 5/worst 
+    DAG1-Kernel3-Block3 => 26/worst 
+    DAG2-Kernel1-Block3 => 12/worst 
+    DAG2-Kernel3-Block3 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block4 => 29/worst 
-    DAG1-Kernel3-Block4 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block4 => 34/worst 
-    DAG2-Kernel3-Block4 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block4 => 5/worst 
+    DAG1-Kernel3-Block4 => 26/worst 
+    DAG2-Kernel1-Block4 => 12/worst 
+    DAG2-Kernel3-Block4 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block5 => 29/worst 
-    DAG1-Kernel3-Block5 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block5 => 34/worst 
-    DAG2-Kernel3-Block5 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block5 => 5/worst 
+    DAG1-Kernel3-Block5 => 26/worst 
+    DAG2-Kernel1-Block5 => 12/worst 
+    DAG2-Kernel3-Block5 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block6 => 29/worst 
-    DAG1-Kernel3-Block6 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block6 => 34/worst 
-    DAG2-Kernel3-Block6 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block6 => 5/worst 
+    DAG1-Kernel3-Block6 => 26/worst 
+    DAG2-Kernel1-Block6 => 12/worst 
+    DAG2-Kernel3-Block6 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block7 => 29/worst 
-    DAG1-Kernel3-Block7 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block7 => 34/worst 
-    DAG2-Kernel3-Block7 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block7 => 5/worst 
+    DAG1-Kernel3-Block7 => 26/worst 
+    DAG2-Kernel1-Block7 => 12/worst 
+    DAG2-Kernel3-Block7 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block8 => 29/worst 
-    DAG1-Kernel3-Block8 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block8 => 34/worst 
-    DAG2-Kernel3-Block8 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block8 => 5/worst 
+    DAG1-Kernel3-Block8 => 26/worst 
+    DAG2-Kernel1-Block8 => 12/worst 
+    DAG2-Kernel3-Block8 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block9 => 29/worst 
-    DAG1-Kernel3-Block9 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block9 => 34/worst 
-    DAG2-Kernel3-Block9 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block9 => 5/worst 
+    DAG1-Kernel3-Block9 => 26/worst 
+    DAG2-Kernel1-Block9 => 12/worst 
+    DAG2-Kernel3-Block9 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block10 => 29/worst 
-    DAG1-Kernel3-Block10 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block10 => 34/worst 
-    DAG2-Kernel3-Block10 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block10 => 5/worst 
+    DAG1-Kernel3-Block10 => 26/worst 
+    DAG2-Kernel1-Block10 => 12/worst 
+    DAG2-Kernel3-Block10 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block11 => 29/worst 
-    DAG1-Kernel3-Block11 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block11 => 34/worst 
-    DAG2-Kernel3-Block11 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block11 => 5/worst 
+    DAG1-Kernel3-Block11 => 26/worst 
+    DAG2-Kernel1-Block11 => 12/worst 
+    DAG2-Kernel3-Block11 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block12 => 29/worst 
-    DAG1-Kernel3-Block12 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block12 => 34/worst 
-    DAG2-Kernel3-Block12 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block12 => 5/worst 
+    DAG1-Kernel3-Block12 => 26/worst 
+    DAG2-Kernel1-Block12 => 12/worst 
+    DAG2-Kernel3-Block12 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block13 => 29/worst 
-    DAG1-Kernel3-Block13 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block13 => 34/worst 
-    DAG2-Kernel3-Block13 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block13 => 5/worst 
+    DAG1-Kernel3-Block13 => 26/worst 
+    DAG2-Kernel1-Block13 => 12/worst 
+    DAG2-Kernel3-Block13 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block14 => 29/worst 
-    DAG1-Kernel3-Block14 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block14 => 34/worst 
-    DAG2-Kernel3-Block14 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block14 => 5/worst 
+    DAG1-Kernel3-Block14 => 26/worst 
+    DAG2-Kernel1-Block14 => 12/worst 
+    DAG2-Kernel3-Block14 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block15 => 29/worst 
-    DAG1-Kernel3-Block15 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block15 => 34/worst 
-    DAG2-Kernel3-Block15 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block15 => 5/worst 
+    DAG1-Kernel3-Block15 => 26/worst 
+    DAG2-Kernel1-Block15 => 12/worst 
+    DAG2-Kernel3-Block15 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
 - Number of context switches :  44
-- Number of preemptions :  6
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel1-Block16 => 29/worst 
-    DAG1-Kernel3-Block16 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  163),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block16 => 34/worst 
-    DAG2-Kernel3-Block16 => 28/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel1-Block16 => 5/worst 
+    DAG1-Kernel3-Block16 => 26/worst 
+    DAG2-Kernel1-Block16 => 12/worst 
+    DAG2-Kernel3-Block16 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block17 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block17 => 26/worst 
-    DAG2-Kernel3-Block17 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block18 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block18 => 26/worst 
-    DAG2-Kernel3-Block18 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block17 => 26/worst 
+    DAG2-Kernel1-Block17 => 12/worst 
+    DAG2-Kernel3-Block17 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block19 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block19 => 26/worst 
-    DAG2-Kernel3-Block19 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block20 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block20 => 26/worst 
-    DAG2-Kernel3-Block20 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block18 => 26/worst 
+    DAG2-Kernel1-Block18 => 12/worst 
+    DAG2-Kernel3-Block18 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block21 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block21 => 26/worst 
-    DAG2-Kernel3-Block21 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block22 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block22 => 26/worst 
-    DAG2-Kernel3-Block22 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block19 => 26/worst 
+    DAG2-Kernel1-Block19 => 12/worst 
+    DAG2-Kernel3-Block19 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block23 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block23 => 26/worst 
-    DAG2-Kernel3-Block23 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block24 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block24 => 26/worst 
-    DAG2-Kernel3-Block24 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block20 => 26/worst 
+    DAG2-Kernel1-Block20 => 12/worst 
+    DAG2-Kernel3-Block20 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block25 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block25 => 26/worst 
-    DAG2-Kernel3-Block25 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block26 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block26 => 26/worst 
-    DAG2-Kernel3-Block26 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block21 => 26/worst 
+    DAG2-Kernel1-Block21 => 12/worst 
+    DAG2-Kernel3-Block21 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block27 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block27 => 26/worst 
-    DAG2-Kernel3-Block27 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block28 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block28 => 26/worst 
-    DAG2-Kernel3-Block28 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block22 => 26/worst 
+    DAG2-Kernel1-Block22 => 12/worst 
+    DAG2-Kernel3-Block22 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block29 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block29 => 26/worst 
-    DAG2-Kernel3-Block29 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block30 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block30 => 26/worst 
-    DAG2-Kernel3-Block30 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block23 => 26/worst 
+    DAG2-Kernel1-Block23 => 12/worst 
+    DAG2-Kernel3-Block23 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block31 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block31 => 26/worst 
-    DAG2-Kernel3-Block31 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block32 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel1-Block32 => 26/worst 
-    DAG2-Kernel3-Block32 => 26/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block24 => 26/worst 
+    DAG2-Kernel1-Block24 => 12/worst 
+    DAG2-Kernel3-Block24 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block25 => 26/worst 
+    DAG2-Kernel1-Block25 => 12/worst 
+    DAG2-Kernel3-Block25 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block26 => 26/worst 
+    DAG2-Kernel1-Block26 => 12/worst 
+    DAG2-Kernel3-Block26 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block27 => 26/worst 
+    DAG2-Kernel1-Block27 => 12/worst 
+    DAG2-Kernel3-Block27 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block28 => 26/worst 
+    DAG2-Kernel1-Block28 => 12/worst 
+    DAG2-Kernel3-Block28 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block29 => 26/worst 
+    DAG2-Kernel1-Block29 => 12/worst 
+    DAG2-Kernel3-Block29 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block30 => 26/worst 
+    DAG2-Kernel1-Block30 => 12/worst 
+    DAG2-Kernel3-Block30 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block31 => 26/worst 
+    DAG2-Kernel1-Block31 => 12/worst 
+    DAG2-Kernel3-Block31 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block32 => 26/worst 
+    DAG2-Kernel1-Block32 => 12/worst 
+    DAG2-Kernel3-Block32 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block33 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block33 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block33 => 26/worst 
+    DAG2-Kernel3-Block33 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block34 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block34 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block34 => 26/worst 
+    DAG2-Kernel3-Block34 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block35 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block35 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block35 => 26/worst 
+    DAG2-Kernel3-Block35 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block36 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block36 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block36 => 26/worst 
+    DAG2-Kernel3-Block36 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block37 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block37 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block37 => 26/worst 
+    DAG2-Kernel3-Block37 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block38 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block38 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block38 => 26/worst 
+    DAG2-Kernel3-Block38 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block39 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block39 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block39 => 26/worst 
+    DAG2-Kernel3-Block39 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block40 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block40 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block40 => 26/worst 
+    DAG2-Kernel3-Block40 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block41 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block41 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block41 => 26/worst 
+    DAG2-Kernel3-Block41 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block42 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block42 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block42 => 26/worst 
+    DAG2-Kernel3-Block42 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block43 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block43 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block43 => 26/worst 
+    DAG2-Kernel3-Block43 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block44 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block44 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block44 => 26/worst 
+    DAG2-Kernel3-Block44 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block45 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block45 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block45 => 26/worst 
+    DAG2-Kernel3-Block45 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block46 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block46 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block46 => 26/worst 
+    DAG2-Kernel3-Block46 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block47 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block47 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block47 => 26/worst 
+    DAG2-Kernel3-Block47 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  19
+- Number of context switches :  21
 - Number of preemptions :  2
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block48 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel3-Block48 => 23/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block48 => 26/worst 
+    DAG2-Kernel3-Block48 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block49 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel2-Block16 => 24/worst 
-    DAG2-Kernel3-Block49 => 24/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block50 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel2-Block15 => 24/worst 
-    DAG2-Kernel3-Block50 => 24/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block49 => 26/worst 
+    DAG2-Kernel2-Block16 => 16/worst 
+    DAG2-Kernel3-Block49 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block51 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel2-Block14 => 24/worst 
-    DAG2-Kernel3-Block51 => 24/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block52 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel2-Block13 => 24/worst 
-    DAG2-Kernel3-Block52 => 24/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block50 => 26/worst 
+    DAG2-Kernel2-Block15 => 16/worst 
+    DAG2-Kernel3-Block50 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block53 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel2-Block12 => 24/worst 
-    DAG2-Kernel3-Block53 => 24/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block54 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel2-Block11 => 24/worst 
-    DAG2-Kernel3-Block54 => 24/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block51 => 26/worst 
+    DAG2-Kernel2-Block14 => 16/worst 
+    DAG2-Kernel3-Block51 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  30
-- Number of preemptions :  4
-
-- Task response time computed from simulation : 
-    DAG1-Kernel3-Block55 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel2-Block10 => 24/worst 
-    DAG2-Kernel3-Block55 => 24/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
-
-
-- Number of context switches :  30
-- Number of preemptions :  4
+- Number of context switches :  32
+- Number of preemptions :  3
 
 - Task response time computed from simulation : 
-    DAG1-Kernel3-Block56 => 64/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  32),  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  98),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  157),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  231),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  290),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG2-Kernel2-Block9 => 24/worst 
-    DAG2-Kernel3-Block56 => 24/worst 
-- Some task deadlines will be missed : the task set is not schedulable.
+    DAG1-Kernel3-Block52 => 26/worst 
+    DAG2-Kernel2-Block13 => 16/worst 
+    DAG2-Kernel3-Block52 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
 
 
-- Number of context switches :  47
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block53 => 26/worst 
+    DAG2-Kernel2-Block12 => 16/worst 
+    DAG2-Kernel3-Block53 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block54 => 26/worst 
+    DAG2-Kernel2-Block11 => 16/worst 
+    DAG2-Kernel3-Block54 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block55 => 26/worst 
+    DAG2-Kernel2-Block10 => 16/worst 
+    DAG2-Kernel3-Block55 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  32
+- Number of preemptions :  3
+
+- Task response time computed from simulation : 
+    DAG1-Kernel3-Block56 => 26/worst 
+    DAG2-Kernel2-Block9 => 16/worst 
+    DAG2-Kernel3-Block56 => 16/worst 
+- No deadline missed in the computed scheduling : the task set is schedulable if you computed the scheduling on the feasibility interval.
+
+
+- Number of context switches :  53
 - Number of preemptions :  0
 
 - Task response time computed from simulation : 
-    DAG1-Kernel2-Block8 => 55/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  132),  missed its deadline (absolute deadline =  180 ; completion time =  191),  missed its deadline (absolute deadline =  210 ; completion time =  222),  missed its deadline (absolute deadline =  240 ; completion time =  265),  missed its deadline (absolute deadline =  270 ; completion time =  281),  missed its deadline (absolute deadline =  300 ; completion time =  324),  missed its deadline (absolute deadline =  330 ; completion time =  355)
-    DAG1-Kernel3-Block57 => 71/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  104),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  178),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  237),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  311),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG1-Kernel4-Block8 => 48/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  95),  missed its deadline (absolute deadline =  120 ; completion time =  125),  missed its deadline (absolute deadline =  150 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  184),  missed its deadline (absolute deadline =  210 ; completion time =  228),  missed its deadline (absolute deadline =  240 ; completion time =  258),  missed its deadline (absolute deadline =  270 ; completion time =  287),  missed its deadline (absolute deadline =  300 ; completion time =  317)
-    DAG2-Kernel2-Block8 => 68/worst ,  missed its deadline (absolute deadline =  80 ; completion time =  82),  missed its deadline (absolute deadline =  160 ; completion time =  169),  missed its deadline (absolute deadline =  200 ; completion time =  206),  missed its deadline (absolute deadline =  240 ; completion time =  252),  missed its deadline (absolute deadline =  280 ; completion time =  293),  missed its deadline (absolute deadline =  320 ; completion time =  348)
-    DAG2-Kernel3-Block57 => 62/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  45),  missed its deadline (absolute deadline =  160 ; completion time =  163),  missed its deadline (absolute deadline =  200 ; completion time =  215),  missed its deadline (absolute deadline =  240 ; completion time =  246),  missed its deadline (absolute deadline =  280 ; completion time =  302),  missed its deadline (absolute deadline =  320 ; completion time =  342)
+    DAG1-Kernel2-Block8 => 20/worst 
+    DAG1-Kernel3-Block57 => 26/worst 
+    DAG1-Kernel4-Block8 => 34/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  150 ; completion time =  151),  missed its deadline (absolute deadline =  270 ; completion time =  271)
+    DAG2-Kernel2-Block8 => 26/worst 
+    DAG2-Kernel3-Block57 => 26/worst 
 - Some task deadlines will be missed : the task set is not schedulable.
 
 
-- Number of context switches :  47
+- Number of context switches :  53
 - Number of preemptions :  0
 
 - Task response time computed from simulation : 
-    DAG1-Kernel2-Block7 => 55/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  132),  missed its deadline (absolute deadline =  180 ; completion time =  191),  missed its deadline (absolute deadline =  210 ; completion time =  222),  missed its deadline (absolute deadline =  240 ; completion time =  265),  missed its deadline (absolute deadline =  270 ; completion time =  281),  missed its deadline (absolute deadline =  300 ; completion time =  324),  missed its deadline (absolute deadline =  330 ; completion time =  355)
-    DAG1-Kernel3-Block58 => 71/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  104),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  178),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  237),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  311),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG1-Kernel4-Block7 => 48/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  95),  missed its deadline (absolute deadline =  120 ; completion time =  125),  missed its deadline (absolute deadline =  150 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  184),  missed its deadline (absolute deadline =  210 ; completion time =  228),  missed its deadline (absolute deadline =  240 ; completion time =  258),  missed its deadline (absolute deadline =  270 ; completion time =  287),  missed its deadline (absolute deadline =  300 ; completion time =  317)
-    DAG2-Kernel2-Block7 => 68/worst ,  missed its deadline (absolute deadline =  80 ; completion time =  82),  missed its deadline (absolute deadline =  160 ; completion time =  169),  missed its deadline (absolute deadline =  200 ; completion time =  206),  missed its deadline (absolute deadline =  240 ; completion time =  252),  missed its deadline (absolute deadline =  280 ; completion time =  293),  missed its deadline (absolute deadline =  320 ; completion time =  348)
-    DAG2-Kernel3-Block58 => 62/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  45),  missed its deadline (absolute deadline =  160 ; completion time =  163),  missed its deadline (absolute deadline =  200 ; completion time =  215),  missed its deadline (absolute deadline =  240 ; completion time =  246),  missed its deadline (absolute deadline =  280 ; completion time =  302),  missed its deadline (absolute deadline =  320 ; completion time =  342)
+    DAG1-Kernel2-Block7 => 20/worst 
+    DAG1-Kernel3-Block58 => 26/worst 
+    DAG1-Kernel4-Block7 => 34/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  150 ; completion time =  151),  missed its deadline (absolute deadline =  270 ; completion time =  271)
+    DAG2-Kernel2-Block7 => 26/worst 
+    DAG2-Kernel3-Block58 => 26/worst 
 - Some task deadlines will be missed : the task set is not schedulable.
 
 
-- Number of context switches :  47
+- Number of context switches :  53
 - Number of preemptions :  0
 
 - Task response time computed from simulation : 
-    DAG1-Kernel2-Block6 => 55/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  132),  missed its deadline (absolute deadline =  180 ; completion time =  191),  missed its deadline (absolute deadline =  210 ; completion time =  222),  missed its deadline (absolute deadline =  240 ; completion time =  265),  missed its deadline (absolute deadline =  270 ; completion time =  281),  missed its deadline (absolute deadline =  300 ; completion time =  324),  missed its deadline (absolute deadline =  330 ; completion time =  355)
-    DAG1-Kernel3-Block59 => 71/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  104),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  178),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  237),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  311),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG1-Kernel4-Block6 => 48/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  95),  missed its deadline (absolute deadline =  120 ; completion time =  125),  missed its deadline (absolute deadline =  150 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  184),  missed its deadline (absolute deadline =  210 ; completion time =  228),  missed its deadline (absolute deadline =  240 ; completion time =  258),  missed its deadline (absolute deadline =  270 ; completion time =  287),  missed its deadline (absolute deadline =  300 ; completion time =  317)
-    DAG2-Kernel2-Block6 => 68/worst ,  missed its deadline (absolute deadline =  80 ; completion time =  82),  missed its deadline (absolute deadline =  160 ; completion time =  169),  missed its deadline (absolute deadline =  200 ; completion time =  206),  missed its deadline (absolute deadline =  240 ; completion time =  252),  missed its deadline (absolute deadline =  280 ; completion time =  293),  missed its deadline (absolute deadline =  320 ; completion time =  348)
-    DAG2-Kernel3-Block59 => 62/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  45),  missed its deadline (absolute deadline =  160 ; completion time =  163),  missed its deadline (absolute deadline =  200 ; completion time =  215),  missed its deadline (absolute deadline =  240 ; completion time =  246),  missed its deadline (absolute deadline =  280 ; completion time =  302),  missed its deadline (absolute deadline =  320 ; completion time =  342)
+    DAG1-Kernel2-Block6 => 20/worst 
+    DAG1-Kernel3-Block59 => 26/worst 
+    DAG1-Kernel4-Block6 => 34/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  150 ; completion time =  151),  missed its deadline (absolute deadline =  270 ; completion time =  271)
+    DAG2-Kernel2-Block6 => 26/worst 
+    DAG2-Kernel3-Block59 => 26/worst 
 - Some task deadlines will be missed : the task set is not schedulable.
 
 
-- Number of context switches :  47
+- Number of context switches :  53
 - Number of preemptions :  0
 
 - Task response time computed from simulation : 
-    DAG1-Kernel2-Block5 => 55/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  132),  missed its deadline (absolute deadline =  180 ; completion time =  191),  missed its deadline (absolute deadline =  210 ; completion time =  222),  missed its deadline (absolute deadline =  240 ; completion time =  265),  missed its deadline (absolute deadline =  270 ; completion time =  281),  missed its deadline (absolute deadline =  300 ; completion time =  324),  missed its deadline (absolute deadline =  330 ; completion time =  355)
-    DAG1-Kernel3-Block60 => 71/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  104),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  178),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  237),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  311),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG1-Kernel4-Block5 => 48/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  95),  missed its deadline (absolute deadline =  120 ; completion time =  125),  missed its deadline (absolute deadline =  150 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  184),  missed its deadline (absolute deadline =  210 ; completion time =  228),  missed its deadline (absolute deadline =  240 ; completion time =  258),  missed its deadline (absolute deadline =  270 ; completion time =  287),  missed its deadline (absolute deadline =  300 ; completion time =  317)
-    DAG2-Kernel2-Block5 => 68/worst ,  missed its deadline (absolute deadline =  80 ; completion time =  82),  missed its deadline (absolute deadline =  160 ; completion time =  169),  missed its deadline (absolute deadline =  200 ; completion time =  206),  missed its deadline (absolute deadline =  240 ; completion time =  252),  missed its deadline (absolute deadline =  280 ; completion time =  293),  missed its deadline (absolute deadline =  320 ; completion time =  348)
-    DAG2-Kernel3-Block60 => 62/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  45),  missed its deadline (absolute deadline =  160 ; completion time =  163),  missed its deadline (absolute deadline =  200 ; completion time =  215),  missed its deadline (absolute deadline =  240 ; completion time =  246),  missed its deadline (absolute deadline =  280 ; completion time =  302),  missed its deadline (absolute deadline =  320 ; completion time =  342)
+    DAG1-Kernel2-Block5 => 20/worst 
+    DAG1-Kernel3-Block60 => 26/worst 
+    DAG1-Kernel4-Block5 => 34/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  150 ; completion time =  151),  missed its deadline (absolute deadline =  270 ; completion time =  271)
+    DAG2-Kernel2-Block5 => 26/worst 
+    DAG2-Kernel3-Block60 => 26/worst 
 - Some task deadlines will be missed : the task set is not schedulable.
 
 
-- Number of context switches :  47
+- Number of context switches :  53
 - Number of preemptions :  0
 
 - Task response time computed from simulation : 
-    DAG1-Kernel2-Block4 => 55/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  132),  missed its deadline (absolute deadline =  180 ; completion time =  191),  missed its deadline (absolute deadline =  210 ; completion time =  222),  missed its deadline (absolute deadline =  240 ; completion time =  265),  missed its deadline (absolute deadline =  270 ; completion time =  281),  missed its deadline (absolute deadline =  300 ; completion time =  324),  missed its deadline (absolute deadline =  330 ; completion time =  355)
-    DAG1-Kernel3-Block61 => 71/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  104),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  178),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  237),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  311),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG1-Kernel4-Block4 => 48/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  95),  missed its deadline (absolute deadline =  120 ; completion time =  125),  missed its deadline (absolute deadline =  150 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  184),  missed its deadline (absolute deadline =  210 ; completion time =  228),  missed its deadline (absolute deadline =  240 ; completion time =  258),  missed its deadline (absolute deadline =  270 ; completion time =  287),  missed its deadline (absolute deadline =  300 ; completion time =  317)
-    DAG2-Kernel2-Block4 => 68/worst ,  missed its deadline (absolute deadline =  80 ; completion time =  82),  missed its deadline (absolute deadline =  160 ; completion time =  169),  missed its deadline (absolute deadline =  200 ; completion time =  206),  missed its deadline (absolute deadline =  240 ; completion time =  252),  missed its deadline (absolute deadline =  280 ; completion time =  293),  missed its deadline (absolute deadline =  320 ; completion time =  348)
-    DAG2-Kernel3-Block61 => 62/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  45),  missed its deadline (absolute deadline =  160 ; completion time =  163),  missed its deadline (absolute deadline =  200 ; completion time =  215),  missed its deadline (absolute deadline =  240 ; completion time =  246),  missed its deadline (absolute deadline =  280 ; completion time =  302),  missed its deadline (absolute deadline =  320 ; completion time =  342)
+    DAG1-Kernel2-Block4 => 20/worst 
+    DAG1-Kernel3-Block61 => 26/worst 
+    DAG1-Kernel4-Block4 => 34/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  150 ; completion time =  151),  missed its deadline (absolute deadline =  270 ; completion time =  271)
+    DAG2-Kernel2-Block4 => 26/worst 
+    DAG2-Kernel3-Block61 => 26/worst 
 - Some task deadlines will be missed : the task set is not schedulable.
 
 
-- Number of context switches :  47
+- Number of context switches :  53
 - Number of preemptions :  0
 
 - Task response time computed from simulation : 
-    DAG1-Kernel2-Block3 => 55/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  132),  missed its deadline (absolute deadline =  180 ; completion time =  191),  missed its deadline (absolute deadline =  210 ; completion time =  222),  missed its deadline (absolute deadline =  240 ; completion time =  265),  missed its deadline (absolute deadline =  270 ; completion time =  281),  missed its deadline (absolute deadline =  300 ; completion time =  324),  missed its deadline (absolute deadline =  330 ; completion time =  355)
-    DAG1-Kernel3-Block62 => 71/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  104),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  178),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  237),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  311),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG1-Kernel4-Block3 => 48/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  95),  missed its deadline (absolute deadline =  120 ; completion time =  125),  missed its deadline (absolute deadline =  150 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  184),  missed its deadline (absolute deadline =  210 ; completion time =  228),  missed its deadline (absolute deadline =  240 ; completion time =  258),  missed its deadline (absolute deadline =  270 ; completion time =  287),  missed its deadline (absolute deadline =  300 ; completion time =  317)
-    DAG2-Kernel2-Block3 => 68/worst ,  missed its deadline (absolute deadline =  80 ; completion time =  82),  missed its deadline (absolute deadline =  160 ; completion time =  169),  missed its deadline (absolute deadline =  200 ; completion time =  206),  missed its deadline (absolute deadline =  240 ; completion time =  252),  missed its deadline (absolute deadline =  280 ; completion time =  293),  missed its deadline (absolute deadline =  320 ; completion time =  348)
-    DAG2-Kernel3-Block62 => 62/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  45),  missed its deadline (absolute deadline =  160 ; completion time =  163),  missed its deadline (absolute deadline =  200 ; completion time =  215),  missed its deadline (absolute deadline =  240 ; completion time =  246),  missed its deadline (absolute deadline =  280 ; completion time =  302),  missed its deadline (absolute deadline =  320 ; completion time =  342)
+    DAG1-Kernel2-Block3 => 20/worst 
+    DAG1-Kernel3-Block62 => 26/worst 
+    DAG1-Kernel4-Block3 => 34/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  150 ; completion time =  151),  missed its deadline (absolute deadline =  270 ; completion time =  271)
+    DAG2-Kernel2-Block3 => 26/worst 
+    DAG2-Kernel3-Block62 => 26/worst 
 - Some task deadlines will be missed : the task set is not schedulable.
 
 
-- Number of context switches :  47
+- Number of context switches :  53
 - Number of preemptions :  0
 
 - Task response time computed from simulation : 
-    DAG1-Kernel2-Block2 => 55/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  132),  missed its deadline (absolute deadline =  180 ; completion time =  191),  missed its deadline (absolute deadline =  210 ; completion time =  222),  missed its deadline (absolute deadline =  240 ; completion time =  265),  missed its deadline (absolute deadline =  270 ; completion time =  281),  missed its deadline (absolute deadline =  300 ; completion time =  324),  missed its deadline (absolute deadline =  330 ; completion time =  355)
-    DAG1-Kernel3-Block63 => 71/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  104),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  178),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  237),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  311),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG1-Kernel4-Block2 => 48/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  95),  missed its deadline (absolute deadline =  120 ; completion time =  125),  missed its deadline (absolute deadline =  150 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  184),  missed its deadline (absolute deadline =  210 ; completion time =  228),  missed its deadline (absolute deadline =  240 ; completion time =  258),  missed its deadline (absolute deadline =  270 ; completion time =  287),  missed its deadline (absolute deadline =  300 ; completion time =  317)
-    DAG2-Kernel2-Block2 => 68/worst ,  missed its deadline (absolute deadline =  80 ; completion time =  82),  missed its deadline (absolute deadline =  160 ; completion time =  169),  missed its deadline (absolute deadline =  200 ; completion time =  206),  missed its deadline (absolute deadline =  240 ; completion time =  252),  missed its deadline (absolute deadline =  280 ; completion time =  293),  missed its deadline (absolute deadline =  320 ; completion time =  348)
-    DAG2-Kernel3-Block63 => 62/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  45),  missed its deadline (absolute deadline =  160 ; completion time =  163),  missed its deadline (absolute deadline =  200 ; completion time =  215),  missed its deadline (absolute deadline =  240 ; completion time =  246),  missed its deadline (absolute deadline =  280 ; completion time =  302),  missed its deadline (absolute deadline =  320 ; completion time =  342)
+    DAG1-Kernel2-Block2 => 20/worst 
+    DAG1-Kernel3-Block63 => 26/worst 
+    DAG1-Kernel4-Block2 => 34/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  150 ; completion time =  151),  missed its deadline (absolute deadline =  270 ; completion time =  271)
+    DAG2-Kernel2-Block2 => 26/worst 
+    DAG2-Kernel3-Block63 => 26/worst 
 - Some task deadlines will be missed : the task set is not schedulable.
 
 
-- Number of context switches :  47
+- Number of context switches :  53
 - Number of preemptions :  0
 
 - Task response time computed from simulation : 
-    DAG1-Kernel2-Block1 => 55/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  132),  missed its deadline (absolute deadline =  180 ; completion time =  191),  missed its deadline (absolute deadline =  210 ; completion time =  222),  missed its deadline (absolute deadline =  240 ; completion time =  265),  missed its deadline (absolute deadline =  270 ; completion time =  281),  missed its deadline (absolute deadline =  300 ; completion time =  324),  missed its deadline (absolute deadline =  330 ; completion time =  355)
-    DAG1-Kernel3-Block64 => 71/worst ,  missed its deadline (absolute deadline =  60 ; completion time =  67),  missed its deadline (absolute deadline =  90 ; completion time =  104),  missed its deadline (absolute deadline =  120 ; completion time =  141),  missed its deadline (absolute deadline =  150 ; completion time =  178),  missed its deadline (absolute deadline =  180 ; completion time =  200),  missed its deadline (absolute deadline =  210 ; completion time =  237),  missed its deadline (absolute deadline =  240 ; completion time =  274),  missed its deadline (absolute deadline =  270 ; completion time =  311),  missed its deadline (absolute deadline =  300 ; completion time =  333)
-    DAG1-Kernel4-Block1 => 48/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  95),  missed its deadline (absolute deadline =  120 ; completion time =  125),  missed its deadline (absolute deadline =  150 ; completion time =  154),  missed its deadline (absolute deadline =  180 ; completion time =  184),  missed its deadline (absolute deadline =  210 ; completion time =  228),  missed its deadline (absolute deadline =  240 ; completion time =  258),  missed its deadline (absolute deadline =  270 ; completion time =  287),  missed its deadline (absolute deadline =  300 ; completion time =  317)
-    DAG2-Kernel2-Block1 => 68/worst ,  missed its deadline (absolute deadline =  80 ; completion time =  82),  missed its deadline (absolute deadline =  160 ; completion time =  169),  missed its deadline (absolute deadline =  200 ; completion time =  206),  missed its deadline (absolute deadline =  240 ; completion time =  252),  missed its deadline (absolute deadline =  280 ; completion time =  293),  missed its deadline (absolute deadline =  320 ; completion time =  348)
-    DAG2-Kernel3-Block64 => 62/worst ,  missed its deadline (absolute deadline =  40 ; completion time =  45),  missed its deadline (absolute deadline =  160 ; completion time =  163),  missed its deadline (absolute deadline =  200 ; completion time =  215),  missed its deadline (absolute deadline =  240 ; completion time =  246),  missed its deadline (absolute deadline =  280 ; completion time =  302),  missed its deadline (absolute deadline =  320 ; completion time =  342)
+    DAG1-Kernel2-Block1 => 20/worst 
+    DAG1-Kernel3-Block64 => 26/worst 
+    DAG1-Kernel4-Block1 => 34/worst ,  missed its deadline (absolute deadline =  30 ; completion time =  34),  missed its deadline (absolute deadline =  150 ; completion time =  151),  missed its deadline (absolute deadline =  270 ; completion time =  271)
+    DAG2-Kernel2-Block1 => 26/worst 
+    DAG2-Kernel3-Block64 => 26/worst 
 - Some task deadlines will be missed : the task set is not schedulable.
 
 
