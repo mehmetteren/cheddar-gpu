@@ -1,0 +1,1654 @@
+Number of arguments:  3
+Period: 1200
+System: framework_examples/gpu/inputs/round_robin_91.xmlv3
+Extra: 0
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+hein ?
+Simulation Complete.
+Nb Response: 8
+
+
+Scheduling simulation, Processor TPC_1-SM_1 : 
+
+- Number of context switches :  199
+- Number of preemptions :  22
+
+- Task response time computed from simulation : 
+    1_1_dummy_task_1 => 4/worst 
+    1_1_dummy_task_2 => 68/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  128)
+    1_1_dummy_task_3 => 14/worst 
+    1_1_dummy_task_4 => 66/worst 
+    1_1_dummy_task_5 => 24/worst 
+    1_1_dummy_task_6 => 82/worst 
+    1_1_dummy_task_7 => 32/worst 
+    1_1_dummy_task_8 => 108/worst 
+    DAG1-Kernel1-Block1 => 83/worst 
+    DAG1-Kernel1-Block9 => 90/worst 
+    DAG1-Kernel3-Block1 => 104/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  104)
+    DAG1-Kernel3-Block9 => 116/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  116)
+    DAG1-Kernel4-Block8 => 110/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  110)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  199
+- Number of preemptions :  22
+
+- Task response time computed from simulation : 
+    1_2_dummy_task_1 => 4/worst 
+    1_2_dummy_task_2 => 68/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  128)
+    1_2_dummy_task_3 => 14/worst 
+    1_2_dummy_task_4 => 66/worst 
+    1_2_dummy_task_5 => 24/worst 
+    1_2_dummy_task_6 => 82/worst 
+    1_2_dummy_task_7 => 32/worst 
+    1_2_dummy_task_8 => 108/worst 
+    DAG1-Kernel1-Block10 => 83/worst 
+    DAG1-Kernel1-Block2 => 90/worst 
+    DAG1-Kernel3-Block10 => 104/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  104)
+    DAG1-Kernel3-Block2 => 116/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  116)
+    DAG1-Kernel4-Block7 => 110/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  110)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  199
+- Number of preemptions :  22
+
+- Task response time computed from simulation : 
+    1_3_dummy_task_1 => 4/worst 
+    1_3_dummy_task_2 => 68/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  128)
+    1_3_dummy_task_3 => 14/worst 
+    1_3_dummy_task_4 => 66/worst 
+    1_3_dummy_task_5 => 24/worst 
+    1_3_dummy_task_6 => 82/worst 
+    1_3_dummy_task_7 => 32/worst 
+    1_3_dummy_task_8 => 108/worst 
+    DAG1-Kernel1-Block11 => 83/worst 
+    DAG1-Kernel1-Block3 => 90/worst 
+    DAG1-Kernel3-Block11 => 104/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  104)
+    DAG1-Kernel3-Block3 => 116/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  116)
+    DAG1-Kernel4-Block6 => 110/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  110)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  199
+- Number of preemptions :  22
+
+- Task response time computed from simulation : 
+    1_4_dummy_task_1 => 4/worst 
+    1_4_dummy_task_2 => 68/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  128)
+    1_4_dummy_task_3 => 14/worst 
+    1_4_dummy_task_4 => 66/worst 
+    1_4_dummy_task_5 => 24/worst 
+    1_4_dummy_task_6 => 82/worst 
+    1_4_dummy_task_7 => 32/worst 
+    1_4_dummy_task_8 => 108/worst 
+    DAG1-Kernel1-Block12 => 83/worst 
+    DAG1-Kernel1-Block4 => 90/worst 
+    DAG1-Kernel3-Block12 => 104/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  104)
+    DAG1-Kernel3-Block4 => 116/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  116)
+    DAG1-Kernel4-Block5 => 110/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  110)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  215
+- Number of preemptions :  24
+
+- Task response time computed from simulation : 
+    1_5_dummy_task_1 => 6/worst 
+    1_5_dummy_task_2 => 76/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  136)
+    1_5_dummy_task_3 => 14/worst 
+    1_5_dummy_task_4 => 84/worst 
+    1_5_dummy_task_5 => 28/worst 
+    1_5_dummy_task_6 => 86/worst 
+    1_5_dummy_task_7 => 32/worst 
+    1_5_dummy_task_8 => 116/worst 
+    DAG1-Kernel1-Block13 => 84/worst 
+    DAG1-Kernel1-Block5 => 112/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  112)
+    DAG1-Kernel2-Block4 => 87/worst 
+    DAG1-Kernel3-Block13 => 126/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  126)
+    DAG1-Kernel3-Block5 => 132/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  132)
+    DAG1-Kernel4-Block4 => 110/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  110)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  215
+- Number of preemptions :  24
+
+- Task response time computed from simulation : 
+    1_6_dummy_task_1 => 6/worst 
+    1_6_dummy_task_2 => 76/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  136)
+    1_6_dummy_task_3 => 14/worst 
+    1_6_dummy_task_4 => 84/worst 
+    1_6_dummy_task_5 => 28/worst 
+    1_6_dummy_task_6 => 86/worst 
+    1_6_dummy_task_7 => 32/worst 
+    1_6_dummy_task_8 => 116/worst 
+    DAG1-Kernel1-Block14 => 84/worst 
+    DAG1-Kernel1-Block6 => 112/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  112)
+    DAG1-Kernel2-Block3 => 87/worst 
+    DAG1-Kernel3-Block14 => 126/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  126)
+    DAG1-Kernel3-Block6 => 132/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  132)
+    DAG1-Kernel4-Block3 => 110/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  110)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  215
+- Number of preemptions :  24
+
+- Task response time computed from simulation : 
+    1_7_dummy_task_1 => 6/worst 
+    1_7_dummy_task_2 => 76/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  136)
+    1_7_dummy_task_3 => 14/worst 
+    1_7_dummy_task_4 => 84/worst 
+    1_7_dummy_task_5 => 28/worst 
+    1_7_dummy_task_6 => 86/worst 
+    1_7_dummy_task_7 => 32/worst 
+    1_7_dummy_task_8 => 116/worst 
+    DAG1-Kernel1-Block15 => 84/worst 
+    DAG1-Kernel1-Block7 => 112/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  112)
+    DAG1-Kernel2-Block2 => 87/worst 
+    DAG1-Kernel3-Block15 => 126/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  126)
+    DAG1-Kernel3-Block7 => 132/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  132)
+    DAG1-Kernel4-Block2 => 110/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  110)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+
+- Number of context switches :  215
+- Number of preemptions :  24
+
+- Task response time computed from simulation : 
+    1_8_dummy_task_1 => 6/worst 
+    1_8_dummy_task_2 => 76/worst ,  missed its deadline (absolute deadline =  120 ; completion time =  136)
+    1_8_dummy_task_3 => 14/worst 
+    1_8_dummy_task_4 => 84/worst 
+    1_8_dummy_task_5 => 28/worst 
+    1_8_dummy_task_6 => 86/worst 
+    1_8_dummy_task_7 => 32/worst 
+    1_8_dummy_task_8 => 116/worst 
+    DAG1-Kernel1-Block16 => 84/worst 
+    DAG1-Kernel1-Block8 => 112/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  112)
+    DAG1-Kernel2-Block1 => 87/worst 
+    DAG1-Kernel3-Block16 => 126/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  126)
+    DAG1-Kernel3-Block8 => 132/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  132)
+    DAG1-Kernel4-Block1 => 110/worst ,  missed its deadline (absolute deadline =  90 ; completion time =  110)
+- Some task deadlines will be missed : the task set is not schedulable.
+
+

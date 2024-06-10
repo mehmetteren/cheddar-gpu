@@ -70,10 +70,80 @@ with scheduling_simulation_test_hlfet; use scheduling_simulation_test_hlfet;
 
 package body static_transformer is
 
+   procedure generate_dummy_workload_simple
+     (cheddar_system      : in out System; current_utilization : in out Float;
+      no_of_tasks_per_cpu : in     Integer; TPCs : in TPCList; algo : in Unbounded_string)
+   is
+      a_factor          : Integer;
+      a_capacity        : Natural := 0;
+      a_period          : Natural := 0;
+      a_deadline        : Natural := 0;
+      a_start_time      : Natural := 0;
+      a_priority : Integer := 2;
+      a_random_deadline : Float;
+
+      a_random_offset : Float;
+      my_tasks        : tasks_set;
+      cur_TPC         : TPC_ptr;
+      cur_cpu         : generic_processor_ptr;
+      cur_task        : generic_task_ptr;
+   begin
+      for tpc_index in 1 .. TPCs'Length loop
+         cur_TPC := TPCs (tpc_index);
+
+         for cpu_index in 1 .. cur_TPC.SMs'Length loop
+            cur_cpu             := cur_TPC.SMs (cpu_index);
+            current_utilization :=
+              Float
+                (processor_utilization_over_period
+                   (cheddar_system.tasks, cur_cpu.name));
+
+            if current_utilization > 0.9 then
+               put_line ("current utilization is higher than 0.9");
+            end if;
+            for i in 1 .. no_of_tasks_per_cpu loop
+               a_capacity := i * 2;
+               a_period := i * 30;
+               a_deadline := a_period;
+
+               if algo = "round_robin" then
+                  a_priority := (i mod 2) + 1;
+               else
+                  a_priority := 2;
+               end if;
+
+               current_utilization :=
+                 current_utilization + Float (a_capacity) / Float (a_period);
+
+               --  put_line
+               --    ("Current CPU utilization: " & current_utilization'Img);
+
+               add_task
+                 (my_tasks => cheddar_system.tasks, A_Task => cur_task,
+                  name               =>
+                    suppress_space
+                      (To_Unbounded_String
+                         (tpc_index'Img & "_" & cpu_index'Img &
+                          "_dummy_task_" & i'Img)),
+                  cpu_name           => cur_cpu.name,
+                  address_space_name =>
+                    suppress_space ("Address_Space_" & cur_cpu.name),
+                  core_name => empty_string, task_type => periodic_type,
+                  start_time         => 0, capacity => a_capacity,
+                  period => a_period, deadline => a_deadline, jitter => 0,
+                  blocking_time      => 0, priority => a_priority,
+                  criticality        => 0, policy => Sched_Fifo);
+
+               -- put_line ("Added task " & to_string (cur_task.name));
+            end loop;
+         end loop;
+      end loop;
+   end generate_dummy_workload_simple;
+
    procedure generate_dummy_workload
      (cheddar_system     : in out System; current_utilization : in out Float;
       target_utilization : in out Float; no_of_tasks_per_cpu : in Integer;
-      TPCs               : in     TPCList)
+      TPCs               : in     TPCList; algo : in Unbounded_String)
    is
       n_different_periods : Integer := 10;
       d_min               : Float   := 1.0;
@@ -99,6 +169,7 @@ package body static_transformer is
       cur_cpu         : generic_processor_ptr;
       cur_task        : generic_task_ptr;
 
+      a_priority : Integer := 2;
    begin
 
       a_factor := 2;--N_Tasks;
@@ -126,6 +197,10 @@ package body static_transformer is
                 (no_of_tasks_per_cpu, n_different_periods);
 
             for i in 1 .. no_of_tasks_per_cpu loop
+
+               if algo = "round_robin" then
+                  a_priority := (i mod 2) + 1;
+               end if;
                if current_utilization < target_utilization then
                   a_period :=
                     Natural
@@ -188,8 +263,8 @@ package body static_transformer is
                      core_name => empty_string, task_type => periodic_type,
                      start_time => a_start_time, capacity => a_capacity,
                      period => a_period, deadline => a_deadline, jitter => 0,
-                     blocking_time      => 0, priority => 1, criticality => 0,
-                     policy             => Sched_Fifo);
+                     blocking_time      => 0, priority => a_priority,
+                     criticality        => 0, policy => Sched_Fifo);
 
                   put_line ("Added task " & to_string (cur_task.name));
                end if;
@@ -202,7 +277,7 @@ package body static_transformer is
    procedure static_transformer
      (transformed_system : in out System; DAGs : DAGList;
       Stream_To_TPC      : in out StreamTPCMap; TPCs : in out TPCList;
-      TPC_count          :        Integer)
+      TPC_count          :        Integer; algo : in unbounded_string)
    is
 
       package Task_Vector is new Ada.Containers.Vectors
@@ -229,32 +304,41 @@ package body static_transformer is
       subtype Range_1_100 is Integer range 1 .. 100;
       package Rand_1_10 is new Ada.Numerics.Discrete_Random (Range_1_10);
       package Rand_1_100 is new Ada.Numerics.Discrete_Random (Range_1_100);
-      Gen_1_10          : Rand_1_10.Generator;
-      Gen_1_100         : Rand_1_100.Generator;
-      tpc_block_size    : Integer;
-      cpu_count         : Integer;
-      cpu_index         : Integer;
-      cur_tpc           : TPC_ptr;
-      prev_tasks        : Task_Vector.Vector;
-      cur_tasks         : Task_Vector.Vector;
-      prev_task_counter : Integer;
-      inc_cpu_count     : Boolean;
+      Gen_1_10            : Rand_1_10.Generator;
+      Gen_1_100           : Rand_1_100.Generator;
+      tpc_block_size      : Integer;
+      cpu_count           : Integer;
+      cpu_index           : Integer;
+      cur_tpc             : TPC_ptr;
+      prev_tasks          : Task_Vector.Vector;
+      cur_tasks           : Task_Vector.Vector;
+      prev_task_counter   : Integer;
+      inc_cpu_count       : Boolean;
       task_capacity_index : Integer := 1;
-      generic_Gen : Ada.Numerics.Float_Random.Generator; -- Declare the random number generator.
+      generic_Gen         :
+        Ada.Numerics.Float_Random
+          .Generator; -- Declare the random number generator.
+         
+      sched_type : Schedulers_Type;
+      a_priority : Integer := 1;
 
-    -- Function to generate a random integer between Low and High
-    function Random_Range (Low, High : Integer) return Integer is
-        Random_Value : Float := Ada.Numerics.Float_Random.Random (generic_Gen); -- Generate a random float between 0.0 and 1.0
-        the_range : Integer := High - Low + 1; -- Compute the range size
-        Scaled_Value : Integer := Integer (Random_Value * Float (the_range)) + Low; -- Scale and shift the random value
-    begin
-        return Scaled_Value; -- Return the scaled random integer
-    end;
+      -- Function to generate a random integer between Low and High
+      function Random_Range (Low, High : Integer) return Integer is
+         Random_Value : Float   :=
+           Ada.Numerics.Float_Random.Random
+             (generic_Gen); -- Generate a random float between 0.0 and 1.0
+         the_range    : Integer := High - Low + 1; -- Compute the range size
+         Scaled_Value : Integer :=
+           Integer (Random_Value * Float (the_range)) +
+           Low; -- Scale and shift the random value
+      begin
+         return Scaled_Value; -- Return the scaled random integer
+      end Random_Range;
 
    begin
       Rand_1_10.Reset (Gen_1_10);
       Rand_1_100.Reset (Gen_1_100);
-      Ada.Numerics.Float_Random.reset(generic_Gen);
+      Ada.Numerics.Float_Random.reset (generic_Gen);
 
       --  Call_Framework.initialize (False);
 
@@ -267,15 +351,25 @@ package body static_transformer is
       Set_initialize;
       initialize (transformed_system);
 
+      if algo = "round_robin" or algo = "fixed_priority" then
+         sched_type := Posix_1003_Highest_Priority_First_Protocol;
+      elsif algo = "rate_monotonic" then
+         sched_type := Rate_Monotonic_Protocol;
+      elsif algo = "deadline_monotonic" then
+         sched_type := Deadline_Monotonic_Protocol;
+      end if;
+
       for i in 1 .. TPC_count loop
-         sm_per_tpc := 2;
+         sm_per_tpc     := 2;
          tpc_block_size := TPCs (i).max_block_size;
-         sm_per_tpc := sm_per_tpc * TPCs(i).resource_multiplier;
+         sm_per_tpc     := sm_per_tpc * TPCs (i).resource_multiplier;
          Put_Line ("TPC " & i'Img & " block size: " & tpc_block_size'Img);
-         cpu_count    := (max_sm_size / tpc_block_size) * sm_per_tpc;
-         put_line("smpertpc: " & sm_per_tpc'Img & "  cpu_count: " & cpu_count'Img);
+         cpu_count := (max_sm_size / tpc_block_size) * sm_per_tpc;
+         put_line
+           ("smpertpc: " & sm_per_tpc'Img & "  cpu_count: " & cpu_count'Img);
          TPCs (i).SMs := new SM_Array (1 .. cpu_count);
          --core_unit_table_ptr := new Core_Units_Table;
+
          for j in 1 .. cpu_count loop
             Add_core_unit
               (My_core_units            => transformed_system.Core_units,
@@ -283,13 +377,13 @@ package body static_transformer is
                Name                     =>
                  Suppress_Space
                    ((("core-TPC_" & i'Img) & "-" & core_name_prefix & j'Img)),
-               Is_Preemptive => preemptive, Quantum => 5, speed => 1,
+               Is_Preemptive => preemptive, Quantum => 0, speed => 1,
                capacity                 => 1, period => 1, priority => 1,
                File_Name                => empty_string,
-               A_Scheduler => posix_1003_highest_priority_first_protocol,
+               A_Scheduler => sched_type,
                scheduling_protocol_name => To_Unbounded_String (""),
                automaton_name           => empty_string, start_time => 0);
-            Put_Line ("Core unit added");
+            --Put_Line ("Core unit added");
 
             add_processor
               (My_Processors => transformed_system.Processors,
@@ -300,7 +394,7 @@ package body static_transformer is
 
             TPCs (i).SMs (j) := cpu_ptr;
 
-            Put_Line ("Processor added");
+            --Put_Line ("Processor added");
 
             Add_Address_Space
               (My_Address_Spaces => transformed_system.Address_Spaces,
@@ -313,7 +407,7 @@ package body static_transformer is
                    ((("TPC_" & i'Img) & "-" & core_name_prefix & j'Img)),
                Text_Memory_Size  => 1_024, Stack_Memory_Size => 1_024,
                Data_Memory_Size  => 1_024, Heap_Memory_Size => 1_024);
-            Put_Line ("Address space added");
+            --Put_Line ("Address space added");
          end loop;
       end loop;
 
@@ -333,14 +427,18 @@ package body static_transformer is
             loop -- for kernel in cur_dag.kernels
                cur_kernel := cur_dag.kernels (i);
                if i mod 2 = 1 then
-                  inc_cpu_count := true;
+                  inc_cpu_count := True;
                   cpu_index     := 1;
                else
-                  inc_cpu_count := false;
+                  inc_cpu_count := False;
                   cpu_index     := cur_tpc.SMs'Length;
                end if;
 
                for j in 1 .. cur_kernel.block_count loop
+
+                  if algo = "round_robin" then
+                     a_priority := ((i+1) mod 2) + 1;
+                  end if;
 
                   Add_Task
                     (My_Tasks => transformed_system.Tasks, A_Task => cur_task,
@@ -362,17 +460,15 @@ package body static_transformer is
                           ("TPC_" & Integer'Image (cur_tpc.id) & "-" &
                            core_name_prefix & cpu_index'Img)),
                      Task_Type          => Periodic_Type, Start_Time => 0,
-                     Capacity           => cur_kernel.capacity,
-                     Period => cur_dag.period, Deadline => cur_dag.deadline,
-                     Priority           => cur_dag.stream,
+                     Capacity => cur_kernel.capacity, Period => cur_dag.period,
+                     Deadline => cur_dag.deadline, Priority => a_priority,
                      -- User_Defined_Parameters_Table, ???????
-                     Jitter             => 0,
-                     Blocking_Time      => 0, Criticality => 0,
+                     Jitter => 0, Blocking_Time => 0, Criticality => 0,
                      Policy             => Sched_Fifo);
                   task_capacity_index := task_capacity_index + 1;
                   cur_tasks.Append (cur_task);
-                  put_line
-                    ("Task " & to_string (cur_task.name) & " added to system");
+                  --  put_line
+                  --    ("Task " & to_string (cur_task.name) & " added to system");
 
                   -- task_index := task_index + 1;
 
@@ -407,9 +503,9 @@ package body static_transformer is
                            a_type            => from_task_to_object,
                            protocol_property => first_message);
                         prev_task_counter := prev_task_counter + 1;
-                        put_line
-                          ("Message " & to_string (message_ptr.name) &
-                           " added to system");
+                        --  put_line
+                        --    ("Message " & to_string (message_ptr.name) &
+                        --     " added to system");
                      end loop;
                   end if;
                   if inc_cpu_count then
@@ -438,44 +534,48 @@ package body static_transformer is
 
    end static_transformer;
 
-   procedure finalize (transformed_system : in System; utilization : in Float)
+   procedure finalize
+     (transformed_system : in System; utilization : in out Float; algo : in Unbounded_string)
    is
-   cpu_count : Float := 0.0;
-   total : Float := 0.0;
-   avg_utilization : Float := 0.0;
-   util : Float := 0.0;
-   iterator : Processors_Iterator;
-   cpu : generic_processor_ptr;
+      cpu_count       : Float := 0.0;
+      total           : Float := 0.0;
+      avg_utilization : Float := 0.0;
+      util            : Float := 0.0;
+      iterator        : Processors_Iterator;
+      cpu             : generic_processor_ptr;
    begin
       reset_iterator (transformed_system.Processors, iterator);
       loop
          current_element (transformed_system.Processors, cpu, iterator);
 
          cpu_count := cpu_count + 1.0;
-         util := Float
-                (processor_utilization_over_period
-                   (transformed_system.tasks, cpu.name));
-         Put_Line("Util: " & Float'Image(util * 100.0));
+         util      :=
+           Float
+             (processor_utilization_over_period
+                (transformed_system.tasks, cpu.name));
+         Put_Line ("Util: " & Float'Image (util * 100.0));
          total := total + util;
-              
+
          exit when is_last_element (transformed_system.Processors, iterator);
          next_element (transformed_system.Processors, iterator);
       end loop;
 
       avg_utilization := total / cpu_count;
+      utilization     := avg_utilization;
       Put_Line ("------------------------");
+      Put_Line(to_string("Scheduling algorithm: " & algo));
       Put_Line
         ("Hyperperiod: " &
          Integer'Image (compute_hyperperiod (transformed_system.Tasks)));
       Put_Line
-        ("Average Utilization: %" & Float'Image(avg_utilization * 100.0));
+        ("Average Utilization: %" & Integer (avg_utilization * 100.0)'Img);
       Put_Line ("Write system to xml file");
       Write_To_Xml_File
         (a_system  => transformed_system,
          File_Name =>
            Suppress_Space
-             (To_Unbounded_String
-                ("framework_examples/gpu/inputs/analysis_model_" &
+             (
+                ("framework_examples/gpu/inputs/" & algo & "_" &
                  Integer (utilization * 100.0)'Img & ".xmlv3")));
       Put_Line ("Finish write");
       Put_Line ("System Transformed for Cheddar Simulation");

@@ -59,14 +59,19 @@ package static_transformer is
     procedure static_transformer
        (transformed_system : in out System; DAGs : DAGList;
         Stream_To_TPC      : in out StreamTPCMap; TPCs : in out TPCList;
-        TPC_count          :        Integer);
+        TPC_count          :        Integer; algo : in unbounded_string);
 
     procedure generate_dummy_workload
        (cheddar_system     : in out System; current_utilization : in out Float;
         target_utilization : in out Float; no_of_tasks_per_cpu : in Integer;
-        TPCs               : in     TPCList);
+        TPCs               : in     TPCList; algo : in Unbounded_String);
+
+    procedure generate_dummy_workload_simple
+       (cheddar_system     : in out System; current_utilization : in out Float;
+        no_of_tasks_per_cpu : in Integer;
+        TPCs               : in     TPCList; algo : in unbounded_string);
 
     procedure finalize
-       (transformed_system : in System; utilization : in Float);
+       (transformed_system : in System; utilization : in out Float; algo : in unbounded_string);
 
 end static_transformer;

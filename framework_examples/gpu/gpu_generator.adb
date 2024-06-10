@@ -174,25 +174,25 @@ package body gpu_generator is
         put_line ("Total block count: " & total_block_count'Img);
         put_line ("DAG count: " & DAGs'Length'Img);
 
-        u_values := gen_uunifast (DAGs'Length, target_cpu_utilization);
+        --  u_values := gen_uunifast (DAGs'Length, target_cpu_utilization);
 
-        t_values :=
-           generate_period_set_with_limited_hyperperiod
-              (DAGs'Length, n_different_periods);
+        --  t_values :=
+        --     generate_period_set_with_limited_hyperperiod
+        --        (DAGs'Length, n_different_periods);
 
         for i in 1 .. DAGs'Length loop
             cur_dag  := DAGs (i);
-            a_period :=
-               Natural
-                  (t_values (i) *
-                   a_factor); -- A_factor inflates the periods to avoid too much execution times
-            -- equal to zero due to integer rounding
+            --  a_period :=
+            --     Natural
+            --        (t_values (i) *
+            --         a_factor); -- A_factor inflates the periods to avoid too much execution times
+            --  -- equal to zero due to integer rounding
 
-            a_capacity :=
-               Integer (Float'Rounding (Float (a_period) * u_values (i - 1)));
-            if a_capacity = 0 then
-                a_capacity := 1;
-            end if;
+            --  a_capacity :=
+            --     Integer (Float'Rounding (Float (a_period) * u_values (i - 1)));
+            --  if a_capacity = 0 then
+            --      a_capacity := 1;
+            --  end if;
 
             --  a_random_deadline := d_min + Random (g) * (d_max - d_min);
             --      while (a_random_deadline > d_max) or
