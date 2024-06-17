@@ -1,0 +1,264 @@
+---------------------------------------------------- e1_allocation_1
+sum_result_360.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 64: 100.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+Kernel1 in DAG2 missed 0 deadlines out of 32: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 16: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 64: 100.0
+sum_result_480.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 64: 100.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+Kernel1 in DAG2 missed 0 deadlines out of 32: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 16: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 64: 100.0
+sum_result_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 64: 100.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+Kernel1 in DAG2 missed 0 deadlines out of 32: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 16: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 64: 100.0
+{'360': {'A': 8, 'B': 0}, '480': {'A': 8, 'B': 0}, '600': {'A': 8, 'B': 0}}
+{'360': {'A': 96, 'B': 112}, '480': {'A': 96, 'B': 112}, '600': {'A': 96, 'B': 112}}
+x: 360, missed: 8, total: 96
+x: 360, missed: 0, total: 112
+x: 480, missed: 8, total: 96
+x: 480, missed: 0, total: 112
+x: 600, missed: 8, total: 96
+x: 600, missed: 0, total: 112
+
+
+---------------------------------------------------- e1_13_22_31
+sum_result_13_360.txt
+Kernel1 in DAG1 missed 1 deadlines out of 2: 50.0
+Kernel2 in DAG1 missed 1 deadlines out of 1: 0.0
+Kernel3 in DAG1 missed 8 deadlines out of 8: 0.0
+Kernel4 in DAG1 missed 1 deadlines out of 1: 0.0
+Kernel1 in DAG2 missed 0 deadlines out of 4: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 2: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 8: 100.0
+sum_result_22_360.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 1 deadlines out of 1: 0.0
+Kernel1 in DAG2 missed 0 deadlines out of 4: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 2: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 8: 100.0
+sum_result_31_360.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel1 in DAG2 missed 0 deadlines out of 4: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 2: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 8: 100.0
+{'1-3': {'A': 11, 'B': 0}, '2-2': {'A': 1, 'B': 0}, '3-1': {'A': 0, 'B': 0}}
+{'1-3': {'A': 12, 'B': 14}, '2-2': {'A': 12, 'B': 14}, '3-1': {'A': 12, 'B': 14}}
+x: 1-3, missed: 11, total: 12
+x: 1-3, missed: 0, total: 14
+x: 2-2, missed: 1, total: 12
+x: 2-2, missed: 0, total: 14
+x: 3-1, missed: 0, total: 12
+x: 3-1, missed: 0, total: 14
+
+
+
+---------------------------------------------------- e2
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_51.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_44.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_78.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_71.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_91.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_84.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_58.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_64.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_58.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_64.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_71.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_64.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_58.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_71.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_51.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_44.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_78.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_91.txt
+Kernel1 in DAG1 missed 8 deadlines out of 16: 50.0
+Kernel2 in DAG1 missed 4 deadlines out of 4: 0.0
+Kernel3 in DAG1 missed 16 deadlines out of 16: 0.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_84.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 8 deadlines out of 16: 50.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_91.txt
+Kernel1 in DAG1 missed 4 deadlines out of 16: 75.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 16 deadlines out of 16: 0.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_84.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 8 deadlines out of 16: 50.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_51.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_78.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_44.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_84.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_58.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_64.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_71.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_91.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_44.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_78.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_51.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
