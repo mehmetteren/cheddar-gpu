@@ -320,7 +320,10 @@ package body static_transformer is
           .Generator; -- Declare the random number generator.
          
       sched_type : Schedulers_Type;
-      a_priority : Integer := 1;
+      a_priority : Integer := 2;
+      subsub : Boolean := false;
+      sub_counter : Integer := 1;
+
 
       -- Function to generate a random integer between Low and High
       function Random_Range (Low, High : Integer) return Integer is
@@ -438,7 +441,7 @@ package body static_transformer is
 
                   if algo = "round_robin" then
                      a_priority := ((i+1) mod 2) + 1;
-                  end if;
+                  end if;                  
 
                   Add_Task
                     (My_Tasks => transformed_system.Tasks, A_Task => cur_task,
@@ -535,7 +538,7 @@ package body static_transformer is
    end static_transformer;
 
    procedure finalize
-     (transformed_system : in System; utilization : in out Float; algo : in Unbounded_string)
+     (transformed_system : in System; utilization : in out Float; algo : in Unbounded_string; index: Integer)
    is
       cpu_count       : Float := 0.0;
       total           : Float := 0.0;
@@ -570,13 +573,19 @@ package body static_transformer is
       Put_Line
         ("Average Utilization: %" & Integer (avg_utilization * 100.0)'Img);
       Put_Line ("Write system to xml file");
+      --  Write_To_Xml_File
+      --    (a_system  => transformed_system,
+      --     File_Name =>
+      --       Suppress_Space
+      --         (
+      --            ("framework_examples/gpu/inputs/" & algo & "_" &
+      --             Integer (utilization * 100.0)'Img & ".xmlv3")));
       Write_To_Xml_File
         (a_system  => transformed_system,
          File_Name =>
            Suppress_Space
              (
-                ("framework_examples/gpu/inputs/" & algo & "_" &
-                 Integer (utilization * 100.0)'Img & ".xmlv3")));
+                ("framework_examples/gpu/inputs/analysis_system_" & index'Img  &".xmlv3")));
       Put_Line ("Finish write");
       Put_Line ("System Transformed for Cheddar Simulation");
       Put_Line ("------------------------");

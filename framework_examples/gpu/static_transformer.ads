@@ -72,6 +72,6 @@ package static_transformer is
         TPCs               : in     TPCList; algo : in unbounded_string);
 
     procedure finalize
-       (transformed_system : in System; utilization : in out Float; algo : in unbounded_string);
+       (transformed_system : in System; utilization : in out Float; algo : in unbounded_string; index: Integer);
 
 end static_transformer;

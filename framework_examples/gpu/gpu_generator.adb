@@ -62,20 +62,38 @@ package body gpu_generator is
         TPCs             : in out TPCList; TPC_count : in Integer;
         block_per_kernel : in     Integer)
     is
-        cur_dag    : DAG;
-        cur_kernel : Kernel;
+        cur_dag        : DAG;
+        cur_kernel     : Kernel;
+        min_block_size : Integer := 1_024;
+        multiplier     : Integer := 1;
     begin
 
         for i in 1 .. DAGs'Length loop
             cur_dag := DAGs (i);
 
             for j in 1 .. cur_dag.kernel_count loop
-                cur_dag.kernels (j).block_count := block_per_kernel;
+                cur_kernel := cur_dag.kernels (j);
+                if cur_kernel.block_size < min_block_size then
+                    min_block_size := cur_kernel.block_size;
+                end if;
+            end loop;
+        end loop;
 
-                put_line
-                   ("DAG " & cur_dag.id'Img & " Kernel " & cur_kernel.id'Img &
-                    " Period: " & cur_dag.period'Img & " Capacity: " &
-                    cur_kernel.capacity'Img & " Deadline: " &
+        for i in 1 .. DAGs'Length loop
+            cur_dag := DAGs (i);
+            for j in 1 .. cur_dag.kernel_count loop
+                cur_kernel                      := cur_dag.kernels (j);
+                multiplier := cur_kernel.block_size / min_block_size;
+                cur_dag.kernels (j).block_count :=
+                   cur_kernel.block_count * multiplier;
+
+                Put_Line
+                   ("DAG " & cur_dag.id'Img & " Kernel " &
+                    cur_dag.kernels (j).id'Img & " block count:" &
+                    cur_dag.kernels (j).block_count'Img & " block size:" &
+                    cur_dag.kernels (j).block_size'Img & " Period: " &
+                    cur_dag.period'Img & " Capacity: " &
+                    cur_dag.kernels (j).capacity'Img & " Deadline: " &
                     cur_dag.deadline'Img);
             end loop;
         end loop;
@@ -105,21 +123,17 @@ package body gpu_generator is
         block_index                 : Integer := 1;
         cur_max_capacity_for_kernel : Integer := 1;
 
-        generic_Gen :
-           Ada.Numerics.Float_Random
-              .Generator;
+        generic_Gen : Ada.Numerics.Float_Random.Generator;
 
         -- Function to generate a random integer between Low and High
         function Random_Range (Low, High : Integer) return Integer is
             Random_Value : Float   :=
-               Ada.Numerics.Float_Random.Random
-                  (generic_Gen); 
+               Ada.Numerics.Float_Random.Random (generic_Gen);
             the_range    : Integer := High - Low + 1;
             Scaled_Value : Integer :=
-               Integer (Random_Value * Float (the_range)) +
-               Low;
+               Integer (Random_Value * Float (the_range)) + Low;
         begin
-            return Scaled_Value; 
+            return Scaled_Value;
         end Random_Range;
 
         --  procedure Free is new Ada.Unchecked_Deallocation
@@ -141,9 +155,9 @@ package body gpu_generator is
         begin
             Rand_Int.Reset (Gen);
             for I in Part_Range loop
-                Parts (i) := Rand_Int.Random (Gen);
+                Parts (I) := Rand_Int.Random (Gen);
                 Sum       := Sum + Parts (I);
-                put_line ("sum: " & sum'Img & "  parts: " & Parts (i)'Img);
+                Put_Line ("sum: " & Sum'Img & "  parts: " & Parts (I)'Img);
             end loop;
 
             Factor := Float (Target_Value) / Float (Sum);
@@ -159,7 +173,7 @@ package body gpu_generator is
             end if;
 
             for x in Part_Range loop
-                put_line (Parts (x)'Img);
+                Put_Line (Parts (x)'Img);
             end loop;
 
             return new IntegerArray'(Parts);
@@ -169,10 +183,10 @@ package body gpu_generator is
 
         a_factor := 2;--N_Tasks;
         Reset (g);
-        Ada.Numerics.Float_Random.reset (generic_Gen);
+        Ada.Numerics.Float_Random.Reset (generic_Gen);
 
-        put_line ("Total block count: " & total_block_count'Img);
-        put_line ("DAG count: " & DAGs'Length'Img);
+        Put_Line ("Total block count: " & total_block_count'Img);
+        Put_Line ("DAG count: " & DAGs'Length'Img);
 
         --  u_values := gen_uunifast (DAGs'Length, target_cpu_utilization);
 
@@ -181,7 +195,7 @@ package body gpu_generator is
         --        (DAGs'Length, n_different_periods);
 
         for i in 1 .. DAGs'Length loop
-            cur_dag  := DAGs (i);
+            cur_dag := DAGs (i);
             --  a_period :=
             --     Natural
             --        (t_values (i) *
@@ -220,8 +234,8 @@ package body gpu_generator is
                current_cpu_utilization + Float (a_capacity) / Float (a_period);
 
             for kernel_index in 1 .. cur_dag.kernel_count loop
-                cur_dag.kernels (kernel_index).capacity := Random_Range(1, 7);
-                put_line
+                cur_dag.kernels (kernel_index).capacity := Random_Range (1, 7);
+                Put_Line
                    ("DAG " & cur_dag.id'Img & " Kernel " &
                     cur_dag.kernels (kernel_index).id'Img & " Period: " &
                     DAGs (i).period'Img & " Capacity: " &
@@ -231,6 +245,45 @@ package body gpu_generator is
         end loop;
 
     end generate_dag_specs_uunifast;
+
+    procedure add_aligner_task
+       (system_file_name : Unbounded_String;
+        aligned_task_id  : Unbounded_String; start_time : Integer;
+        capacity         : Integer; cpu_name : Unbounded_String; iteration:Integer)
+    is
+        the_system : System;
+        dir1       : unbounded_string_list;
+        the_task   : generic_task_ptr;
+        iterationin: Integer := iteration;
+    begin
+
+        set_initialize;
+        initialize (the_system);
+
+        Read_From_Xml_File (the_system, dir1, suppress_space("framework_examples/gpu/inputs/" & system_file_name & "_" & iterationin'Img & ".xmlv3"));
+
+        Add_Task
+           (My_Tasks           => the_system.Tasks, a_task => the_task,
+            Name => Suppress_Space (("Aligner_of_" & aligned_task_id & "_iteration_" & iterationin'Img)),
+            Cpu_Name => Suppress_Space (cpu_name), core_name => empty_string,
+            Address_Space_Name =>
+               Suppress_Space ("Address_Space_" & (cpu_name)),
+            Task_Type          => Aperiodic_Type, Start_Time => start_time,
+            Capacity => capacity, period => 0, deadline => 0, jitter => 0,
+            blocking_time      => 0, priority => 100, criticality => 0,
+            policy             => sched_fifo);
+
+        Put_Line
+           ("start_time: " & start_time'Img & "    capacity: " & capacity'Img);
+
+        Put_Line ("Write system to xml file");
+        iterationin := iterationin + 1;
+        Write_To_Xml_File
+           (a_system => the_system, File_Name => Suppress_Space(("framework_examples/gpu/inputs/" & system_file_name & "_" & iterationin'Img & ".xmlv3")));
+        Put_Line ("Finish write");
+        Put_Line ("Aligner task added");
+        Put_Line ("------------------------");
+    end add_aligner_task;
 
     procedure gpu_generator
        (DAGs : in out DAGList; stream_to_TPC : in out StreamTPCMap;

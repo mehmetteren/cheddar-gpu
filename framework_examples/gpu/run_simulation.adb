@@ -228,6 +228,6 @@ begin
 
     compute_scheduling_of_tasks(period, the_system, Suppress_Space
                   (To_Unbounded_String
-                      ("framework_examples/gpu/results/total_result_" & Integer'Image(extra) & ".xml")), true);
+                      ("framework_examples/gpu/results/total_result_" & Integer'Image(extra) & ".txt")), true);
 
 end run_simulation;

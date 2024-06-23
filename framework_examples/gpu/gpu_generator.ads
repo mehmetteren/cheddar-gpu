@@ -126,5 +126,9 @@ package gpu_generator is
         d_max : in Float := 1.0; 
         is_synchronous : in Boolean := True
         );
+    procedure add_aligner_task
+       (system_file_name : Unbounded_String;
+        aligned_task_id  : Unbounded_String; start_time : Integer;
+        capacity         : Integer; cpu_name : Unbounded_String; iteration:Integer);
 
 end gpu_generator;
