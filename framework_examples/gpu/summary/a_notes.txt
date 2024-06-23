@@ -1,0 +1,105 @@
+UTIL A > B 
+    DAGss : DAGList := new DAGArray'
+       (1 =>
+           (Id      => 1, kernel_count => 4, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 16, block_size => 128, capacity => 6), 
+                2 => (id => 2, block_count => 8, block_size => 128, capacity => 7),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 7), 
+                4 => (id => 4, block_count => 8, block_size => 128, capacity => 8))),
+         2 =>
+           (Id      => 2, kernel_count => 3, Stream => 1, period => 40, deadline => 40,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 32, block_size => 128, capacity => 3), 
+                2 => (id => 2, block_count => 16, block_size => 128, capacity => 7),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 4))));
+
+Enter a list of integers separated by spaces: 600
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_1.xmlv3 600 > framework_examples/gpu/results/sum_result_600.txt
+Running command: python3 framework_examples/gpu/plot.py framework_examples/gpu/results framework_examples/gpu/plot
+sum_result_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 8 deadlines out of 8: 0.0
+Kernel3 in DAG1 missed 64 deadlines out of 64: 0.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+Kernel1 in DAG2 missed 0 deadlines out of 32: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 16: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 64: 100.0
+{'600': {'A': 80, 'B': 0}}
+{'600': {'A': 96, 'B': 112}}
+x: 600, missed: 80, total: 96
+x: 600, missed: 0, total: 112
+
+================================================================================================================
+UTIL A = B
+    DAGss : DAGList := new DAGArray'
+       (1 =>
+           (Id      => 1, kernel_count => 4, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 16, block_size => 128, capacity => 4), 
+                2 => (id => 2, block_count => 8, block_size => 128, capacity => 2),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 3), 
+                4 => (id => 4, block_count => 8, block_size => 128, capacity => 3))),
+         2 =>
+           (Id      => 2, kernel_count => 3, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 32, block_size => 128, capacity => 10), 
+                2 => (id => 2, block_count => 16, block_size => 128, capacity => 12),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 9))));
+
+Enter a list of integers separated by spaces: 600
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_1.xmlv3 600 > framework_examples/gpu/results/sum_result_600.txt
+Running command: python3 framework_examples/gpu/plot.py framework_examples/gpu/results framework_examples/gpu/plot
+sum_result_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel3 in DAG1 missed 64 deadlines out of 64: 0.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel1 in DAG2 missed 0 deadlines out of 32: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 16: 100.0
+Kernel3 in DAG2 missed 64 deadlines out of 64: 0.0
+{'600': {'A': 64, 'B': 64}}
+{'600': {'A': 96, 'B': 112}}
+x: 600, missed: 64, total: 96
+x: 600, missed: 64, total: 112
+
+================================================================================================================
+UTIL A < B
+
+    DAGss : DAGList := new DAGArray'
+       (1 =>
+           (Id      => 1, kernel_count => 4, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 16, block_size => 128, capacity => 2), 
+                2 => (id => 2, block_count => 8, block_size => 128, capacity => 2),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 1), 
+                4 => (id => 4, block_count => 8, block_size => 128, capacity => 3))),
+         2 =>
+           (Id      => 2, kernel_count => 3, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 32, block_size => 128, capacity => 10), 
+                2 => (id => 2, block_count => 16, block_size => 128, capacity => 11),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 10))));
+
+
+Enter a list of integers separated by spaces: 600
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_1.xmlv3 600 > framework_examples/gpu/results/sum_result_600.txt
+Running command: python3 framework_examples/gpu/plot.py framework_examples/gpu/results framework_examples/gpu/plot
+sum_result_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 64: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel1 in DAG2 missed 0 deadlines out of 32: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 16: 100.0
+Kernel3 in DAG2 missed 64 deadlines out of 64: 0.0
+{'600': {'A': 0, 'B': 64}}
+{'600': {'A': 96, 'B': 112}}
+x: 600, missed: 0, total: 96
+x: 600, missed: 64, total: 112
