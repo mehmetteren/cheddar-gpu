@@ -1,0 +1,556 @@
+UTIL A > B 
+    DAGss : DAGList := new DAGArray'
+       (1 =>
+           (Id      => 1, kernel_count => 4, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 16, block_size => 128, capacity => 6), 
+                2 => (id => 2, block_count => 8, block_size => 128, capacity => 7),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 7), 
+                4 => (id => 4, block_count => 8, block_size => 128, capacity => 8))),
+         2 =>
+           (Id      => 2, kernel_count => 3, Stream => 1, period => 40, deadline => 40,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 32, block_size => 128, capacity => 3), 
+                2 => (id => 2, block_count => 16, block_size => 128, capacity => 7),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 4))));
+
+TPC  1 block size:  1024
+smpertpc:  2  cpu_count:  2
+TPC  2 block size:  1024
+smpertpc:  6  cpu_count:  6
+Util:  1.13333E+02
+Util:  1.63333E+02
+Util:  2.75000E+01
+Util:  2.75000E+01
+Util:  1.75000E+01
+Util:  1.75000E+01
+Util:  2.75000E+01
+Util:  2.75000E+01
+------------------------
+Scheduling algorithm: fixed_priority
+Hyperperiod:  120
+Average Utilization: % 53
+Write system to xml file
+Finish write
+System Transformed for Cheddar Simulation
+------------------------
+TPC  1 block size:  1024
+smpertpc:  6  cpu_count:  6
+TPC  2 block size:  1024
+smpertpc:  2  cpu_count:  2
+Util:  6.66667E+01
+Util:  6.66667E+01
+Util:  2.33333E+01
+Util:  2.33333E+01
+Util:  2.33333E+01
+Util:  7.33333E+01
+Util:  7.25000E+01
+Util:  7.25000E+01
+------------------------
+Scheduling algorithm: fixed_priority
+Hyperperiod:  120
+Average Utilization: % 53
+Write system to xml file
+Finish write
+System Transformed for Cheddar Simulation
+------------------------
+TPC  1 block size:  1024
+smpertpc:  4  cpu_count:  4
+TPC  2 block size:  1024
+smpertpc:  4  cpu_count:  4
+Util:  6.66667E+01
+Util:  6.66667E+01
+Util:  4.66667E+01
+Util:  9.66667E+01
+Util:  2.75000E+01
+Util:  2.75000E+01
+Util:  4.50000E+01
+Util:  4.50000E+01
+------------------------
+Scheduling algorithm: fixed_priority
+Hyperperiod:  120
+Average Utilization: % 53
+Write system to xml file
+Finish write
+System Transformed for Cheddar Simulation
+------------------------
+
+Enter a list of integers separated by spaces: 13 22 31
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_13.xmlv3 13 > framework_examples/gpu/results/sum_result_13_600.txt
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_22.xmlv3 22 > framework_examples/gpu/results/sum_result_22_600.txt
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_31.xmlv3 31 > framework_examples/gpu/results/sum_result_31_600.txt
+Running command: python3 framework_examples/gpu/plot.py framework_examples/gpu/results framework_examples/gpu/plot
+sum_result_13_600.txt
+Kernel1 in DAG1 missed 2 deadlines out of 2: 0.0
+Kernel2 in DAG1 missed 1 deadlines out of 1: 0.0
+Kernel3 in DAG1 missed 8 deadlines out of 8: 0.0
+Kernel4 in DAG1 missed 1 deadlines out of 1: 0.0
+Kernel1 in DAG2 missed 0 deadlines out of 4: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 2: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 8: 100.0
+sum_result_22_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 1 deadlines out of 1: 0.0
+Kernel1 in DAG2 missed 0 deadlines out of 4: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 2: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 8: 100.0
+sum_result_31_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel1 in DAG2 missed 0 deadlines out of 4: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 2: 100.0
+Kernel3 in DAG2 missed 0 deadlines out of 8: 100.0
+
+{'1-3': {'A': 12, 'B': 0}, '2-2': {'A': 1, 'B': 0}, '3-1': {'A': 0, 'B': 0}}
+{'1-3': {'A': 12, 'B': 14}, '2-2': {'A': 12, 'B': 14}, '3-1': {'A': 12, 'B': 14}}
+x: 1-3, missed: 12, total: 12
+x: 1-3, missed: 0, total: 14
+x: 2-2, missed: 1, total: 12
+x: 2-2, missed: 0, total: 14
+x: 3-1, missed: 0, total: 12
+x: 3-1, missed: 0, total: 14
+
+================================================================================================================
+UTIL A = B
+    DAGss : DAGList := new DAGArray'
+       (1 =>
+           (Id      => 1, kernel_count => 4, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 16, block_size => 128, capacity => 4), 
+                2 => (id => 2, block_count => 8, block_size => 128, capacity => 2),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 3), 
+                4 => (id => 4, block_count => 8, block_size => 128, capacity => 3))),
+         2 =>
+           (Id      => 2, kernel_count => 3, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 32, block_size => 128, capacity => 10), 
+                2 => (id => 2, block_count => 16, block_size => 128, capacity => 12),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 9))));
+
+TPC  1 block size:  1024
+smpertpc:  2  cpu_count:  2
+TPC  2 block size:  1024
+smpertpc:  6  cpu_count:  6
+Util:  5.33333E+01
+Util:  7.00000E+01
+Util:  9.33333E+01
+Util:  9.33333E+01
+Util:  6.33333E+01
+Util:  6.33333E+01
+Util:  7.00000E+01
+Util:  7.00000E+01
+------------------------
+Scheduling algorithm: fixed_priority
+Hyperperiod:  30
+Average Utilization: % 72
+Write system to xml file
+Finish write
+System Transformed for Cheddar Simulation
+------------------------
+TPC  1 block size:  1024
+smpertpc:  6  cpu_count:  6
+TPC  2 block size:  1024
+smpertpc:  2  cpu_count:  2
+Util:  3.33333E+01
+Util:  3.33333E+01
+Util:  1.00000E+01
+Util:  1.00000E+01
+Util:  1.00000E+01
+Util:  2.66667E+01
+Util:  2.26667E+02
+Util:  2.26667E+02
+------------------------
+Scheduling algorithm: fixed_priority
+Hyperperiod:  30
+Average Utilization: % 72
+Write system to xml file
+Finish write
+System Transformed for Cheddar Simulation
+------------------------
+TPC  1 block size:  1024
+smpertpc:  4  cpu_count:  4
+TPC  2 block size:  1024
+smpertpc:  4  cpu_count:  4
+Util:  3.33333E+01
+Util:  3.33333E+01
+Util:  2.00000E+01
+Util:  3.66667E+01
+Util:  9.33333E+01
+Util:  9.33333E+01
+Util:  1.33333E+02
+Util:  1.33333E+02
+------------------------
+Scheduling algorithm: fixed_priority
+Hyperperiod:  30
+Average Utilization: % 72
+Write system to xml file
+Finish write
+System Transformed for Cheddar Simulation
+------------------------
+
+Enter a list of integers separated by spaces: 13 22 31
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_13.xmlv3 13 > framework_examples/gpu/results/sum_result_13_600.txt
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_22.xmlv3 22 > framework_examples/gpu/results/sum_result_22_600.txt
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_31.xmlv3 31 > framework_examples/gpu/results/sum_result_31_600.txt
+Running command: python3 framework_examples/gpu/plot.py framework_examples/gpu/results framework_examples/gpu/plot
+sum_result_13_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel1 in DAG2 missed 0 deadlines out of 4: 100.0
+Kernel2 in DAG2 missed 0 deadlines out of 2: 100.0
+Kernel3 in DAG2 missed 8 deadlines out of 8: 0.0
+sum_result_22_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel1 in DAG2 missed 2 deadlines out of 4: 50.0
+Kernel2 in DAG2 missed 2 deadlines out of 2: 0.0
+Kernel3 in DAG2 missed 8 deadlines out of 8: 0.0
+sum_result_31_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel1 in DAG2 missed 4 deadlines out of 4: 0.0
+Kernel2 in DAG2 missed 2 deadlines out of 2: 0.0
+Kernel3 in DAG2 missed 8 deadlines out of 8: 0.0
+
+{'1-3': {'A': 0, 'B': 8}, '2-2': {'A': 0, 'B': 12}, '3-1': {'A': 0, 'B': 14}}
+{'1-3': {'A': 12, 'B': 14}, '2-2': {'A': 12, 'B': 14}, '3-1': {'A': 12, 'B': 14}}
+x: 1-3, missed: 0, total: 12
+x: 1-3, missed: 8, total: 14
+x: 2-2, missed: 0, total: 12
+x: 2-2, missed: 12, total: 14
+x: 3-1, missed: 0, total: 12
+x: 3-1, missed: 14, total: 14
+
+================================================================================================================
+UTIL A < B
+
+    DAGss : DAGList := new DAGArray'
+       (1 =>
+           (Id      => 1, kernel_count => 4, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 16, block_size => 128, capacity => 2), 
+                2 => (id => 2, block_count => 8, block_size => 128, capacity => 2),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 1), 
+                4 => (id => 4, block_count => 8, block_size => 128, capacity => 3))),
+         2 =>
+           (Id      => 2, kernel_count => 3, Stream => 1, period => 30, deadline => 30,
+            kernels =>
+               new Kernel_Array'
+               (1 => (id => 1, block_count => 32, block_size => 128, capacity => 10), 
+                2 => (id => 2, block_count => 16, block_size => 128, capacity => 11),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 10))));
+
+TPC  1 block size:  1024
+smpertpc:  2  cpu_count:  2
+TPC  2 block size:  1024
+smpertpc:  6  cpu_count:  6
+Util:  2.00000E+01
+Util:  3.66667E+01
+Util:  1.00000E+02
+Util:  1.00000E+02
+Util:  6.66667E+01
+Util:  6.66667E+01
+Util:  7.00000E+01
+Util:  7.00000E+01
+------------------------
+Scheduling algorithm: fixed_priority
+Hyperperiod:  30
+Average Utilization: % 66
+Write system to xml file
+Finish write
+System Transformed for Cheddar Simulation
+------------------------
+TPC  1 block size:  1024
+smpertpc:  6  cpu_count:  6
+TPC  2 block size:  1024
+smpertpc:  2  cpu_count:  2
+Util:  1.33333E+01
+Util:  1.33333E+01
+Util:  3.33333E+00
+Util:  3.33333E+00
+Util:  3.33333E+00
+Util:  2.00000E+01
+Util:  2.36667E+02
+Util:  2.36667E+02
+------------------------
+Scheduling algorithm: fixed_priority
+Hyperperiod:  30
+Average Utilization: % 66
+Write system to xml file
+Finish write
+System Transformed for Cheddar Simulation
+------------------------
+TPC  1 block size:  1024
+smpertpc:  4  cpu_count:  4
+TPC  2 block size:  1024
+smpertpc:  4  cpu_count:  4
+Util:  1.33333E+01
+Util:  1.33333E+01
+Util:  6.66667E+00
+Util:  2.33333E+01
+Util:  1.00000E+02
+Util:  1.00000E+02
+Util:  1.36667E+02
+Util:  1.36667E+02
+------------------------
+Scheduling algorithm: fixed_priority
+Hyperperiod:  30
+Average Utilization: % 66
+Write system to xml file
+Finish write
+System Transformed for Cheddar Simulation
+------------------------
+
+
+Enter a list of integers separated by spaces: 13 22 31
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_13.xmlv3 13 > framework_examples/gpu/results/sum_result_13_600.txt
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_22.xmlv3 22 > framework_examples/gpu/results/sum_result_22_600.txt
+Running command: ./gpu_run_simulation 600 framework_examples/gpu/inputs/analysis_model_31.xmlv3 31 > framework_examples/gpu/results/sum_result_31_600.txt
+Running command: python3 framework_examples/gpu/plot.py framework_examples/gpu/results framework_examples/gpu/plot
+sum_result_13_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel1 in DAG2 missed 2 deadlines out of 4: 50.0
+Kernel2 in DAG2 missed 0 deadlines out of 2: 100.0
+Kernel3 in DAG2 missed 8 deadlines out of 8: 0.0
+sum_result_22_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel1 in DAG2 missed 2 deadlines out of 4: 50.0
+Kernel2 in DAG2 missed 2 deadlines out of 2: 0.0
+Kernel3 in DAG2 missed 8 deadlines out of 8: 0.0
+sum_result_31_600.txt
+Kernel1 in DAG1 missed 0 deadlines out of 2: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 8: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 1: 100.0
+Kernel1 in DAG2 missed 4 deadlines out of 4: 0.0
+Kernel2 in DAG2 missed 2 deadlines out of 2: 0.0
+Kernel3 in DAG2 missed 8 deadlines out of 8: 0.0
+
+{'1-3': {'A': 0, 'B': 10}, '2-2': {'A': 0, 'B': 12}, '3-1': {'A': 0, 'B': 14}}
+{'1-3': {'A': 12, 'B': 14}, '2-2': {'A': 12, 'B': 14}, '3-1': {'A': 12, 'B': 14}}
+x: 1-3, missed: 0, total: 12
+x: 1-3, missed: 10, total: 14
+x: 2-2, missed: 0, total: 12
+x: 2-2, missed: 12, total: 14
+x: 3-1, missed: 0, total: 12
+x: 3-1, missed: 14, total: 14
+
+
+
+=== e2
+
+
+
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_71.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_58.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_64.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_84.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_91.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_51.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_71.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_64.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_71.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_44.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_51.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_78.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_78.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_91.txt
+Kernel1 in DAG1 missed 8 deadlines out of 16: 50.0
+Kernel2 in DAG1 missed 4 deadlines out of 4: 0.0
+Kernel3 in DAG1 missed 16 deadlines out of 16: 0.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_78.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_91.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_84.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 8 deadlines out of 16: 50.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_91.txt
+Kernel1 in DAG1 missed 4 deadlines out of 16: 75.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 16 deadlines out of 16: 0.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_44.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_51.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_71.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_44.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_51.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_58.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_84.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 8 deadlines out of 16: 50.0
+Kernel4 in DAG1 missed 8 deadlines out of 8: 0.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/rate_monotonic_58.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_78.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_44.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_64.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/round_robin_58.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/deadline_monotonic_84.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
+-----------------------------------------------------------------------------------------
+framework_examples/gpu/results/fixed_priority_64.txt
+Kernel1 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel2 in DAG1 missed 0 deadlines out of 4: 100.0
+Kernel3 in DAG1 missed 0 deadlines out of 16: 100.0
+Kernel4 in DAG1 missed 0 deadlines out of 8: 100.0
