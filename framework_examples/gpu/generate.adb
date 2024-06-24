@@ -18,12 +18,13 @@ procedure generate is
                 3 => (id => 3, block_count => 64, block_size => 128, capacity => 7), 
                 4 => (id => 4, block_count => 8, block_size => 128, capacity => 8))),
          2 =>
-           (Id      => 2, kernel_count => 3, Stream => 1, period => 40, deadline => 40,
+           (Id      => 2, kernel_count => 4, Stream => 1, period => 30, deadline => 30,
             kernels =>
                new Kernel_Array'
-               (1 => (id => 1, block_count => 32, block_size => 128, capacity => 3), 
-                2 => (id => 2, block_count => 16, block_size => 128, capacity => 7),
-                3 => (id => 3, block_count => 64, block_size => 128, capacity => 4))));
+               (1 => (id => 1, block_count => 16, block_size => 128, capacity => 6), 
+                2 => (id => 2, block_count => 8, block_size => 128, capacity => 7),
+                3 => (id => 3, block_count => 64, block_size => 128, capacity => 7), 
+                4 => (id => 4, block_count => 8, block_size => 128, capacity => 8))));
 
     TPC1  : constant TPC_ptr :=
        new TPC'(Id => 1, max_block_size => 128, SMs => null);
