@@ -64,7 +64,7 @@ def parse_sum_result(file_path):
         rate = (count - b_missed_counts[kernel]) / count * 100
         print(f"{kernel} in DAG2 missed {b_missed_counts[kernel]} deadlines out of {b_total_counts[kernel]}: {rate}")
 
-    return a_missed_counts, b_missed_counts
+    return a_missed_counts, b_missed_counts, a_total_counts, b_total_counts
 
 def calculate_rates(missed_counts, total_counts):
     schedulability_rates = {}
@@ -92,7 +92,7 @@ def main(results_dir, output_filename):
         print(filename)
         if filename.startswith("sum") and filename.endswith(".txt"):
             vals = [int(num) for num in re.findall(r'\d+', filename)]
-            model = f"{vals[0] // 10}-{vals[0] % 10}"
+            model = vals[0]
             model_and_dag_missed[model] = {}
             model_and_dag_total[model] = {}
 
@@ -100,16 +100,19 @@ def main(results_dir, output_filename):
             b_key = "B"
 
             file_path = os.path.join(results_dir, filename)
-            a_missed_count_kernels, b_missed_count_kernels = parse_sum_result(file_path)
+            a_missed_count_kernels, b_missed_count_kernels, a_total_count_kernels, b_total_count_kernels = parse_sum_result(file_path)
 
             a_missed_count = sum(a_missed_count_kernels.values())
             b_missed_count = sum(b_missed_count_kernels.values())
 
+            a_total_count = sum(a_total_count_kernels.values())
+            b_total_count = sum(b_total_count_kernels.values())
+
             model_and_dag_missed[model][a_key] = a_missed_count
             model_and_dag_missed[model][b_key] = b_missed_count
 
-            model_and_dag_total[model][a_key] = A_TOTAL
-            model_and_dag_total[model][b_key] = B_TOTAL
+            model_and_dag_total[model][a_key] = a_total_count
+            model_and_dag_total[model][b_key] = b_total_count
         # elif filename.startswith("total") and filename.endswith(".xml"):
         #     file_path = os.path.join(results_dir, filename)
         #     total_count = parse_total_result(file_path)

@@ -11,21 +11,20 @@ procedure generate is
   DAGss : DAGList :=
    new DAGArray'
     (1 =>
-      (Id => 1, kernel_count => 4, Stream => 1, period => 20, deadline => 20,
+      (Id => 1, kernel_count => 4, Stream => 1, period => 40, deadline => 40,
        kernels =>
         new Kernel_Array'
-         (1 => (id => 1, block_count => 16, block_size => 256, capacity => 5),
-          2 => (id => 2, block_count => 4, block_size => 256, capacity => 6),
+         (1 => (id => 1, block_count => 2, block_size => 256, capacity => 2),
+          2 => (id => 2, block_count => 4, block_size => 256, capacity => 3),
           3 => (id => 3, block_count => 8, block_size => 256, capacity => 2),
-          4 =>
-           (id => 4, block_count => 2, block_size => 256, capacity => 3))),
+          4 => (id => 4, block_count => 2, block_size => 256, capacity => 3))),
     2 =>
       (Id => 2, kernel_count => 3, Stream => 1, period => 30, deadline => 30,
        kernels =>
         new Kernel_Array'
          (1 => (id => 11, block_count => 2, block_size => 1024, capacity => 2),
-          2 => (id => 12, block_count => 4, block_size => 1024, capacity => 2),
-          3 => (id => 13, block_count => 2, block_size => 1024, capacity => 1))));
+          2 => (id => 12, block_count => 4, block_size => 1024, capacity => 1),
+          3 => (id => 13, block_count => 2, block_size => 1024, capacity => 3))));
 
   TPC_count : constant Integer := 1;
 

@@ -1,5 +1,6 @@
 import re, json, subprocess
 import xml.etree.ElementTree as ET
+from pprint import pprint
 BIGGER_DAG = 'DAG2'
 MULTIPLIER = 4
 def parse_system(file_path):
@@ -28,7 +29,7 @@ def parse_system(file_path):
         else:
             tasks_dict[modified_task_name] = [task_id]
 
-    print(tasks_dict)
+    pprint(tasks_dict)
     return tasks_dict, task_cpu_map
 
 def parse_result(file_path):
@@ -84,16 +85,17 @@ def detect(task_activations, tasks_dict):
 
 
 def main():
-    cmd = f"./gpu_run_simulation 60 framework_examples/gpu/inputs/analysis_system_0_0.xmlv3 0 > framework_examples/gpu/results/sum_result_0.txt"
+    system_file = "framework_examples/gpu/inputs/analysis_system_0_{i}.xmlv3"
+    cmd = f"./gpu_run_simulation 120 {system_file.format(i=0)} 0 > framework_examples/gpu/results/sum_result_0.txt"
+    print(f"Running command: {cmd}")
     subprocess.run(cmd, shell=True, check=True)
 
-    system_file = f"framework_examples/gpu/inputs/analysis_system_0_0.xmlv3"
-    tasks_dict, task_cpu_map = parse_system(system_file)
+    tasks_dict, task_cpu_map = parse_system(system_file.format(i=0))
     task_activations = parse_result(f"framework_examples/gpu/results/total_result_0.txt")
     detect_result = detect(task_activations, tasks_dict)
 
     if detect_result is not None:
-        print(detect_result)
+        pprint(detect_result)
 
     iteration = 0
     while detect_result is not None:
@@ -101,24 +103,23 @@ def main():
         task_id = detect_result['task_id']
         capacity = detect_result['capacity']
         cpu_name = task_cpu_map[task_id]
-        print(f"Adding aligner task with start time {start_time}, capacity {capacity}, cpu name {cpu_name}, task id {task_id} and system file {system_file}")
+        print(f"Adding aligner task with start time {start_time}, capacity {capacity}, cpu name {cpu_name}, task id {task_id} and system file {system_file.format(i=iteration)}")
 
-        system_file = f"analysis_system_0"
-        cmd = f"./add_aligner_task {start_time} {capacity} {cpu_name} {task_id} {system_file} {iteration}"
+        cmd = f"./add_aligner_task {start_time} {capacity} {cpu_name} {task_id} analysis_system_0 {iteration}"
         print(f"Running command: {cmd}")
         subprocess.run(cmd, shell=True, check=True)
         iteration += 1
         
-        cmd = f"./gpu_run_simulation 60 framework_examples/gpu/inputs/analysis_system_0_{iteration}.xmlv3 {iteration} > framework_examples/gpu/results/sum_result_{iteration}.txt"
+        cmd = f"./gpu_run_simulation 120 {system_file.format(i=iteration)} {iteration} > framework_examples/gpu/results/sum_result_{iteration}.txt"
         print(f"Running command: {cmd}")
         subprocess.run(cmd, shell=True, check=True)
 
-        tasks_dict, task_cpu_map = parse_system(f"framework_examples/gpu/inputs/analysis_system_0_{iteration}.xmlv3")
+        tasks_dict, task_cpu_map = parse_system(system_file.format(i=iteration))
         task_activations = parse_result(f"framework_examples/gpu/results/total_result_{iteration}.txt")
         detect_result = detect(task_activations, tasks_dict)
 
         if detect_result is not None:
-            print(detect_result)
+            pprint(detect_result)
 
 
 main()
